@@ -5,6 +5,7 @@ from widgets.pages.ui_main import (
     LeftMenu, ContentObject, StatusBar, ContentPage
 )
 from widgets.pages.ui_menu import LayoutMenu
+from PySide6.QtCore import QPropertyAnimation
 
 
 class MainWindows(QMainWindow):
@@ -50,4 +51,20 @@ class MainWindows(QMainWindow):
         # LAYOUT LEFT MENU
         self.left_menu_layout = LayoutMenu(self.left_menu)
 
+        # EVENT TOGGLE
+        self.left_menu_layout.toggle_btn.clicked.connect(self.toggle_button)
+
         self.setCentralWidget(self.cf)
+
+    def toggle_button(self):
+        menu_width = self.left_menu.width()
+
+        width = 50
+        if menu_width == 50:
+            width = 240
+
+        self.animation = QPropertyAnimation(self.left_menu, b'minimumWidth')
+        self.animation.setStartValue(menu_width)
+        self.animation.setEndValue(width)
+        self.animation.setDuration(500)
+        self.animation.start()
