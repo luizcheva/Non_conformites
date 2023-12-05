@@ -4,6 +4,7 @@ from PySide6.QtWidgets import (
 from widgets.pages.ui_main import (
     LeftMenu, ContentObject, StatusBar, ContentPage
 )
+from widgets.pages.ui_menu import LayoutMenu
 
 
 class MainWindows(QMainWindow):
@@ -45,5 +46,8 @@ class MainWindows(QMainWindow):
         self.content_layout.addWidget(self.top_stuatus_bar)
         self.content_layout.addWidget(self.content_page)
         self.content_layout.addWidget(self.bottom_status_bar)
+
+        # LAYOUT LEFT MENU
+        self.left_menu_layout = LayoutMenu(self.left_menu)
 
         self.setCentralWidget(self.cf)
