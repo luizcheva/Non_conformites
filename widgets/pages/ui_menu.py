@@ -1,8 +1,8 @@
 from PySide6.QtWidgets import (
-    QVBoxLayout, QFrame, QSpacerItem, QSizePolicy, QLabel,
-    QPushButton
+    QVBoxLayout, QFrame, QSpacerItem, QSizePolicy, QLabel
 )
 from PySide6.QtCore import Qt
+from widgets.py_pushbutton import PyPushButton
 
 
 class LayoutMenu(QVBoxLayout):
@@ -49,25 +49,26 @@ class LayoutMenu(QVBoxLayout):
         btn_layout.setContentsMargins(0, 0, 0, 0)
         btn_layout.setSpacing(0)
 
-        self.toggle_btn = QPushButton()
-        self.toggle_btn.setText('Menu')
-        self.toggle_btn.setStyleSheet('color: white')
+        self.toggle_btn = PyPushButton(
+            text='Ocultar Menu', icon_path='btn_toggle.svg'
+        )
 
-        self.home_btn = QPushButton()
-        self.home_btn.setText('HOME')
-        self.home_btn.setStyleSheet('color: white')
+        self.home_btn = PyPushButton(
+            text='Página Inicial', icon_path='btn_home.svg',
+            is_active=True
+        )
 
-        self.new_btn = QPushButton()
-        self.new_btn.setText('NEW')
-        self.new_btn.setStyleSheet('color: white')
+        self.new_btn = PyPushButton(
+            text='Novo registro', icon_path='btn_add.svg'
+        )
 
-        self.edit_btn = QPushButton()
-        self.edit_btn.setText('EDIT')
-        self.edit_btn.setStyleSheet('color: white')
+        self.edit_btn = PyPushButton(
+            text='Editar registro', icon_path='btn_edit.svg'
+        )
 
-        self.del_btn = QPushButton()
-        self.del_btn.setText('DEL')
-        self.del_btn.setStyleSheet('color: white')
+        self.del_btn = PyPushButton(
+            text='Excluir registro', icon_path='btn_del.svg'
+        )
 
         btn_layout.addWidget(self.toggle_btn)
         btn_layout.addWidget(self.home_btn)
@@ -79,8 +80,8 @@ class LayoutMenu(QVBoxLayout):
         settings_layout.setContentsMargins(0, 0, 0, 0)
         settings_layout.setSpacing(0)
 
-        self.settings_btn = QPushButton()
-        self.settings_btn.setText('SETTINGS')
-        self.settings_btn.setStyleSheet('color: white')
+        self.settings_btn = PyPushButton(
+            text='Configurações', icon_path='btn_settings.svg',
+        )
 
         settings_layout.addWidget(self.settings_btn)

@@ -5,7 +5,7 @@ from widgets.pages.ui_main import (
     LeftMenu, ContentObject, StatusBar, ContentPage
 )
 from widgets.pages.ui_menu import LayoutMenu
-from PySide6.QtCore import QPropertyAnimation
+from PySide6.QtCore import QPropertyAnimation, QEasingCurve
 
 
 class MainWindows(QMainWindow):
@@ -61,10 +61,11 @@ class MainWindows(QMainWindow):
 
         width = 50
         if menu_width == 50:
-            width = 240
+            width = 200
 
         self.animation = QPropertyAnimation(self.left_menu, b'minimumWidth')
         self.animation.setStartValue(menu_width)
         self.animation.setEndValue(width)
         self.animation.setDuration(500)
+        self.animation.setEasingCurve(QEasingCurve.OutBack)
         self.animation.start()
