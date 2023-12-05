@@ -5,6 +5,7 @@ from widgets.pages.ui_main import (
     LeftMenu, ContentObject, StatusBar, ContentPage
 )
 from widgets.pages.ui_menu import LayoutMenu
+from widgets.pages.ui_statusBar import LayoutTopBar, LayoutBottomBar
 from PySide6.QtCore import QPropertyAnimation, QEasingCurve
 
 
@@ -53,6 +54,12 @@ class MainWindows(QMainWindow):
 
         # EVENT TOGGLE
         self.left_menu_layout.toggle_btn.clicked.connect(self.toggle_button)
+
+        # LAYOUT TOP BAR
+        self.top_bar_layout = LayoutTopBar(self.top_stuatus_bar)
+
+        # LAYOUT BOTTOM BAR
+        self.bottom_bar_layout = LayoutBottomBar(self.bottom_status_bar)
 
         self.setCentralWidget(self.cf)
 

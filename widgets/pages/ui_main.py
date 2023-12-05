@@ -20,7 +20,7 @@ class StatusBar(QFrame):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        self.setStyleSheet('background-color: #f2d0d9')
+        self.setStyleSheet('background-color: #f2d0d9; color: #853276;')
         self.setMaximumHeight(30)
         self.setMinimumHeight(30)
 
