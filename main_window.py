@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import (
-    QMainWindow, QFrame, QHBoxLayout, QVBoxLayout
+    QMainWindow, QFrame, QHBoxLayout, QVBoxLayout, QPushButton
 )
 from widgets.pages.ui_main import (
     LeftMenu, ContentObject, StatusBar, ContentPage
@@ -61,6 +61,15 @@ class MainWindows(QMainWindow):
         # LAYOUT BOTTOM BAR
         self.bottom_bar_layout = LayoutBottomBar(self.bottom_status_bar)
 
+        # EVENTS BTNS
+        self.left_menu_layout.home_btn.clicked.connect(self.show_page_home)
+        self.left_menu_layout.new_btn.clicked.connect(self.show_page_add)
+        self.left_menu_layout.edit_btn.clicked.connect(self.show_page_edit)
+        self.left_menu_layout.del_btn.clicked.connect(self.show_page_del)
+        self.left_menu_layout.settings_btn.clicked.connect(
+            self.show_page_settings
+        )
+
         self.setCentralWidget(self.cf)
 
     def toggle_button(self):
@@ -76,3 +85,40 @@ class MainWindows(QMainWindow):
         self.animation.setDuration(500)
         self.animation.setEasingCurve(QEasingCurve.OutBack)
         self.animation.start()
+
+    def reset_selection(self):
+        for btn in self.left_menu.findChildren(QPushButton):
+            if btn.set_active:
+                btn.set_active(False)
+
+    def show_page_home(self):
+        self.reset_selection()
+        self.content_page.setCurrentWidget(self.content_page.ui_page.page_home)
+        self.left_menu_layout.home_btn.set_active(True)
+        self.top_bar_layout.right_lbl.setText('| Página Inicial')
+
+    def show_page_add(self):
+        self.reset_selection()
+        self.content_page.setCurrentWidget(self.content_page.ui_page.page_add)
+        self.left_menu_layout.new_btn.set_active(True)
+        self.top_bar_layout.right_lbl.setText('| Novo Registro')
+
+    def show_page_edit(self):
+        self.reset_selection()
+        self.content_page.setCurrentWidget(self.content_page.ui_page.page_edit)
+        self.left_menu_layout.edit_btn.set_active(True)
+        self.top_bar_layout.right_lbl.setText('| Editar Registro')
+
+    def show_page_del(self):
+        self.reset_selection()
+        self.content_page.setCurrentWidget(self.content_page.ui_page.page_del)
+        self.left_menu_layout.del_btn.set_active(True)
+        self.top_bar_layout.right_lbl.setText('| Deletar Registro')
+
+    def show_page_settings(self):
+        self.reset_selection()
+        self.content_page.setCurrentWidget(
+            self.content_page.ui_page.page_settings
+        )
+        self.left_menu_layout.settings_btn.set_active(True)
+        self.top_bar_layout.right_lbl.setText('| Configurações')

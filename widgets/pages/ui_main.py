@@ -1,4 +1,5 @@
-from PySide6.QtWidgets import QFrame
+from PySide6.QtWidgets import QFrame, QStackedWidget
+from widgets.pages.ui_pages import Ui_StackedWidget
 
 
 class LeftMenu(QFrame):
@@ -25,6 +26,11 @@ class StatusBar(QFrame):
         self.setMinimumHeight(30)
 
 
-class ContentPage(QFrame):
+class ContentPage(QStackedWidget):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+
+        self.setStyleSheet('font-size: 12pt; color: black')
+        self.ui_page = Ui_StackedWidget()
+        self.ui_page.setupUi(self)
+        self.setCurrentWidget(self.ui_page.page_home)
