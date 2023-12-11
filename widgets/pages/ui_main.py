@@ -6,7 +6,7 @@ class LeftMenu(QFrame):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        self.setStyleSheet('background-color: #853276')
+        self.setStyleSheet('background-color: #853275')
         self.setMaximumWidth(50)
         self.setMinimumWidth(50)
 
@@ -21,7 +21,7 @@ class StatusBar(QFrame):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        self.setStyleSheet('background-color: #f2d0d9; color: #853276;')
+        self.setStyleSheet('background-color: #222425; color: #A7A8A9;')
         self.setMaximumHeight(30)
         self.setMinimumHeight(30)
 

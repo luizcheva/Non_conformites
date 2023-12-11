@@ -72,6 +72,7 @@ class LayoutMenu(QVBoxLayout):
 
         btn_layout.addWidget(self.toggle_btn)
         btn_layout.addWidget(self.home_btn)
+        btn_layout.addWidget(self.new_btn)
         btn_layout.addWidget(self.edit_btn)
         btn_layout.addWidget(self.del_btn)
 

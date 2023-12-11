@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import (
-    QMainWindow, QFrame, QHBoxLayout, QVBoxLayout, QPushButton
+    QMainWindow, QFrame, QHBoxLayout, QVBoxLayout, QPushButton, QLabel
 )
 from widgets.pages.ui_main import (
     LeftMenu, ContentObject, StatusBar, ContentPage
@@ -61,6 +61,9 @@ class MainWindows(QMainWindow):
         # LAYOUT BOTTOM BAR
         self.bottom_bar_layout = LayoutBottomBar(self.bottom_status_bar)
 
+        # WORK WITH PAGES ON STACKEDWIDGET
+        self.ui_pages = self.content_page.ui_page
+
         # EVENTS BTNS
         self.left_menu_layout.home_btn.clicked.connect(self.show_page_home)
         self.left_menu_layout.new_btn.clicked.connect(self.show_page_add)
@@ -69,6 +72,15 @@ class MainWindows(QMainWindow):
         self.left_menu_layout.settings_btn.clicked.connect(
             self.show_page_settings
         )
+        self.ui_pages.btn_DadoGerais.clicked.connect(self.show_dadosNC)
+        self.ui_pages.btn_DadosNcs.clicked.connect(self.show_dadosDisp)
+        self.ui_pages.btn_Disposicao.clicked.connect(self.salvarInfo)
+        self.ui_pages.btnVoltar1.clicked.connect(self.btnVoltar1)
+        self.ui_pages.btnVoltar2.clicked.connect(self.btnVoltar2)
+
+        # CURRENT PAGE FROM INSERT
+        self.pagesInsert = self.ui_pages.stackedWidget
+        self.pagesInsert.setCurrentWidget(self.ui_pages.page_geral)
 
         self.setCentralWidget(self.cf)
 
@@ -91,34 +103,88 @@ class MainWindows(QMainWindow):
             if btn.set_active:
                 btn.set_active(False)
 
+    def reset_labels(self):
+        for lbl in self.ui_pages.frame_4.findChildren(QLabel):
+            opts = (1, 2, 3)
+            if not lbl.text() in str(opts):
+                lbl.setStyleSheet(
+                    'color: #e6e6e6;'
+                )
+            else:
+                lbl.setStyleSheet(
+                    'background-color: #A7A8A9;'
+                    'color: #fff;'
+                    'border-radius: 10%;'
+                    'font: 10pt "KonsensLight" bold;'
+                )
+
     def show_page_home(self):
         self.reset_selection()
-        self.content_page.setCurrentWidget(self.content_page.ui_page.page_home)
+        self.content_page.setCurrentWidget(self.ui_pages.page_home)
         self.left_menu_layout.home_btn.set_active(True)
         self.top_bar_layout.right_lbl.setText('| Página Inicial')
 
     def show_page_add(self):
         self.reset_selection()
-        self.content_page.setCurrentWidget(self.content_page.ui_page.page_add)
+        self.content_page.setCurrentWidget(self.ui_pages.page_add)
         self.left_menu_layout.new_btn.set_active(True)
         self.top_bar_layout.right_lbl.setText('| Novo Registro')
 
     def show_page_edit(self):
         self.reset_selection()
-        self.content_page.setCurrentWidget(self.content_page.ui_page.page_edit)
+        self.content_page.setCurrentWidget(self.ui_pages.page_edit)
         self.left_menu_layout.edit_btn.set_active(True)
         self.top_bar_layout.right_lbl.setText('| Editar Registro')
 
     def show_page_del(self):
         self.reset_selection()
-        self.content_page.setCurrentWidget(self.content_page.ui_page.page_del)
+        self.content_page.setCurrentWidget(self.ui_pages.page_del)
         self.left_menu_layout.del_btn.set_active(True)
         self.top_bar_layout.right_lbl.setText('| Deletar Registro')
 
     def show_page_settings(self):
         self.reset_selection()
         self.content_page.setCurrentWidget(
-            self.content_page.ui_page.page_settings
+            self.ui_pages.page_settings
         )
         self.left_menu_layout.settings_btn.set_active(True)
         self.top_bar_layout.right_lbl.setText('| Configurações')
+
+    def show_dadosNC(self):
+        self.reset_labels()
+        self.pagesInsert.setCurrentWidget(self.ui_pages.page_NC)
+        self.ui_pages.label_6.setStyleSheet(
+            'background-color: #853275; color: #fff;'
+            'border-radius: 10%; font: 10pt "KonsensLight" bold;'
+        )
+        self.ui_pages.label_9.setStyleSheet('color: black;')
+
+    def show_dadosDisp(self):
+        self.reset_labels()
+        self.pagesInsert.setCurrentWidget(self.ui_pages.page_Disp)
+        self.ui_pages.label_7.setStyleSheet(
+            'background-color: #853275; color: #fff;'
+            'border-radius: 10%; font: 10pt "KonsensLight" bold;'
+        )
+        self.ui_pages.label_10.setStyleSheet('color: black;')
+
+    def btnVoltar1(self):
+        self.reset_labels()
+        self.pagesInsert.setCurrentWidget(self.ui_pages.page_geral)
+        self.ui_pages.label_2.setStyleSheet(
+            'background-color: #853275; color: #fff;'
+            'border-radius: 10%; font: 10pt "KonsensLight" bold;'
+        )
+        self.ui_pages.label_8.setStyleSheet('color: black;')
+
+    def btnVoltar2(self):
+        self.reset_labels()
+        self.pagesInsert.setCurrentWidget(self.ui_pages.page_NC)
+        self.ui_pages.label_6.setStyleSheet(
+            'background-color: #853275; color: #fff;'
+            'border-radius: 10%; font: 10pt "KonsensLight" bold;'
+        )
+        self.ui_pages.label_9.setStyleSheet('color: black;')
+
+    def salvarInfo(self):
+        print('Adicionando os dados....')
