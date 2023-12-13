@@ -15,18 +15,37 @@ class DataBase():
 
     def connectDB(self):
         self.connection = sqlite3.connect(self.name)
+        self.cursor = self.connection.cursor()
 
     def selectTable(self, table_name='nao_conformidade'):
-        self.table_name = table_name
-        self.cursor = self.connection.cursor()
+        table = table_name
         self.cursor.execute(
-            f'SELECT * FROM {table_name} ORDER BY "ID" DESC;'
+            f'SELECT * FROM {table} ORDER BY "ID" DESC;'
         )
         columns = [column[0] for column in self.cursor.description]
         data_table = [
             dict(zip(columns, row)) for row in self.cursor.fetchall()
         ]
         return data_table
+
+    def queries(self, table_name='nao_conformidade', column='', search=''):
+        table = table_name
+        coluna = column
+        pesquisa = search
+        self.cursor.execute(
+            f'SELECT * FROM {table} WHERE {coluna} = {pesquisa};'
+        )
+        data = self.cursor.fetchall()
+        return data
+
+    def selectColumn(self, table_name='nao_conformidade', column=''):
+        table = table_name
+        coluna = column
+        self.cursor.execute(
+            f'SELECT {coluna} FROM {table};'
+        )
+        data = self.cursor.fetchall()
+        return data
 
     def closeDB(self):
         try:

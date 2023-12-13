@@ -1,14 +1,15 @@
 from PySide6.QtWidgets import (
     QMainWindow, QFrame, QHBoxLayout, QVBoxLayout, QPushButton, QLabel,
-    QTableWidgetItem
 )
 from widgets.pages.ui_main import (
     LeftMenu, ContentObject, StatusBar, ContentPage
 )
 from widgets.pages.ui_menu import LayoutMenu
 from widgets.pages.ui_statusBar import LayoutTopBar, LayoutBottomBar
+from widgets.tables import tableEdit
+from widgets.combobox import UploadCB
 from PySide6.QtCore import QPropertyAnimation, QEasingCurve
-from db.conn import DataBase
+from PySide6.QtCore import Slot
 
 
 class MainWindows(QMainWindow):
@@ -85,7 +86,14 @@ class MainWindows(QMainWindow):
         self.pagesInsert.setCurrentWidget(self.ui_pages.page_geral)
 
         # UPLOAD TABLE
-        self.carregaTable()
+        self.table_edit = tableEdit(self.ui_pages)
+        self.table_edit.carregaTable()
+
+        # UPLOAD CB
+        self.combo_box = UploadCB(self.ui_pages)
+        self.combo_box.AreasIdentificacao()
+        self.combo_box.AreaNC()
+        self.combo_box.motivosNC()
 
         self.setCentralWidget(self.cf)
 
@@ -135,18 +143,21 @@ class MainWindows(QMainWindow):
         self.left_menu_layout.new_btn.set_active(True)
         self.top_bar_layout.right_lbl.setText('| Novo Registro')
 
+    @Slot()
     def show_page_edit(self):
         self.reset_selection()
         self.content_page.setCurrentWidget(self.ui_pages.page_edit)
         self.left_menu_layout.edit_btn.set_active(True)
         self.top_bar_layout.right_lbl.setText('| Editar Registro')
 
+    @Slot()
     def show_page_del(self):
         self.reset_selection()
         self.content_page.setCurrentWidget(self.ui_pages.page_del)
         self.left_menu_layout.del_btn.set_active(True)
         self.top_bar_layout.right_lbl.setText('| Deletar Registro')
 
+    @Slot()
     def show_page_settings(self):
         self.reset_selection()
         self.content_page.setCurrentWidget(
@@ -155,6 +166,7 @@ class MainWindows(QMainWindow):
         self.left_menu_layout.settings_btn.set_active(True)
         self.top_bar_layout.right_lbl.setText('| Configurações')
 
+    @Slot()
     def show_dadosNC(self):
         self.reset_labels()
         self.pagesInsert.setCurrentWidget(self.ui_pages.page_NC)
@@ -164,6 +176,7 @@ class MainWindows(QMainWindow):
         )
         self.ui_pages.label_9.setStyleSheet('color: black;')
 
+    @Slot()
     def show_dadosDisp(self):
         self.reset_labels()
         self.pagesInsert.setCurrentWidget(self.ui_pages.page_Disp)
@@ -173,6 +186,7 @@ class MainWindows(QMainWindow):
         )
         self.ui_pages.label_10.setStyleSheet('color: black;')
 
+    @Slot()
     def btnVoltar1(self):
         self.reset_labels()
         self.pagesInsert.setCurrentWidget(self.ui_pages.page_geral)
@@ -182,6 +196,7 @@ class MainWindows(QMainWindow):
         )
         self.ui_pages.label_8.setStyleSheet('color: black;')
 
+    @Slot()
     def btnVoltar2(self):
         self.reset_labels()
         self.pagesInsert.setCurrentWidget(self.ui_pages.page_NC)
@@ -191,44 +206,6 @@ class MainWindows(QMainWindow):
         )
         self.ui_pages.label_9.setStyleSheet('color: black;')
 
+    @Slot()
     def salvarInfo(self):
         print('Adicionando os dados....')
-
-    def carregaTable(self):
-        db = DataBase()
-        table = self.ui_pages.tab_dados
-        results = db.selectTable()
-
-        table.clearContents()
-        table.setRowCount(len(results))
-
-        for row, text in enumerate(results):
-            table.setItem(row, 0, QTableWidgetItem(str(text["ID"])))
-            try:
-                item = int(text["ITEM"])
-            except ValueError:
-                item = text["ITEM"]
-
-            table.setItem(row, 1, QTableWidgetItem(str(item)))
-            table.setItem(row, 2, QTableWidgetItem(str(text["ORDEM"])))
-            table.setItem(row, 3, QTableWidgetItem(str(text["LOTE"])))
-            table.setItem(
-                row, 4, QTableWidgetItem(str(text["AREA_RESPONSAVEL"]))
-            )
-            table.setItem(row, 5, QTableWidgetItem(str(text["OPERACAO"])))
-            table.setItem(
-                row, 6, QTableWidgetItem(str(text["NAO_CONFORMIDADE"]))
-            )
-            table.setItem(row, 7, QTableWidgetItem(str(text["QUANTIDADE"])))
-            table.setItem(
-                row, 8, QTableWidgetItem(str(text["QUANTIDADE_REPROVADA"]))
-            )
-            table.setItem(row, 9, QTableWidgetItem(str(text["ACAO"])))
-
-            data_format = db.convertDate(text["DATA"])
-            table.setItem(row, 10, QTableWidgetItem(str(data_format)))
-            table.setItem(row, 11, QTableWidgetItem(str(text["RESPONSAVEL"])))
-            table.setItem(row, 12, QTableWidgetItem(str(text["S_RO"])))
-            table.setItem(row, 13, QTableWidgetItem(str(text["OBS"])))
-
-        db.closeDB()

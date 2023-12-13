@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'pageszdKiqH.ui'
+## Form generated from reading UI file 'pagesmhrzpU.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.3
 ##
@@ -875,9 +875,6 @@ class Ui_StackedWidget(object):
         self.verticalLayout_19.addWidget(self.label_28)
 
         self.comboBox = QComboBox(self.frame_7)
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
         self.comboBox.setObjectName(u"comboBox")
         self.comboBox.setMinimumSize(QSize(368, 0))
         self.comboBox.setMaximumSize(QSize(16777215, 50))
@@ -1951,7 +1948,7 @@ class Ui_StackedWidget(object):
 
         self.retranslateUi(StackedWidget)
 
-        StackedWidget.setCurrentIndex(1)
+        StackedWidget.setCurrentIndex(4)
         self.stackedWidget.setCurrentIndex(0)
 
 
@@ -2021,10 +2018,6 @@ class Ui_StackedWidget(object):
         self.label_27.setText(QCoreApplication.translate("StackedWidget", u"Item:*", None))
         self.lineEdit_5.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"109.XXX-X", None))
         self.label_28.setText(QCoreApplication.translate("StackedWidget", u"\u00c1rea Respons\u00e1vel pela identifica\u00e7\u00e3o:*", None))
-        self.comboBox.setItemText(0, QCoreApplication.translate("StackedWidget", u"1", None))
-        self.comboBox.setItemText(1, QCoreApplication.translate("StackedWidget", u"2", None))
-        self.comboBox.setItemText(2, QCoreApplication.translate("StackedWidget", u"3", None))
-
         self.comboBox.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"Selecione uma op\u00e7\u00e3o..", None))
         self.label_29.setText(QCoreApplication.translate("StackedWidget", u"Respons\u00e1vel pela identifica\u00e7\u00e3o:*", None))
         self.lineEdit_6.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"u123XXX", None))
@@ -2051,10 +2044,10 @@ class Ui_StackedWidget(object):
         self.label_20.setText(QCoreApplication.translate("StackedWidget", u"DISPOSI\u00c7\u00c3O", None))
         self.label_21.setText(QCoreApplication.translate("StackedWidget", u"da N\u00e3o Conformidade", None))
         self.label_22.setText(QCoreApplication.translate("StackedWidget", u"Informe corretamente a disposi\u00e7\u00e3o final da ordem para evitar processos faltantes durante a tratativa da n\u00e3o conformidade, qualquer d\u00favida falar com seu L\u00edder direto.", None))
-        self.groupBox.setTitle(QCoreApplication.translate("StackedWidget", u"Deseja abrir S.RO?", None))
+        self.groupBox.setTitle(QCoreApplication.translate("StackedWidget", u"Deseja abrir S.RO?*", None))
         self.radioButton.setText(QCoreApplication.translate("StackedWidget", u"SIM", None))
         self.radioButton_2.setText(QCoreApplication.translate("StackedWidget", u"N\u00c3O", None))
-        self.groupBox_2.setTitle(QCoreApplication.translate("StackedWidget", u"Deseja enviar por e-mail?", None))
+        self.groupBox_2.setTitle(QCoreApplication.translate("StackedWidget", u"Deseja enviar por e-mail?*", None))
         self.radioButton_3.setText(QCoreApplication.translate("StackedWidget", u"SIM", None))
         self.radioButton_4.setText(QCoreApplication.translate("StackedWidget", u"N\u00c3O", None))
         self.groupBox_3.setTitle(QCoreApplication.translate("StackedWidget", u"Selecione os e-mails que deseja enviar:", None))
