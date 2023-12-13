@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import (
-    QMainWindow, QFrame, QHBoxLayout, QVBoxLayout, QPushButton, QLabel,
+    QMainWindow, QFrame, QHBoxLayout, QVBoxLayout, QPushButton, QLabel
 )
 from widgets.pages.ui_main import (
     LeftMenu, ContentObject, StatusBar, ContentPage
@@ -8,8 +8,11 @@ from widgets.pages.ui_menu import LayoutMenu
 from widgets.pages.ui_statusBar import LayoutTopBar, LayoutBottomBar
 from widgets.tables import tableEdit
 from widgets.combobox import UploadCB
-from PySide6.QtCore import QPropertyAnimation, QEasingCurve
-from PySide6.QtCore import Slot
+from PySide6.QtCore import QPropertyAnimation, QEasingCurve, Slot
+from PySide6.QtGui import QIntValidator
+from datetime import datetime
+from information import Message
+from db.insertDB import insertNew
 
 
 class MainWindows(QMainWindow):
@@ -95,7 +98,23 @@ class MainWindows(QMainWindow):
         self.combo_box.AreaNC()
         self.combo_box.motivosNC()
 
+        # VALIDATION
+        self.ui_pages.text_qtde.setValidator(QIntValidator())
+        self.ui_pages.text_qtdeRep.setValidator(QIntValidator())
+        self.ui_pages.text_data.setInputMask('99/99/9999')
+        self.ui_pages.text_data.editingFinished.connect(self.verificar_data)
+
         self.setCentralWidget(self.cf)
+
+    def verificar_data(self):
+        data_str = self.ui_pages.text_data.text()
+        try:
+            data = datetime.strptime(data_str, '%d/%m/%Y')
+            msg = Message('Data Válida', f'A data {data} é válida.')
+            msg.informationMsg()
+        except ValueError:
+            msg = Message('Data Errada', f'A data {data_str} é inválida.')
+            msg.errorMsg()
 
     def toggle_button(self):
         menu_width = self.left_menu.width()
@@ -208,4 +227,11 @@ class MainWindows(QMainWindow):
 
     @Slot()
     def salvarInfo(self):
-        print('Adicionando os dados....')
+        msg = Message(
+           'Salvar dados no Banco de dados',
+           'Deseja realmente salvar os dados?'
+        )
+        result = msg.questionMsg()
+        if result == msg.StandardButton.Yes:
+            inserir = insertNew(self.ui_pages)
+            inserir.salvarDados()

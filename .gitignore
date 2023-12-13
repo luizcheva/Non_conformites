@@ -3,6 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 *resources.qrc
+*pages.ui
 
 # C extensions
 *.so

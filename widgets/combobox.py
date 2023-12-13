@@ -9,7 +9,7 @@ class UploadCB():
     def AreasIdentificacao(self):
         setores = ('CQ_ACQ', 'CQ_HIG', 'CQ_INF', 'CQ_LAB', 'CQ_TRS')
         for setor in setores:
-            self.ui_pages.comboBox.addItem(setor)
+            self.ui_pages.cmb_areaResp.addItem(setor)
 
     def AreaNC(self):
         conn = DataBase()
@@ -17,7 +17,7 @@ class UploadCB():
 
         for values in cursor:
             for setor in values:
-                self.ui_pages.comboBox_3.addItem(setor)
+                self.ui_pages.cmb_areaNC.addItem(setor)
 
     def motivosNC(self):
         conn = DataBase()
@@ -25,4 +25,4 @@ class UploadCB():
 
         for values in cursor:
             for motivo in values:
-                self.ui_pages.comboBox_2.addItem(motivo)
+                self.ui_pages.cmb_Motivos.addItem(motivo)

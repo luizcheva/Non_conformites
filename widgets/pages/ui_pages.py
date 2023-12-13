@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'pagesmhrzpU.ui'
+## Form generated from reading UI file 'pagesoLRsrV.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.3
 ##
@@ -693,11 +693,11 @@ class Ui_StackedWidget(object):
 
         self.verticalLayout_14.addWidget(self.label_23)
 
-        self.lineEdit = QLineEdit(self.frame_7)
-        self.lineEdit.setObjectName(u"lineEdit")
-        self.lineEdit.setMaximumSize(QSize(16777215, 50))
-        self.lineEdit.setFont(font)
-        self.lineEdit.setStyleSheet(u"QLineEdit {\n"
+        self.text_data = QLineEdit(self.frame_7)
+        self.text_data.setObjectName(u"text_data")
+        self.text_data.setMaximumSize(QSize(16777215, 50))
+        self.text_data.setFont(font)
+        self.text_data.setStyleSheet(u"QLineEdit {\n"
 "	border: 2px solid rgb(255,255,255);\n"
 "	padding: 15px;\n"
 "	border-radius: 5px;\n"
@@ -712,7 +712,7 @@ class Ui_StackedWidget(object):
 "	border: 2px solid rgb(99,101,105);\n"
 "}")
 
-        self.verticalLayout_14.addWidget(self.lineEdit)
+        self.verticalLayout_14.addWidget(self.text_data)
 
 
         self.gridLayout.addLayout(self.verticalLayout_14, 0, 0, 1, 1)
@@ -729,11 +729,11 @@ class Ui_StackedWidget(object):
 
         self.verticalLayout_15.addWidget(self.label_24)
 
-        self.lineEdit_2 = QLineEdit(self.frame_7)
-        self.lineEdit_2.setObjectName(u"lineEdit_2")
-        self.lineEdit_2.setMaximumSize(QSize(16777215, 50))
-        self.lineEdit_2.setFont(font)
-        self.lineEdit_2.setStyleSheet(u"QLineEdit {\n"
+        self.text_planta = QLineEdit(self.frame_7)
+        self.text_planta.setObjectName(u"text_planta")
+        self.text_planta.setMaximumSize(QSize(16777215, 50))
+        self.text_planta.setFont(font)
+        self.text_planta.setStyleSheet(u"QLineEdit {\n"
 "	border: 2px solid rgb(255,255,255);\n"
 "	padding: 15px;\n"
 "	border-radius: 5px;\n"
@@ -748,7 +748,7 @@ class Ui_StackedWidget(object):
 "	border: 2px solid rgb(99,101,105);\n"
 "}")
 
-        self.verticalLayout_15.addWidget(self.lineEdit_2)
+        self.verticalLayout_15.addWidget(self.text_planta)
 
 
         self.gridLayout.addLayout(self.verticalLayout_15, 0, 1, 1, 1)
@@ -765,12 +765,12 @@ class Ui_StackedWidget(object):
 
         self.verticalLayout_16.addWidget(self.label_25)
 
-        self.lineEdit_3 = QLineEdit(self.frame_7)
-        self.lineEdit_3.setObjectName(u"lineEdit_3")
-        self.lineEdit_3.setMinimumSize(QSize(368, 0))
-        self.lineEdit_3.setMaximumSize(QSize(16777215, 50))
-        self.lineEdit_3.setFont(font)
-        self.lineEdit_3.setStyleSheet(u"QLineEdit {\n"
+        self.text_ordem = QLineEdit(self.frame_7)
+        self.text_ordem.setObjectName(u"text_ordem")
+        self.text_ordem.setMinimumSize(QSize(368, 0))
+        self.text_ordem.setMaximumSize(QSize(16777215, 50))
+        self.text_ordem.setFont(font)
+        self.text_ordem.setStyleSheet(u"QLineEdit {\n"
 "	border: 2px solid rgb(255,255,255);\n"
 "	padding: 15px;\n"
 "	border-radius: 5px;\n"
@@ -785,7 +785,7 @@ class Ui_StackedWidget(object):
 "	border: 2px solid rgb(99,101,105);\n"
 "}")
 
-        self.verticalLayout_16.addWidget(self.lineEdit_3)
+        self.verticalLayout_16.addWidget(self.text_ordem)
 
 
         self.gridLayout.addLayout(self.verticalLayout_16, 1, 0, 1, 2)
@@ -802,11 +802,11 @@ class Ui_StackedWidget(object):
 
         self.verticalLayout_17.addWidget(self.label_26)
 
-        self.lineEdit_4 = QLineEdit(self.frame_7)
-        self.lineEdit_4.setObjectName(u"lineEdit_4")
-        self.lineEdit_4.setMaximumSize(QSize(16777215, 50))
-        self.lineEdit_4.setFont(font)
-        self.lineEdit_4.setStyleSheet(u"QLineEdit {\n"
+        self.text_lote = QLineEdit(self.frame_7)
+        self.text_lote.setObjectName(u"text_lote")
+        self.text_lote.setMaximumSize(QSize(16777215, 50))
+        self.text_lote.setFont(font)
+        self.text_lote.setStyleSheet(u"QLineEdit {\n"
 "	border: 2px solid rgb(255,255,255);\n"
 "	padding: 15px;\n"
 "	border-radius: 5px;\n"
@@ -821,7 +821,7 @@ class Ui_StackedWidget(object):
 "	border: 2px solid rgb(99,101,105);\n"
 "}")
 
-        self.verticalLayout_17.addWidget(self.lineEdit_4)
+        self.verticalLayout_17.addWidget(self.text_lote)
 
 
         self.gridLayout.addLayout(self.verticalLayout_17, 2, 0, 1, 1)
@@ -838,11 +838,11 @@ class Ui_StackedWidget(object):
 
         self.verticalLayout_18.addWidget(self.label_27)
 
-        self.lineEdit_5 = QLineEdit(self.frame_7)
-        self.lineEdit_5.setObjectName(u"lineEdit_5")
-        self.lineEdit_5.setMaximumSize(QSize(16777215, 50))
-        self.lineEdit_5.setFont(font)
-        self.lineEdit_5.setStyleSheet(u"QLineEdit {\n"
+        self.text_item = QLineEdit(self.frame_7)
+        self.text_item.setObjectName(u"text_item")
+        self.text_item.setMaximumSize(QSize(16777215, 50))
+        self.text_item.setFont(font)
+        self.text_item.setStyleSheet(u"QLineEdit {\n"
 "	border: 2px solid rgb(255,255,255);\n"
 "	padding: 15px;\n"
 "	border-radius: 5px;\n"
@@ -857,7 +857,7 @@ class Ui_StackedWidget(object):
 "	border: 2px solid rgb(99,101,105);\n"
 "}")
 
-        self.verticalLayout_18.addWidget(self.lineEdit_5)
+        self.verticalLayout_18.addWidget(self.text_item)
 
 
         self.gridLayout.addLayout(self.verticalLayout_18, 2, 1, 1, 1)
@@ -874,12 +874,12 @@ class Ui_StackedWidget(object):
 
         self.verticalLayout_19.addWidget(self.label_28)
 
-        self.comboBox = QComboBox(self.frame_7)
-        self.comboBox.setObjectName(u"comboBox")
-        self.comboBox.setMinimumSize(QSize(368, 0))
-        self.comboBox.setMaximumSize(QSize(16777215, 50))
-        self.comboBox.setFont(font)
-        self.comboBox.setStyleSheet(u"QComboBox {\n"
+        self.cmb_areaResp = QComboBox(self.frame_7)
+        self.cmb_areaResp.setObjectName(u"cmb_areaResp")
+        self.cmb_areaResp.setMinimumSize(QSize(368, 0))
+        self.cmb_areaResp.setMaximumSize(QSize(16777215, 50))
+        self.cmb_areaResp.setFont(font)
+        self.cmb_areaResp.setStyleSheet(u"QComboBox {\n"
 "	border: 2px solid rgb(255,255,255);\n"
 "	padding: 15px;\n"
 "	border-radius: 5px;\n"
@@ -894,7 +894,7 @@ class Ui_StackedWidget(object):
 "	border: 2px solid rgb(99,101,105);\n"
 "}")
 
-        self.verticalLayout_19.addWidget(self.comboBox)
+        self.verticalLayout_19.addWidget(self.cmb_areaResp)
 
 
         self.gridLayout.addLayout(self.verticalLayout_19, 3, 0, 1, 2)
@@ -911,12 +911,12 @@ class Ui_StackedWidget(object):
 
         self.verticalLayout_20.addWidget(self.label_29)
 
-        self.lineEdit_6 = QLineEdit(self.frame_7)
-        self.lineEdit_6.setObjectName(u"lineEdit_6")
-        self.lineEdit_6.setMinimumSize(QSize(368, 0))
-        self.lineEdit_6.setMaximumSize(QSize(16777215, 50))
-        self.lineEdit_6.setFont(font)
-        self.lineEdit_6.setStyleSheet(u"QLineEdit {\n"
+        self.text_respIden = QLineEdit(self.frame_7)
+        self.text_respIden.setObjectName(u"text_respIden")
+        self.text_respIden.setMinimumSize(QSize(368, 0))
+        self.text_respIden.setMaximumSize(QSize(16777215, 50))
+        self.text_respIden.setFont(font)
+        self.text_respIden.setStyleSheet(u"QLineEdit {\n"
 "	border: 2px solid rgb(255,255,255);\n"
 "	padding: 15px;\n"
 "	border-radius: 5px;\n"
@@ -931,7 +931,7 @@ class Ui_StackedWidget(object):
 "	border: 2px solid rgb(99,101,105);\n"
 "}")
 
-        self.verticalLayout_20.addWidget(self.lineEdit_6)
+        self.verticalLayout_20.addWidget(self.text_respIden)
 
 
         self.gridLayout.addLayout(self.verticalLayout_20, 4, 0, 1, 2)
@@ -1068,11 +1068,11 @@ class Ui_StackedWidget(object):
 
         self.verticalLayout_21.addWidget(self.label_30)
 
-        self.lineEdit_12 = QLineEdit(self.frame_10)
-        self.lineEdit_12.setObjectName(u"lineEdit_12")
-        self.lineEdit_12.setMaximumSize(QSize(16777215, 50))
-        self.lineEdit_12.setFont(font)
-        self.lineEdit_12.setStyleSheet(u"QLineEdit {\n"
+        self.text_qtde = QLineEdit(self.frame_10)
+        self.text_qtde.setObjectName(u"text_qtde")
+        self.text_qtde.setMaximumSize(QSize(16777215, 50))
+        self.text_qtde.setFont(font)
+        self.text_qtde.setStyleSheet(u"QLineEdit {\n"
 "	border: 2px solid rgb(255,255,255);\n"
 "	padding: 15px;\n"
 "	border-radius: 5px;\n"
@@ -1087,7 +1087,7 @@ class Ui_StackedWidget(object):
 "	border: 2px solid rgb(99,101,105);\n"
 "}")
 
-        self.verticalLayout_21.addWidget(self.lineEdit_12)
+        self.verticalLayout_21.addWidget(self.text_qtde)
 
 
         self.gridLayout_2.addLayout(self.verticalLayout_21, 0, 0, 1, 1)
@@ -1104,11 +1104,11 @@ class Ui_StackedWidget(object):
 
         self.verticalLayout_22.addWidget(self.label_31)
 
-        self.lineEdit_9 = QLineEdit(self.frame_10)
-        self.lineEdit_9.setObjectName(u"lineEdit_9")
-        self.lineEdit_9.setMaximumSize(QSize(16777215, 50))
-        self.lineEdit_9.setFont(font)
-        self.lineEdit_9.setStyleSheet(u"QLineEdit {\n"
+        self.text_qtdeRep = QLineEdit(self.frame_10)
+        self.text_qtdeRep.setObjectName(u"text_qtdeRep")
+        self.text_qtdeRep.setMaximumSize(QSize(16777215, 50))
+        self.text_qtdeRep.setFont(font)
+        self.text_qtdeRep.setStyleSheet(u"QLineEdit {\n"
 "	border: 2px solid rgb(255,255,255);\n"
 "	padding: 15px;\n"
 "	border-radius: 5px;\n"
@@ -1123,7 +1123,7 @@ class Ui_StackedWidget(object):
 "	border: 2px solid rgb(99,101,105);\n"
 "}")
 
-        self.verticalLayout_22.addWidget(self.lineEdit_9)
+        self.verticalLayout_22.addWidget(self.text_qtdeRep)
 
 
         self.gridLayout_2.addLayout(self.verticalLayout_22, 0, 1, 1, 1)
@@ -1140,11 +1140,11 @@ class Ui_StackedWidget(object):
 
         self.verticalLayout_23.addWidget(self.label_32)
 
-        self.comboBox_3 = QComboBox(self.frame_10)
-        self.comboBox_3.setObjectName(u"comboBox_3")
-        self.comboBox_3.setMinimumSize(QSize(368, 0))
-        self.comboBox_3.setFont(font)
-        self.comboBox_3.setStyleSheet(u"QComboBox {\n"
+        self.cmb_areaNC = QComboBox(self.frame_10)
+        self.cmb_areaNC.setObjectName(u"cmb_areaNC")
+        self.cmb_areaNC.setMinimumSize(QSize(368, 0))
+        self.cmb_areaNC.setFont(font)
+        self.cmb_areaNC.setStyleSheet(u"QComboBox {\n"
 "	border: 2px solid rgb(255,255,255);\n"
 "	padding: 15px;\n"
 "	border-radius: 5px;\n"
@@ -1159,7 +1159,7 @@ class Ui_StackedWidget(object):
 "	border: 2px solid rgb(99,101,105);\n"
 "}")
 
-        self.verticalLayout_23.addWidget(self.comboBox_3)
+        self.verticalLayout_23.addWidget(self.cmb_areaNC)
 
 
         self.gridLayout_2.addLayout(self.verticalLayout_23, 1, 0, 1, 2)
@@ -1176,12 +1176,12 @@ class Ui_StackedWidget(object):
 
         self.verticalLayout_24.addWidget(self.label_33)
 
-        self.comboBox_2 = QComboBox(self.frame_10)
-        self.comboBox_2.setObjectName(u"comboBox_2")
-        self.comboBox_2.setMinimumSize(QSize(368, 0))
-        self.comboBox_2.setMaximumSize(QSize(16777215, 50))
-        self.comboBox_2.setFont(font)
-        self.comboBox_2.setStyleSheet(u"QComboBox {\n"
+        self.cmb_Motivos = QComboBox(self.frame_10)
+        self.cmb_Motivos.setObjectName(u"cmb_Motivos")
+        self.cmb_Motivos.setMinimumSize(QSize(368, 0))
+        self.cmb_Motivos.setMaximumSize(QSize(16777215, 50))
+        self.cmb_Motivos.setFont(font)
+        self.cmb_Motivos.setStyleSheet(u"QComboBox {\n"
 "	border: 2px solid rgb(255,255,255);\n"
 "	padding: 15px;\n"
 "	border-radius: 5px;\n"
@@ -1196,7 +1196,7 @@ class Ui_StackedWidget(object):
 "	border: 2px solid rgb(99,101,105);\n"
 "}")
 
-        self.verticalLayout_24.addWidget(self.comboBox_2)
+        self.verticalLayout_24.addWidget(self.cmb_Motivos)
 
 
         self.gridLayout_2.addLayout(self.verticalLayout_24, 2, 0, 1, 2)
@@ -1213,12 +1213,12 @@ class Ui_StackedWidget(object):
 
         self.verticalLayout_25.addWidget(self.label_34)
 
-        self.lineEdit_8 = QLineEdit(self.frame_10)
-        self.lineEdit_8.setObjectName(u"lineEdit_8")
-        self.lineEdit_8.setMinimumSize(QSize(368, 0))
-        self.lineEdit_8.setMaximumSize(QSize(16777215, 50))
-        self.lineEdit_8.setFont(font)
-        self.lineEdit_8.setStyleSheet(u"QLineEdit {\n"
+        self.text_acao = QLineEdit(self.frame_10)
+        self.text_acao.setObjectName(u"text_acao")
+        self.text_acao.setMinimumSize(QSize(368, 0))
+        self.text_acao.setMaximumSize(QSize(16777215, 50))
+        self.text_acao.setFont(font)
+        self.text_acao.setStyleSheet(u"QLineEdit {\n"
 "	border: 2px solid rgb(255,255,255);\n"
 "	padding: 15px;\n"
 "	border-radius: 5px;\n"
@@ -1233,7 +1233,7 @@ class Ui_StackedWidget(object):
 "	border: 2px solid rgb(99,101,105);\n"
 "}")
 
-        self.verticalLayout_25.addWidget(self.lineEdit_8)
+        self.verticalLayout_25.addWidget(self.text_acao)
 
 
         self.gridLayout_2.addLayout(self.verticalLayout_25, 3, 0, 1, 2)
@@ -1250,12 +1250,12 @@ class Ui_StackedWidget(object):
 
         self.verticalLayout_26.addWidget(self.label_35)
 
-        self.textEdit = QTextEdit(self.frame_10)
-        self.textEdit.setObjectName(u"textEdit")
-        self.textEdit.setMinimumSize(QSize(368, 100))
-        self.textEdit.setMaximumSize(QSize(16777215, 100))
-        self.textEdit.setFont(font)
-        self.textEdit.setStyleSheet(u"QTextEdit {\n"
+        self.text_Obs = QTextEdit(self.frame_10)
+        self.text_Obs.setObjectName(u"text_Obs")
+        self.text_Obs.setMinimumSize(QSize(368, 100))
+        self.text_Obs.setMaximumSize(QSize(16777215, 100))
+        self.text_Obs.setFont(font)
+        self.text_Obs.setStyleSheet(u"QTextEdit {\n"
 "	border: 2px solid rgb(255,255,255);\n"
 "	padding: 15px;\n"
 "	border-radius: 5px;\n"
@@ -1271,7 +1271,7 @@ class Ui_StackedWidget(object):
 "	border: 2px solid rgb(99,101,105);\n"
 "}")
 
-        self.verticalLayout_26.addWidget(self.textEdit)
+        self.verticalLayout_26.addWidget(self.text_Obs)
 
 
         self.gridLayout_2.addLayout(self.verticalLayout_26, 4, 0, 1, 2)
@@ -1419,16 +1419,16 @@ class Ui_StackedWidget(object):
         self.horizontalLayout_13.setObjectName(u"horizontalLayout_13")
         self.gridLayout_4 = QGridLayout()
         self.gridLayout_4.setObjectName(u"gridLayout_4")
-        self.groupBox = QGroupBox(self.frame_13)
-        self.groupBox.setObjectName(u"groupBox")
-        self.groupBox.setMinimumSize(QSize(0, 100))
-        self.groupBox.setMaximumSize(QSize(16777215, 100))
+        self.group_SRo = QGroupBox(self.frame_13)
+        self.group_SRo.setObjectName(u"group_SRo")
+        self.group_SRo.setMinimumSize(QSize(0, 100))
+        self.group_SRo.setMaximumSize(QSize(16777215, 100))
         font9 = QFont()
         font9.setFamilies([u"KonsensBook"])
         font9.setPointSize(10)
         font9.setItalic(False)
-        self.groupBox.setFont(font9)
-        self.groupBox.setStyleSheet(u"QGroupBox {\n"
+        self.group_SRo.setFont(font9)
+        self.group_SRo.setStyleSheet(u"QGroupBox {\n"
 "	border: 1px solid rgb(99,101,105);\n"
 "	border-radius: 6px;\n"
 "	margin-top: 6px;\n"
@@ -1441,55 +1441,55 @@ class Ui_StackedWidget(object):
 "	background-color: rgb(99,101,105);\n"
 "	color: white;\n"
 "}")
-        self.groupBox.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
-        self.groupBox.setFlat(False)
-        self.groupBox.setCheckable(False)
-        self.horizontalLayout_15 = QHBoxLayout(self.groupBox)
+        self.group_SRo.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
+        self.group_SRo.setFlat(False)
+        self.group_SRo.setCheckable(False)
+        self.horizontalLayout_15 = QHBoxLayout(self.group_SRo)
         self.horizontalLayout_15.setObjectName(u"horizontalLayout_15")
         self.horizontalSpacer_2 = QSpacerItem(134, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_15.addItem(self.horizontalSpacer_2)
 
-        self.radioButton = QRadioButton(self.groupBox)
-        self.radioButton.setObjectName(u"radioButton")
-        self.radioButton.setMinimumSize(QSize(85, 0))
-        self.radioButton.setMaximumSize(QSize(85, 16777215))
-        self.radioButton.setFont(font)
-        self.radioButton.setStyleSheet(u"QRadioButton {\n"
+        self.btnSimRo = QRadioButton(self.group_SRo)
+        self.btnSimRo.setObjectName(u"btnSimRo")
+        self.btnSimRo.setMinimumSize(QSize(85, 0))
+        self.btnSimRo.setMaximumSize(QSize(85, 16777215))
+        self.btnSimRo.setFont(font)
+        self.btnSimRo.setStyleSheet(u"QRadioButton {\n"
 "	padding-left: 15%;\n"
 "}")
-        self.radioButton.setCheckable(False)
-        self.radioButton.setChecked(False)
+        self.btnSimRo.setCheckable(False)
+        self.btnSimRo.setChecked(False)
 
-        self.horizontalLayout_15.addWidget(self.radioButton, 0, Qt.AlignHCenter|Qt.AlignVCenter)
+        self.horizontalLayout_15.addWidget(self.btnSimRo, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 
-        self.radioButton_2 = QRadioButton(self.groupBox)
-        self.radioButton_2.setObjectName(u"radioButton_2")
-        self.radioButton_2.setMinimumSize(QSize(85, 0))
-        self.radioButton_2.setMaximumSize(QSize(85, 16777215))
-        self.radioButton_2.setFont(font)
-        self.radioButton_2.setStyleSheet(u"QRadioButton {\n"
+        self.btnNaoRo = QRadioButton(self.group_SRo)
+        self.btnNaoRo.setObjectName(u"btnNaoRo")
+        self.btnNaoRo.setMinimumSize(QSize(85, 0))
+        self.btnNaoRo.setMaximumSize(QSize(85, 16777215))
+        self.btnNaoRo.setFont(font)
+        self.btnNaoRo.setStyleSheet(u"QRadioButton {\n"
 "	padding-left: 15%;\n"
 "}")
 
-        self.horizontalLayout_15.addWidget(self.radioButton_2, 0, Qt.AlignHCenter|Qt.AlignVCenter)
+        self.horizontalLayout_15.addWidget(self.btnNaoRo, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 
         self.horizontalSpacer_3 = QSpacerItem(134, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_15.addItem(self.horizontalSpacer_3)
 
 
-        self.gridLayout_4.addWidget(self.groupBox, 0, 0, 1, 2)
+        self.gridLayout_4.addWidget(self.group_SRo, 0, 0, 1, 2)
 
-        self.groupBox_2 = QGroupBox(self.frame_13)
-        self.groupBox_2.setObjectName(u"groupBox_2")
-        self.groupBox_2.setMinimumSize(QSize(0, 100))
-        self.groupBox_2.setMaximumSize(QSize(16777215, 100))
+        self.group_Email = QGroupBox(self.frame_13)
+        self.group_Email.setObjectName(u"group_Email")
+        self.group_Email.setMinimumSize(QSize(0, 100))
+        self.group_Email.setMaximumSize(QSize(16777215, 100))
         font10 = QFont()
         font10.setFamilies([u"KonsensBook"])
         font10.setPointSize(10)
-        self.groupBox_2.setFont(font10)
-        self.groupBox_2.setStyleSheet(u"QGroupBox {\n"
+        self.group_Email.setFont(font10)
+        self.group_Email.setStyleSheet(u"QGroupBox {\n"
 "	border: 1px solid rgb(99,101,105);\n"
 "	border-radius: 6px;\n"
 "	margin-top: 6px;\n"
@@ -1504,44 +1504,44 @@ class Ui_StackedWidget(object):
 "}\n"
 "\n"
 "")
-        self.horizontalLayout_16 = QHBoxLayout(self.groupBox_2)
+        self.horizontalLayout_16 = QHBoxLayout(self.group_Email)
         self.horizontalLayout_16.setObjectName(u"horizontalLayout_16")
         self.horizontalSpacer_4 = QSpacerItem(134, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_16.addItem(self.horizontalSpacer_4)
 
-        self.radioButton_3 = QRadioButton(self.groupBox_2)
-        self.radioButton_3.setObjectName(u"radioButton_3")
-        self.radioButton_3.setMinimumSize(QSize(85, 0))
-        self.radioButton_3.setMaximumSize(QSize(85, 16777215))
-        self.radioButton_3.setFont(font)
-        self.radioButton_3.setStyleSheet(u"padding-left: 15%;")
+        self.btn_SimEmail = QRadioButton(self.group_Email)
+        self.btn_SimEmail.setObjectName(u"btn_SimEmail")
+        self.btn_SimEmail.setMinimumSize(QSize(85, 0))
+        self.btn_SimEmail.setMaximumSize(QSize(85, 16777215))
+        self.btn_SimEmail.setFont(font)
+        self.btn_SimEmail.setStyleSheet(u"padding-left: 15%;")
 
-        self.horizontalLayout_16.addWidget(self.radioButton_3)
+        self.horizontalLayout_16.addWidget(self.btn_SimEmail)
 
-        self.radioButton_4 = QRadioButton(self.groupBox_2)
-        self.radioButton_4.setObjectName(u"radioButton_4")
-        self.radioButton_4.setMinimumSize(QSize(85, 0))
-        self.radioButton_4.setMaximumSize(QSize(85, 16777215))
-        self.radioButton_4.setFont(font)
-        self.radioButton_4.setStyleSheet(u"padding-left: 15%;")
+        self.btn_NaoEmail = QRadioButton(self.group_Email)
+        self.btn_NaoEmail.setObjectName(u"btn_NaoEmail")
+        self.btn_NaoEmail.setMinimumSize(QSize(85, 0))
+        self.btn_NaoEmail.setMaximumSize(QSize(85, 16777215))
+        self.btn_NaoEmail.setFont(font)
+        self.btn_NaoEmail.setStyleSheet(u"padding-left: 15%;")
 
-        self.horizontalLayout_16.addWidget(self.radioButton_4)
+        self.horizontalLayout_16.addWidget(self.btn_NaoEmail)
 
         self.horizontalSpacer_5 = QSpacerItem(134, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_16.addItem(self.horizontalSpacer_5)
 
 
-        self.gridLayout_4.addWidget(self.groupBox_2, 1, 0, 1, 2)
+        self.gridLayout_4.addWidget(self.group_Email, 1, 0, 1, 2)
 
-        self.groupBox_3 = QGroupBox(self.frame_13)
-        self.groupBox_3.setObjectName(u"groupBox_3")
-        self.groupBox_3.setEnabled(True)
-        self.groupBox_3.setMinimumSize(QSize(0, 200))
-        self.groupBox_3.setMaximumSize(QSize(16777215, 200))
-        self.groupBox_3.setFont(font10)
-        self.groupBox_3.setStyleSheet(u"QGroupBox {\n"
+        self.group_addressEmail = QGroupBox(self.frame_13)
+        self.group_addressEmail.setObjectName(u"group_addressEmail")
+        self.group_addressEmail.setEnabled(True)
+        self.group_addressEmail.setMinimumSize(QSize(0, 200))
+        self.group_addressEmail.setMaximumSize(QSize(16777215, 200))
+        self.group_addressEmail.setFont(font10)
+        self.group_addressEmail.setStyleSheet(u"QGroupBox {\n"
 "	border: 1px solid rgb(99,101,105);\n"
 "	border-left: 1px solid transparent;\n"
 "	border-right: 2px solid transparent;\n"
@@ -1558,19 +1558,19 @@ class Ui_StackedWidget(object):
 "	color: white;\n"
 "}\n"
 "")
-        self.gridLayout_3 = QGridLayout(self.groupBox_3)
+        self.gridLayout_3 = QGridLayout(self.group_addressEmail)
         self.gridLayout_3.setSpacing(10)
         self.gridLayout_3.setObjectName(u"gridLayout_3")
         self.gridLayout_3.setContentsMargins(10, 20, 10, 0)
-        self.checkBox = QCheckBox(self.groupBox_3)
-        self.checkBox.setObjectName(u"checkBox")
-        self.checkBox.setEnabled(True)
+        self.check_acabamento = QCheckBox(self.group_addressEmail)
+        self.check_acabamento.setObjectName(u"check_acabamento")
+        self.check_acabamento.setEnabled(True)
         font11 = QFont()
         font11.setFamilies([u"KonsensBook"])
         font11.setPointSize(12)
         font11.setUnderline(False)
-        self.checkBox.setFont(font11)
-        self.checkBox.setStyleSheet(u"QCheckBox {\n"
+        self.check_acabamento.setFont(font11)
+        self.check_acabamento.setStyleSheet(u"QCheckBox {\n"
 "	spacing: 5px;\n"
 "	padding: 5px;\n"
 "}\n"
@@ -1595,15 +1595,15 @@ class Ui_StackedWidget(object):
 "	border: 1px solid #853275;\n"
 "}\n"
 "")
-        self.checkBox.setChecked(False)
-        self.checkBox.setAutoRepeat(False)
+        self.check_acabamento.setChecked(False)
+        self.check_acabamento.setAutoRepeat(False)
 
-        self.gridLayout_3.addWidget(self.checkBox, 0, 0, 1, 1)
+        self.gridLayout_3.addWidget(self.check_acabamento, 0, 0, 1, 1)
 
-        self.checkBox_5 = QCheckBox(self.groupBox_3)
-        self.checkBox_5.setObjectName(u"checkBox_5")
-        self.checkBox_5.setFont(font11)
-        self.checkBox_5.setStyleSheet(u"QCheckBox {\n"
+        self.check_tnc = QCheckBox(self.group_addressEmail)
+        self.check_tnc.setObjectName(u"check_tnc")
+        self.check_tnc.setFont(font11)
+        self.check_tnc.setStyleSheet(u"QCheckBox {\n"
 "	spacing: 5px;\n"
 "	padding: 5px;\n"
 "}\n"
@@ -1627,15 +1627,15 @@ class Ui_StackedWidget(object):
 "QCheckBox::indicator:checked:hover {\n"
 "	border: 1px solid #853275;\n"
 "}")
-        self.checkBox_5.setChecked(False)
-        self.checkBox_5.setAutoRepeat(False)
+        self.check_tnc.setChecked(False)
+        self.check_tnc.setAutoRepeat(False)
 
-        self.gridLayout_3.addWidget(self.checkBox_5, 0, 1, 1, 1)
+        self.gridLayout_3.addWidget(self.check_tnc, 0, 1, 1, 1)
 
-        self.checkBox_9 = QCheckBox(self.groupBox_3)
-        self.checkBox_9.setObjectName(u"checkBox_9")
-        self.checkBox_9.setFont(font11)
-        self.checkBox_9.setStyleSheet(u"QCheckBox {\n"
+        self.check_cnc = QCheckBox(self.group_addressEmail)
+        self.check_cnc.setObjectName(u"check_cnc")
+        self.check_cnc.setFont(font11)
+        self.check_cnc.setStyleSheet(u"QCheckBox {\n"
 "	spacing: 5px;\n"
 "	padding: 5px;\n"
 "}\n"
@@ -1659,15 +1659,15 @@ class Ui_StackedWidget(object):
 "QCheckBox::indicator:checked:hover {\n"
 "	border: 1px solid #853275;\n"
 "}")
-        self.checkBox_9.setChecked(False)
-        self.checkBox_9.setAutoRepeat(False)
+        self.check_cnc.setChecked(False)
+        self.check_cnc.setAutoRepeat(False)
 
-        self.gridLayout_3.addWidget(self.checkBox_9, 0, 2, 1, 1)
+        self.gridLayout_3.addWidget(self.check_cnc, 0, 2, 1, 1)
 
-        self.checkBox_2 = QCheckBox(self.groupBox_3)
-        self.checkBox_2.setObjectName(u"checkBox_2")
-        self.checkBox_2.setFont(font11)
-        self.checkBox_2.setStyleSheet(u"QCheckBox {\n"
+        self.check_higienizacao = QCheckBox(self.group_addressEmail)
+        self.check_higienizacao.setObjectName(u"check_higienizacao")
+        self.check_higienizacao.setFont(font11)
+        self.check_higienizacao.setStyleSheet(u"QCheckBox {\n"
 "	spacing: 5px;\n"
 "	padding: 5px;\n"
 "}\n"
@@ -1691,15 +1691,15 @@ class Ui_StackedWidget(object):
 "QCheckBox::indicator:checked:hover {\n"
 "	border: 1px solid #853275;\n"
 "}")
-        self.checkBox_2.setChecked(False)
-        self.checkBox_2.setAutoRepeat(False)
+        self.check_higienizacao.setChecked(False)
+        self.check_higienizacao.setAutoRepeat(False)
 
-        self.gridLayout_3.addWidget(self.checkBox_2, 1, 0, 1, 1)
+        self.gridLayout_3.addWidget(self.check_higienizacao, 1, 0, 1, 1)
 
-        self.checkBox_6 = QCheckBox(self.groupBox_3)
-        self.checkBox_6.setObjectName(u"checkBox_6")
-        self.checkBox_6.setFont(font11)
-        self.checkBox_6.setStyleSheet(u"QCheckBox {\n"
+        self.check_recebimento = QCheckBox(self.group_addressEmail)
+        self.check_recebimento.setObjectName(u"check_recebimento")
+        self.check_recebimento.setFont(font11)
+        self.check_recebimento.setStyleSheet(u"QCheckBox {\n"
 "	spacing: 5px;\n"
 "	padding: 5px;\n"
 "}\n"
@@ -1723,15 +1723,15 @@ class Ui_StackedWidget(object):
 "QCheckBox::indicator:checked:hover {\n"
 "	border: 1px solid #853275;\n"
 "}")
-        self.checkBox_6.setChecked(False)
-        self.checkBox_6.setAutoRepeat(False)
+        self.check_recebimento.setChecked(False)
+        self.check_recebimento.setAutoRepeat(False)
 
-        self.gridLayout_3.addWidget(self.checkBox_6, 1, 1, 1, 1)
+        self.gridLayout_3.addWidget(self.check_recebimento, 1, 1, 1, 1)
 
-        self.checkBox_7 = QCheckBox(self.groupBox_3)
-        self.checkBox_7.setObjectName(u"checkBox_7")
-        self.checkBox_7.setFont(font11)
-        self.checkBox_7.setStyleSheet(u"QCheckBox {\n"
+        self.check_usinagem = QCheckBox(self.group_addressEmail)
+        self.check_usinagem.setObjectName(u"check_usinagem")
+        self.check_usinagem.setFont(font11)
+        self.check_usinagem.setStyleSheet(u"QCheckBox {\n"
 "	spacing: 5px;\n"
 "	padding: 5px;\n"
 "}\n"
@@ -1755,15 +1755,15 @@ class Ui_StackedWidget(object):
 "QCheckBox::indicator:checked:hover {\n"
 "	border: 1px solid #853275;\n"
 "}")
-        self.checkBox_7.setChecked(False)
-        self.checkBox_7.setAutoRepeat(False)
+        self.check_usinagem.setChecked(False)
+        self.check_usinagem.setAutoRepeat(False)
 
-        self.gridLayout_3.addWidget(self.checkBox_7, 1, 2, 1, 1)
+        self.gridLayout_3.addWidget(self.check_usinagem, 1, 2, 1, 1)
 
-        self.checkBox_3 = QCheckBox(self.groupBox_3)
-        self.checkBox_3.setObjectName(u"checkBox_3")
-        self.checkBox_3.setFont(font11)
-        self.checkBox_3.setStyleSheet(u"QCheckBox {\n"
+        self.check_trs = QCheckBox(self.group_addressEmail)
+        self.check_trs.setObjectName(u"check_trs")
+        self.check_trs.setFont(font11)
+        self.check_trs.setStyleSheet(u"QCheckBox {\n"
 "	spacing: 5px;\n"
 "	padding: 5px;\n"
 "}\n"
@@ -1787,15 +1787,15 @@ class Ui_StackedWidget(object):
 "QCheckBox::indicator:checked:hover {\n"
 "	border: 1px solid #853275;\n"
 "}")
-        self.checkBox_3.setChecked(False)
-        self.checkBox_3.setAutoRepeat(False)
+        self.check_trs.setChecked(False)
+        self.check_trs.setAutoRepeat(False)
 
-        self.gridLayout_3.addWidget(self.checkBox_3, 2, 0, 1, 1)
+        self.gridLayout_3.addWidget(self.check_trs, 2, 0, 1, 1)
 
-        self.checkBox_8 = QCheckBox(self.groupBox_3)
-        self.checkBox_8.setObjectName(u"checkBox_8")
-        self.checkBox_8.setFont(font11)
-        self.checkBox_8.setStyleSheet(u"QCheckBox {\n"
+        self.check_usiAnaLid = QCheckBox(self.group_addressEmail)
+        self.check_usiAnaLid.setObjectName(u"check_usiAnaLid")
+        self.check_usiAnaLid.setFont(font11)
+        self.check_usiAnaLid.setStyleSheet(u"QCheckBox {\n"
 "	spacing: 5px;\n"
 "	padding: 5px;\n"
 "}\n"
@@ -1819,15 +1819,15 @@ class Ui_StackedWidget(object):
 "QCheckBox::indicator:checked:hover {\n"
 "	border: 1px solid #853275;\n"
 "}")
-        self.checkBox_8.setChecked(False)
-        self.checkBox_8.setAutoRepeat(False)
+        self.check_usiAnaLid.setChecked(False)
+        self.check_usiAnaLid.setAutoRepeat(False)
 
-        self.gridLayout_3.addWidget(self.checkBox_8, 2, 1, 1, 2)
+        self.gridLayout_3.addWidget(self.check_usiAnaLid, 2, 1, 1, 2)
 
-        self.checkBox_4 = QCheckBox(self.groupBox_3)
-        self.checkBox_4.setObjectName(u"checkBox_4")
-        self.checkBox_4.setFont(font11)
-        self.checkBox_4.setStyleSheet(u"QCheckBox {\n"
+        self.check_pcp = QCheckBox(self.group_addressEmail)
+        self.check_pcp.setObjectName(u"check_pcp")
+        self.check_pcp.setFont(font11)
+        self.check_pcp.setStyleSheet(u"QCheckBox {\n"
 "	spacing: 5px;\n"
 "	padding: 5px;\n"
 "}\n"
@@ -1851,13 +1851,13 @@ class Ui_StackedWidget(object):
 "QCheckBox::indicator:checked:hover {\n"
 "	border: 1px solid #853275;\n"
 "}")
-        self.checkBox_4.setChecked(False)
-        self.checkBox_4.setAutoRepeat(False)
+        self.check_pcp.setChecked(False)
+        self.check_pcp.setAutoRepeat(False)
 
-        self.gridLayout_3.addWidget(self.checkBox_4, 3, 0, 1, 1)
+        self.gridLayout_3.addWidget(self.check_pcp, 3, 0, 1, 1)
 
 
-        self.gridLayout_4.addWidget(self.groupBox_3, 2, 0, 1, 2)
+        self.gridLayout_4.addWidget(self.group_addressEmail, 2, 0, 1, 2)
 
         self.btnVoltar2 = QPushButton(self.frame_13)
         self.btnVoltar2.setObjectName(u"btnVoltar2")
@@ -1949,7 +1949,7 @@ class Ui_StackedWidget(object):
         self.retranslateUi(StackedWidget)
 
         StackedWidget.setCurrentIndex(4)
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(StackedWidget)
@@ -2008,58 +2008,58 @@ class Ui_StackedWidget(object):
         self.label_13.setText(QCoreApplication.translate("StackedWidget", u"da N\u00e3o Conformidade", None))
         self.label_14.setText(QCoreApplication.translate("StackedWidget", u"Informe corretamente todos os dados  da ordem para evitar informa\u00e7\u00f5es divergentes nos indicadores, qualquer d\u00favida falar com seu L\u00edder direto.", None))
         self.label_23.setText(QCoreApplication.translate("StackedWidget", u"Data:*", None))
-        self.lineEdit.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"01/01/2024", None))
+        self.text_data.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"01/01/2024", None))
         self.label_24.setText(QCoreApplication.translate("StackedWidget", u"Planta:*", None))
-        self.lineEdit_2.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"4400 / 4401", None))
+        self.text_planta.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"4400 / 4401", None))
         self.label_25.setText(QCoreApplication.translate("StackedWidget", u"Ordem:*", None))
-        self.lineEdit_3.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"501020304", None))
+        self.text_ordem.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"501020304", None))
         self.label_26.setText(QCoreApplication.translate("StackedWidget", u"Lote:*", None))
-        self.lineEdit_4.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"ABC12", None))
+        self.text_lote.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"ABC12", None))
         self.label_27.setText(QCoreApplication.translate("StackedWidget", u"Item:*", None))
-        self.lineEdit_5.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"109.XXX-X", None))
+        self.text_item.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"109.XXX-X", None))
         self.label_28.setText(QCoreApplication.translate("StackedWidget", u"\u00c1rea Respons\u00e1vel pela identifica\u00e7\u00e3o:*", None))
-        self.comboBox.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"Selecione uma op\u00e7\u00e3o..", None))
+        self.cmb_areaResp.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"Selecione uma op\u00e7\u00e3o..", None))
         self.label_29.setText(QCoreApplication.translate("StackedWidget", u"Respons\u00e1vel pela identifica\u00e7\u00e3o:*", None))
-        self.lineEdit_6.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"u123XXX", None))
+        self.text_respIden.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"u123XXX", None))
         self.btn_DadoGerais.setText(QCoreApplication.translate("StackedWidget", u"AVAN\u00c7AR", None))
         self.label_15.setText(QCoreApplication.translate("StackedWidget", u"Preencha os", None))
         self.label_16.setText(QCoreApplication.translate("StackedWidget", u"DADOS DA NCs", None))
         self.label_17.setText(QCoreApplication.translate("StackedWidget", u"da N\u00e3o Conformidade", None))
         self.label_18.setText(QCoreApplication.translate("StackedWidget", u"Informe corretamente todos os dados  da N\u00e3o Conformidade para evitar informa\u00e7\u00f5es divergentes nos indicadores, qualquer d\u00favida falar com seu L\u00edder direto.", None))
         self.label_30.setText(QCoreApplication.translate("StackedWidget", u"Qtde. Total:*", None))
-        self.lineEdit_12.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"100", None))
+        self.text_qtde.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"100", None))
         self.label_31.setText(QCoreApplication.translate("StackedWidget", u"Qtde. Reprovada:*", None))
-        self.lineEdit_9.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"50", None))
+        self.text_qtdeRep.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"50", None))
         self.label_32.setText(QCoreApplication.translate("StackedWidget", u"\u00c1res respons\u00e1vel da NC:*", None))
-        self.comboBox_3.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"Selecione uma op\u00e7\u00e3o..", None))
+        self.cmb_areaNC.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"Selecione uma op\u00e7\u00e3o..", None))
         self.label_33.setText(QCoreApplication.translate("StackedWidget", u"Motivo da NC:*", None))
-        self.comboBox_2.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"Selecione uma op\u00e7\u00e3o..", None))
+        self.cmb_Motivos.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"Selecione uma op\u00e7\u00e3o..", None))
         self.label_34.setText(QCoreApplication.translate("StackedWidget", u"A\u00e7\u00e3o a ser tomada:*", None))
-        self.lineEdit_8.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"Retornou ao setor respons\u00e1vel", None))
+        self.text_acao.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"Retornou ao setor respons\u00e1vel", None))
         self.label_35.setText(QCoreApplication.translate("StackedWidget", u"Observa\u00e7\u00f5es:", None))
-        self.textEdit.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"Escreva algo aqui..", None))
+        self.text_Obs.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"Escreva algo aqui..", None))
         self.btnVoltar1.setText(QCoreApplication.translate("StackedWidget", u"VOLTAR", None))
         self.btn_DadosNcs.setText(QCoreApplication.translate("StackedWidget", u"AVAN\u00c7AR", None))
         self.label_19.setText(QCoreApplication.translate("StackedWidget", u"Preencha a", None))
         self.label_20.setText(QCoreApplication.translate("StackedWidget", u"DISPOSI\u00c7\u00c3O", None))
         self.label_21.setText(QCoreApplication.translate("StackedWidget", u"da N\u00e3o Conformidade", None))
         self.label_22.setText(QCoreApplication.translate("StackedWidget", u"Informe corretamente a disposi\u00e7\u00e3o final da ordem para evitar processos faltantes durante a tratativa da n\u00e3o conformidade, qualquer d\u00favida falar com seu L\u00edder direto.", None))
-        self.groupBox.setTitle(QCoreApplication.translate("StackedWidget", u"Deseja abrir S.RO?*", None))
-        self.radioButton.setText(QCoreApplication.translate("StackedWidget", u"SIM", None))
-        self.radioButton_2.setText(QCoreApplication.translate("StackedWidget", u"N\u00c3O", None))
-        self.groupBox_2.setTitle(QCoreApplication.translate("StackedWidget", u"Deseja enviar por e-mail?*", None))
-        self.radioButton_3.setText(QCoreApplication.translate("StackedWidget", u"SIM", None))
-        self.radioButton_4.setText(QCoreApplication.translate("StackedWidget", u"N\u00c3O", None))
-        self.groupBox_3.setTitle(QCoreApplication.translate("StackedWidget", u"Selecione os e-mails que deseja enviar:", None))
-        self.checkBox.setText(QCoreApplication.translate("StackedWidget", u"Acabamento", None))
-        self.checkBox_5.setText(QCoreApplication.translate("StackedWidget", u"TNC", None))
-        self.checkBox_9.setText(QCoreApplication.translate("StackedWidget", u"CNC", None))
-        self.checkBox_2.setText(QCoreApplication.translate("StackedWidget", u"Higieniza\u00e7\u00e3o", None))
-        self.checkBox_6.setText(QCoreApplication.translate("StackedWidget", u"Recebimento", None))
-        self.checkBox_7.setText(QCoreApplication.translate("StackedWidget", u"Usinagem", None))
-        self.checkBox_3.setText(QCoreApplication.translate("StackedWidget", u"TRS", None))
-        self.checkBox_8.setText(QCoreApplication.translate("StackedWidget", u"USI - Analista e L\u00edderes", None))
-        self.checkBox_4.setText(QCoreApplication.translate("StackedWidget", u"PCP", None))
+        self.group_SRo.setTitle(QCoreApplication.translate("StackedWidget", u"Deseja abrir S.RO?*", None))
+        self.btnSimRo.setText(QCoreApplication.translate("StackedWidget", u"SIM", None))
+        self.btnNaoRo.setText(QCoreApplication.translate("StackedWidget", u"N\u00c3O", None))
+        self.group_Email.setTitle(QCoreApplication.translate("StackedWidget", u"Deseja enviar por e-mail?*", None))
+        self.btn_SimEmail.setText(QCoreApplication.translate("StackedWidget", u"SIM", None))
+        self.btn_NaoEmail.setText(QCoreApplication.translate("StackedWidget", u"N\u00c3O", None))
+        self.group_addressEmail.setTitle(QCoreApplication.translate("StackedWidget", u"Selecione os e-mails que deseja enviar:", None))
+        self.check_acabamento.setText(QCoreApplication.translate("StackedWidget", u"Acabamento", None))
+        self.check_tnc.setText(QCoreApplication.translate("StackedWidget", u"TNC", None))
+        self.check_cnc.setText(QCoreApplication.translate("StackedWidget", u"CNC", None))
+        self.check_higienizacao.setText(QCoreApplication.translate("StackedWidget", u"Higieniza\u00e7\u00e3o", None))
+        self.check_recebimento.setText(QCoreApplication.translate("StackedWidget", u"Recebimento", None))
+        self.check_usinagem.setText(QCoreApplication.translate("StackedWidget", u"Usinagem", None))
+        self.check_trs.setText(QCoreApplication.translate("StackedWidget", u"TRS", None))
+        self.check_usiAnaLid.setText(QCoreApplication.translate("StackedWidget", u"USI - Analista e L\u00edderes", None))
+        self.check_pcp.setText(QCoreApplication.translate("StackedWidget", u"PCP", None))
         self.btnVoltar2.setText(QCoreApplication.translate("StackedWidget", u"VOLTAR", None))
         self.btn_Disposicao.setText(QCoreApplication.translate("StackedWidget", u"SALVAR", None))
         self.label.setText(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p align=\"right\"><img src=\"images/neo_Logo1.png\"/></p></body></html>", None))

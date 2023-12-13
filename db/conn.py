@@ -28,7 +28,9 @@ class DataBase():
         ]
         return data_table
 
-    def queries(self, table_name='nao_conformidade', column='', search=''):
+    def selectQueries(
+        self, table_name='nao_conformidade', column='', search=''
+    ):
         table = table_name
         coluna = column
         pesquisa = search
@@ -47,6 +49,24 @@ class DataBase():
         data = self.cursor.fetchall()
         return data
 
+    def insertData(
+        self, table_name='nao_conformidade', fullDataSet: dict = {}
+    ):
+        fieldsTable = (
+            'ITEM', 'ORDEM', 'LOTE', 'AREA_RESPONSAVEL', 'OPERACAO',
+            'NAO_CONFORMIDADE', 'QUANTIDADE', 'QUANTIDADE_REPROVADA',
+            'ACAO', 'DATA', 'RESPONSAVEL', 'S_RO', 'OBS'
+        )
+        valuesTable = (
+            ":item, :ordem, :lote, :area, :operacao, :nc, :qtde, :qtde_rep,"
+            ":acao, :data, :responsavel, :s_ro, :obs"
+        )
+        sql = f'INSERT INTO {table_name} {fieldsTable} VALUES ({valuesTable})'
+        self.cursor.execute(sql, fullDataSet)
+        self.connection.commit()
+        self.closeDB()
+        return "OK"
+
     def closeDB(self):
         try:
             self.cursor.close
@@ -55,7 +75,11 @@ class DataBase():
             pass
 
     def convertDate(self, data_str):
-        data_hora = datetime.strptime(data_str, "%Y-%m-%d %H:%M:%S.%f")
+        try:
+            data_hora = datetime.strptime(data_str, "%Y-%m-%d %H:%M:%S.%f")
+        except ValueError:
+            data_hora = datetime.strptime(data_str, "%Y-%m-%d %H:%M:%S")
+
         data_formatada = data_hora.strftime("%d/%m/%Y")
 
         return data_formatada

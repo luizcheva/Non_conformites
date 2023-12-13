@@ -1136,7 +1136,7 @@ font: 10pt &quot;KonsensLight&quot; bold;</string>
              <string notr="true">background-color: #F9F8F9;</string>
             </property>
             <property name="currentIndex">
-             <number>0</number>
+             <number>2</number>
             </property>
             <widget class="QWidget" name="page_geral">
              <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -1381,7 +1381,7 @@ color: #853275;</string>
                          </widget>
                         </item>
                         <item>
-                         <widget class="QLineEdit" name="lineEdit">
+                         <widget class="QLineEdit" name="text_data">
                           <property name="maximumSize">
                            <size>
                             <width>16777215</width>
@@ -1451,7 +1451,7 @@ QLineEdit:focus {
                          </widget>
                         </item>
                         <item>
-                         <widget class="QLineEdit" name="lineEdit_2">
+                         <widget class="QLineEdit" name="text_planta">
                           <property name="maximumSize">
                            <size>
                             <width>16777215</width>
@@ -1521,7 +1521,7 @@ QLineEdit:focus {
                          </widget>
                         </item>
                         <item>
-                         <widget class="QLineEdit" name="lineEdit_3">
+                         <widget class="QLineEdit" name="text_ordem">
                           <property name="minimumSize">
                            <size>
                             <width>368</width>
@@ -1597,7 +1597,7 @@ QLineEdit:focus {
                          </widget>
                         </item>
                         <item>
-                         <widget class="QLineEdit" name="lineEdit_4">
+                         <widget class="QLineEdit" name="text_lote">
                           <property name="maximumSize">
                            <size>
                             <width>16777215</width>
@@ -1667,7 +1667,7 @@ QLineEdit:focus {
                          </widget>
                         </item>
                         <item>
-                         <widget class="QLineEdit" name="lineEdit_5">
+                         <widget class="QLineEdit" name="text_item">
                           <property name="maximumSize">
                            <size>
                             <width>16777215</width>
@@ -1737,7 +1737,7 @@ QLineEdit:focus {
                          </widget>
                         </item>
                         <item>
-                         <widget class="QComboBox" name="comboBox">
+                         <widget class="QComboBox" name="cmb_areaResp">
                           <property name="minimumSize">
                            <size>
                             <width>368</width>
@@ -1813,7 +1813,7 @@ QComboBox:focus {
                          </widget>
                         </item>
                         <item>
-                         <widget class="QLineEdit" name="lineEdit_6">
+                         <widget class="QLineEdit" name="text_respIden">
                           <property name="minimumSize">
                            <size>
                             <width>368</width>
@@ -2140,7 +2140,7 @@ color: #853275;</string>
                          </widget>
                         </item>
                         <item>
-                         <widget class="QLineEdit" name="lineEdit_12">
+                         <widget class="QLineEdit" name="text_qtde">
                           <property name="maximumSize">
                            <size>
                             <width>16777215</width>
@@ -2210,7 +2210,7 @@ QLineEdit:focus {
                          </widget>
                         </item>
                         <item>
-                         <widget class="QLineEdit" name="lineEdit_9">
+                         <widget class="QLineEdit" name="text_qtdeRep">
                           <property name="maximumSize">
                            <size>
                             <width>16777215</width>
@@ -2280,7 +2280,7 @@ QLineEdit:focus {
                          </widget>
                         </item>
                         <item>
-                         <widget class="QComboBox" name="comboBox_3">
+                         <widget class="QComboBox" name="cmb_areaNC">
                           <property name="minimumSize">
                            <size>
                             <width>368</width>
@@ -2350,7 +2350,7 @@ QComboBox:focus {
                          </widget>
                         </item>
                         <item>
-                         <widget class="QComboBox" name="comboBox_2">
+                         <widget class="QComboBox" name="cmb_Motivos">
                           <property name="minimumSize">
                            <size>
                             <width>368</width>
@@ -2426,7 +2426,7 @@ QComboBox:focus {
                          </widget>
                         </item>
                         <item>
-                         <widget class="QLineEdit" name="lineEdit_8">
+                         <widget class="QLineEdit" name="text_acao">
                           <property name="minimumSize">
                            <size>
                             <width>368</width>
@@ -2502,7 +2502,7 @@ QLineEdit:focus {
                          </widget>
                         </item>
                         <item>
-                         <widget class="QTextEdit" name="textEdit">
+                         <widget class="QTextEdit" name="text_Obs">
                           <property name="minimumSize">
                            <size>
                             <width>368</width>
@@ -2819,7 +2819,7 @@ color: #853275;</string>
                     <item>
                      <layout class="QGridLayout" name="gridLayout_4">
                       <item row="0" column="0" colspan="2">
-                       <widget class="QGroupBox" name="groupBox">
+                       <widget class="QGroupBox" name="group_SRo">
                         <property name="minimumSize">
                          <size>
                           <width>0</width>
@@ -2881,7 +2881,7 @@ QGroupBox::title {
                           </spacer>
                          </item>
                          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
-                          <widget class="QRadioButton" name="radioButton">
+                          <widget class="QRadioButton" name="btnSimRo">
                            <property name="minimumSize">
                             <size>
                              <width>85</width>
@@ -2917,7 +2917,7 @@ QGroupBox::title {
                           </widget>
                          </item>
                          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
-                          <widget class="QRadioButton" name="radioButton_2">
+                          <widget class="QRadioButton" name="btnNaoRo">
                            <property name="minimumSize">
                             <size>
                              <width>85</width>
@@ -2963,7 +2963,7 @@ QGroupBox::title {
                        </widget>
                       </item>
                       <item row="1" column="0" colspan="2">
-                       <widget class="QGroupBox" name="groupBox_2">
+                       <widget class="QGroupBox" name="group_Email">
                         <property name="minimumSize">
                          <size>
                           <width>0</width>
@@ -3017,7 +3017,7 @@ QGroupBox::title {
                           </spacer>
                          </item>
                          <item>
-                          <widget class="QRadioButton" name="radioButton_3">
+                          <widget class="QRadioButton" name="btn_SimEmail">
                            <property name="minimumSize">
                             <size>
                              <width>85</width>
@@ -3045,7 +3045,7 @@ QGroupBox::title {
                           </widget>
                          </item>
                          <item>
-                          <widget class="QRadioButton" name="radioButton_4">
+                          <widget class="QRadioButton" name="btn_NaoEmail">
                            <property name="minimumSize">
                             <size>
                              <width>85</width>
@@ -3089,7 +3089,7 @@ QGroupBox::title {
                        </widget>
                       </item>
                       <item row="2" column="0" colspan="2">
-                       <widget class="QGroupBox" name="groupBox_3">
+                       <widget class="QGroupBox" name="group_addressEmail">
                         <property name="enabled">
                          <bool>true</bool>
                         </property>
@@ -3150,7 +3150,7 @@ QGroupBox::title {
                           <number>10</number>
                          </property>
                          <item row="0" column="0">
-                          <widget class="QCheckBox" name="checkBox">
+                          <widget class="QCheckBox" name="check_acabamento">
                            <property name="enabled">
                             <bool>true</bool>
                            </property>
@@ -3200,7 +3200,7 @@ QCheckBox::indicator:checked:hover {
                           </widget>
                          </item>
                          <item row="0" column="1">
-                          <widget class="QCheckBox" name="checkBox_5">
+                          <widget class="QCheckBox" name="check_tnc">
                            <property name="font">
                             <font>
                              <family>KonsensBook</family>
@@ -3246,7 +3246,7 @@ QCheckBox::indicator:checked:hover {
                           </widget>
                          </item>
                          <item row="0" column="2">
-                          <widget class="QCheckBox" name="checkBox_9">
+                          <widget class="QCheckBox" name="check_cnc">
                            <property name="font">
                             <font>
                              <family>KonsensBook</family>
@@ -3292,7 +3292,7 @@ QCheckBox::indicator:checked:hover {
                           </widget>
                          </item>
                          <item row="1" column="0">
-                          <widget class="QCheckBox" name="checkBox_2">
+                          <widget class="QCheckBox" name="check_higienizacao">
                            <property name="font">
                             <font>
                              <family>KonsensBook</family>
@@ -3338,7 +3338,7 @@ QCheckBox::indicator:checked:hover {
                           </widget>
                          </item>
                          <item row="1" column="1">
-                          <widget class="QCheckBox" name="checkBox_6">
+                          <widget class="QCheckBox" name="check_recebimento">
                            <property name="font">
                             <font>
                              <family>KonsensBook</family>
@@ -3384,7 +3384,7 @@ QCheckBox::indicator:checked:hover {
                           </widget>
                          </item>
                          <item row="1" column="2">
-                          <widget class="QCheckBox" name="checkBox_7">
+                          <widget class="QCheckBox" name="check_usinagem">
                            <property name="font">
                             <font>
                              <family>KonsensBook</family>
@@ -3430,7 +3430,7 @@ QCheckBox::indicator:checked:hover {
                           </widget>
                          </item>
                          <item row="2" column="0">
-                          <widget class="QCheckBox" name="checkBox_3">
+                          <widget class="QCheckBox" name="check_trs">
                            <property name="font">
                             <font>
                              <family>KonsensBook</family>
@@ -3476,7 +3476,7 @@ QCheckBox::indicator:checked:hover {
                           </widget>
                          </item>
                          <item row="2" column="1" colspan="2">
-                          <widget class="QCheckBox" name="checkBox_8">
+                          <widget class="QCheckBox" name="check_usiAnaLid">
                            <property name="font">
                             <font>
                              <family>KonsensBook</family>
@@ -3522,7 +3522,7 @@ QCheckBox::indicator:checked:hover {
                           </widget>
                          </item>
                          <item row="3" column="0">
-                          <widget class="QCheckBox" name="checkBox_4">
+                          <widget class="QCheckBox" name="check_pcp">
                            <property name="font">
                             <font>
                              <family>KonsensBook</family>
