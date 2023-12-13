@@ -1,5 +1,6 @@
 from PySide6.QtWidgets import (
-    QMainWindow, QFrame, QHBoxLayout, QVBoxLayout, QPushButton, QLabel
+    QMainWindow, QFrame, QHBoxLayout, QVBoxLayout, QPushButton, QLabel,
+    QTableWidgetItem
 )
 from widgets.pages.ui_main import (
     LeftMenu, ContentObject, StatusBar, ContentPage
@@ -7,6 +8,7 @@ from widgets.pages.ui_main import (
 from widgets.pages.ui_menu import LayoutMenu
 from widgets.pages.ui_statusBar import LayoutTopBar, LayoutBottomBar
 from PySide6.QtCore import QPropertyAnimation, QEasingCurve
+from db.conn import DataBase
 
 
 class MainWindows(QMainWindow):
@@ -81,6 +83,9 @@ class MainWindows(QMainWindow):
         # CURRENT PAGE FROM INSERT
         self.pagesInsert = self.ui_pages.stackedWidget
         self.pagesInsert.setCurrentWidget(self.ui_pages.page_geral)
+
+        # UPLOAD TABLE
+        self.carregaTable()
 
         self.setCentralWidget(self.cf)
 
@@ -188,3 +193,42 @@ class MainWindows(QMainWindow):
 
     def salvarInfo(self):
         print('Adicionando os dados....')
+
+    def carregaTable(self):
+        db = DataBase()
+        table = self.ui_pages.tab_dados
+        results = db.selectTable()
+
+        table.clearContents()
+        table.setRowCount(len(results))
+
+        for row, text in enumerate(results):
+            table.setItem(row, 0, QTableWidgetItem(str(text["ID"])))
+            try:
+                item = int(text["ITEM"])
+            except ValueError:
+                item = text["ITEM"]
+
+            table.setItem(row, 1, QTableWidgetItem(str(item)))
+            table.setItem(row, 2, QTableWidgetItem(str(text["ORDEM"])))
+            table.setItem(row, 3, QTableWidgetItem(str(text["LOTE"])))
+            table.setItem(
+                row, 4, QTableWidgetItem(str(text["AREA_RESPONSAVEL"]))
+            )
+            table.setItem(row, 5, QTableWidgetItem(str(text["OPERACAO"])))
+            table.setItem(
+                row, 6, QTableWidgetItem(str(text["NAO_CONFORMIDADE"]))
+            )
+            table.setItem(row, 7, QTableWidgetItem(str(text["QUANTIDADE"])))
+            table.setItem(
+                row, 8, QTableWidgetItem(str(text["QUANTIDADE_REPROVADA"]))
+            )
+            table.setItem(row, 9, QTableWidgetItem(str(text["ACAO"])))
+
+            data_format = db.convertDate(text["DATA"])
+            table.setItem(row, 10, QTableWidgetItem(str(data_format)))
+            table.setItem(row, 11, QTableWidgetItem(str(text["RESPONSAVEL"])))
+            table.setItem(row, 12, QTableWidgetItem(str(text["S_RO"])))
+            table.setItem(row, 13, QTableWidgetItem(str(text["OBS"])))
+
+        db.closeDB()

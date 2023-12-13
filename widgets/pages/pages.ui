@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>955</width>
+    <width>954</width>
     <height>660</height>
    </rect>
   </property>
@@ -35,15 +35,759 @@
    <layout class="QVBoxLayout" name="verticalLayout"/>
   </widget>
   <widget class="QWidget" name="page_edit">
+   <property name="styleSheet">
+    <string notr="true">background-color: #F9F8F9;</string>
+   </property>
    <layout class="QVBoxLayout" name="verticalLayout_4">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item alignment="Qt::AlignHCenter">
+     <widget class="QFrame" name="frame_15">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>150</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_20">
+       <item>
+        <spacer name="horizontalSpacer_9">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>30</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_4">
+         <property name="font">
+          <font>
+           <family>KonsensBook</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QGroupBox {
+	border: 1px solid rgb(99,101,105);
+	border-radius: 3px;
+	margin-top: 6px;
+ }
+
+QGroupBox::title {
+	subcontrol-position: bottom left;
+	padding: 0 30px;
+	background-color: rgb(99,101,105);
+	color: white;
+}</string>
+         </property>
+         <property name="title">
+          <string>PESQUISAR</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_5">
+          <property name="leftMargin">
+           <number>20</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>20</number>
+          </property>
+          <property name="bottomMargin">
+           <number>20</number>
+          </property>
+          <property name="horizontalSpacing">
+           <number>20</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>0</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QComboBox" name="comboBox_4">
+            <property name="minimumSize">
+             <size>
+              <width>250</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Trebuchet MS</family>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox {
+	border: 2px solid rgb(255,255,255);
+	padding: 5px;
+	padding-left: 15px;
+	border-radius: 5px;
+	background-color: rgb(242,242,242);
+}
+
+QComboBox:hover {
+	border: 2px solid rgb(167,168,169);
+}
+
+QComboBox:focus {
+	border: 2px solid rgb(99,101,105);
+}</string>
+            </property>
+            <property name="placeholderText">
+             <string>Selecione uma categoria..</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <spacer name="horizontalSpacer_7">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>91</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLineEdit" name="lineEdit_7">
+            <property name="minimumSize">
+             <size>
+              <width>250</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Trebuchet MS</family>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit {
+	border: 2px solid rgb(255,255,255);
+	padding:5px;
+	padding-left: 15px;
+	border-radius: 5px;
+	background-color: rgb(242,242,242);
+}
+
+QLineEdit:hover {
+	border: 2px solid rgb(167,168,169);
+}
+
+QLineEdit:focus {
+	border: 2px solid rgb(99,101,105);
+}</string>
+            </property>
+            <property name="placeholderText">
+             <string>Digite sua busca..</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QPushButton" name="pushButton_2">
+            <property name="font">
+             <font>
+              <family>KonsensBook</family>
+              <pointsize>-1</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	background-color: #f0f0f0;
+	border: 1px solid #d0d0d0;
+	border-radius: 5px;
+	padding: 5px;
+ 	font-size: 16px;
+ }
+
+QPushButton:hover {
+	background-color: #e0e0e0;
+}
+
+QPushButton:pressed {
+	background-color: #c0c0c0;
+}</string>
+            </property>
+            <property name="text">
+             <string>BUSCAR</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_10">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>30</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_5">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>400</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>KonsensBook</family>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QGroupBox {
+	border: 1px solid rgb(99,101,105);
+	border-radius: 3px;
+	margin-top: 6px;
+ }
+
+QGroupBox::title {
+	subcontrol-position: bottom left;
+	padding: 0 30px;
+	background-color: rgb(99,101,105);
+	color: white;
+}</string>
+         </property>
+         <property name="title">
+          <string>FILTROS DE DATAS</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_6">
+          <property name="leftMargin">
+           <number>20</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>20</number>
+          </property>
+          <property name="bottomMargin">
+           <number>20</number>
+          </property>
+          <property name="horizontalSpacing">
+           <number>20</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>2</number>
+          </property>
+          <item row="0" column="0">
+           <layout class="QVBoxLayout" name="verticalLayout_28">
+            <item>
+             <widget class="QLabel" name="label_36">
+              <property name="font">
+               <font>
+                <family>Trebuchet MS</family>
+                <pointsize>8</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">padding-left: 10px;</string>
+              </property>
+              <property name="text">
+               <string>Período Inicial:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDateEdit" name="dateEdit">
+              <property name="minimumSize">
+               <size>
+                <width>250</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>Trebuchet MS</family>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QDateEdit {
+	background-color: rgb(242,242,242);
+	border-radius: 5px;
+	padding-left: 15px;
+	border: 2px solid rgb(255,255,255);
+}
+
+QDateEdit:hover {
+	border: 2px solid rgb(167,168,169);
+}
+
+QDateEdit:focus {
+	border: 2px solid rgb(99,101,105);
+}</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="1">
+           <spacer name="horizontalSpacer_8">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>91</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="1" column="0" rowspan="2">
+           <layout class="QVBoxLayout" name="verticalLayout_29">
+            <item>
+             <widget class="QLabel" name="label_37">
+              <property name="font">
+               <font>
+                <family>Trebuchet MS</family>
+                <pointsize>8</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">padding-left: 10px;</string>
+              </property>
+              <property name="text">
+               <string>Período Final:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDateEdit" name="dateEdit_2">
+              <property name="minimumSize">
+               <size>
+                <width>250</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>Trebuchet MS</family>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QDateEdit {
+	background-color: rgb(242,242,242);
+	border-radius: 5px;
+	padding-left: 15px;
+	border: 2px solid rgb(255,255,255);
+}
+
+QDateEdit:hover {
+	border: 2px solid rgb(167,168,169);
+}
+
+QDateEdit:focus {
+	border: 2px solid rgb(99,101,105);
+}</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="2" column="1">
+           <widget class="QPushButton" name="pushButton_3">
+            <property name="font">
+             <font>
+              <family>KonsensBook</family>
+              <pointsize>-1</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	background-color: #f0f0f0;
+	border: 1px solid #d0d0d0;
+	border-radius: 5px;
+	padding: 5px;
+ 	font-size: 16px;
+ }
+
+QPushButton:hover {
+	background-color: #e0e0e0;
+}
+
+QPushButton:pressed {
+	background-color: #c0c0c0;
+}</string>
+            </property>
+            <property name="text">
+             <string>BUSCAR</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_11">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>30</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
     <item>
-     <widget class="QLabel" name="label_4">
-      <property name="text">
-       <string>Editar um registro</string>
+     <layout class="QHBoxLayout" name="horizontalLayout_18">
+      <property name="spacing">
+       <number>0</number>
       </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
+      <property name="leftMargin">
+       <number>10</number>
       </property>
+      <item>
+       <widget class="QTableWidget" name="tab_dados">
+        <property name="font">
+         <font>
+          <family>KonsensBook</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="cursor" stdset="0">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTableWidget  {
+	background-color: #f5f5f5;
+	border: 1px solid rgb(99,101,105);
+	gridline-color: #d1d1d1;
+	selection-background-color: #a6a6a6;
+	margin-bottom: 10px;
+	border-radius: 5px;
+}
+
+QTableWidget::item {
+	padding: 5px;
+	border: none;
+}
+
+QHeaderView {
+	background-color: rgb(133,50,117);
+	font: 9pt &quot;Trebuchet MS&quot;;
+}
+
+QHeaderView::section {
+	background-color: rgb(133,50,117);
+	color: white;
+	padding: 5px;
+	border: 0.5px solid transparent;
+}
+
+QHeaderView::section:hover {
+	background-color: #ab4c7d;
+}
+
+QTableWidget::item:selected {
+	background-color: #636569;
+	color: white;
+}</string>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <property name="selectionBehavior">
+         <enum>QAbstractItemView::SelectRows</enum>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="horizontalHeaderCascadingSectionResizes">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderMinimumSectionSize">
+         <number>100</number>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>130</number>
+        </attribute>
+        <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderHighlightSections">
+         <bool>false</bool>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>ID</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>ITEM</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>ORDEM</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>LOTE</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>ÁREA RESPONSÁVEL</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>OPERAÇÃO</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>MOTIVO</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>QTDE.</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>QTDE. REPROVADA</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>ACAO</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>DATA</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>RESPONSÁVEL</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>S.RO</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>OBSERVAÇÃO</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_14">
+        <property name="minimumSize">
+         <size>
+          <width>170</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <property name="lineWidth">
+         <number>1</number>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_27">
+         <item>
+          <spacer name="verticalSpacer_7">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnAlterarRegistro">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	background-color: rgb(133,50,117);
+	color: white;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: #ab4c7d;
+}
+
+QPushButton:pressed {
+	background-color: #550044;
+}</string>
+           </property>
+           <property name="text">
+            <string>ALTERAR</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame_16">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>48</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #F9F8F9;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_19">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <spacer name="horizontalSpacer_6">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>745</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>44</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>200</width>
+           <height>44</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;img src=&quot;:/images/neo_Logo1.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </item>
    </layout>
@@ -200,6 +944,9 @@
              </property>
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_2">
+               <property name="spacing">
+                <number>5</number>
+               </property>
                <item>
                 <widget class="QLabel" name="label_2">
                  <property name="minimumSize">
@@ -382,11 +1129,14 @@ font: 10pt &quot;KonsensLight&quot; bold;</string>
           </item>
           <item>
            <widget class="QStackedWidget" name="stackedWidget">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
             <property name="styleSheet">
              <string notr="true">background-color: #F9F8F9;</string>
             </property>
             <property name="currentIndex">
-             <number>1</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="page_geral">
              <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -405,8 +1155,7 @@ font: 10pt &quot;KonsensLight&quot; bold;</string>
                  </size>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">
-</string>
+                 <string notr="true"/>
                 </property>
                 <property name="frameShape">
                  <enum>QFrame::NoFrame</enum>
@@ -598,22 +1347,55 @@ color: #853275;</string>
                       <property name="verticalSpacing">
                        <number>0</number>
                       </property>
-                      <item row="2" column="1">
-                       <widget class="QLineEdit" name="lineEdit_5">
-                        <property name="maximumSize">
-                         <size>
-                          <width>16777215</width>
-                          <height>50</height>
-                         </size>
+                      <item row="0" column="0">
+                       <layout class="QVBoxLayout" name="verticalLayout_14">
+                        <property name="spacing">
+                         <number>5</number>
                         </property>
-                        <property name="font">
-                         <font>
-                          <family>KonsensRegular</family>
-                          <pointsize>12</pointsize>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">QLineEdit {
+                        <item>
+                         <widget class="QLabel" name="label_23">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>15</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>15</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>KonsensRegular</family>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">padding-left: 10px;</string>
+                          </property>
+                          <property name="text">
+                           <string>Data:*</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="lineEdit">
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>50</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>KonsensRegular</family>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QLineEdit {
 	border: 2px solid rgb(255,255,255);
 	padding: 15px;
 	border-radius: 5px;
@@ -627,63 +1409,63 @@ QLineEdit:hover {
 QLineEdit:focus {
 	border: 2px solid rgb(99,101,105);
 }</string>
-                        </property>
-                        <property name="placeholderText">
-                         <string>Item</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item row="4" column="0" colspan="2">
-                       <widget class="QLineEdit" name="lineEdit_6">
-                        <property name="maximumSize">
-                         <size>
-                          <width>16777215</width>
-                          <height>50</height>
-                         </size>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>KonsensRegular</family>
-                          <pointsize>12</pointsize>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">QLineEdit {
-	border: 2px solid rgb(255,255,255);
-	padding: 15px;
-	border-radius: 5px;
-	background-color: rgb(242,242,242);
-}
-
-QLineEdit:hover {
-	border: 2px solid rgb(167,168,169);
-}
-
-QLineEdit:focus {
-	border: 2px solid rgb(99,101,105);
-}</string>
-                        </property>
-                        <property name="placeholderText">
-                         <string>Ordem</string>
-                        </property>
-                       </widget>
+                          </property>
+                          <property name="placeholderText">
+                           <string>01/01/2024</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
                       </item>
                       <item row="0" column="1">
-                       <widget class="QLineEdit" name="lineEdit_2">
-                        <property name="maximumSize">
-                         <size>
-                          <width>16777215</width>
-                          <height>50</height>
-                         </size>
+                       <layout class="QVBoxLayout" name="verticalLayout_15">
+                        <property name="spacing">
+                         <number>5</number>
                         </property>
-                        <property name="font">
-                         <font>
-                          <family>KonsensRegular</family>
-                          <pointsize>12</pointsize>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">QLineEdit {
+                        <item>
+                         <widget class="QLabel" name="label_24">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>15</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>15</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>KonsensRegular</family>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">padding-left: 10px;</string>
+                          </property>
+                          <property name="text">
+                           <string>Planta:*</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="lineEdit_2">
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>50</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>KonsensRegular</family>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QLineEdit {
 	border: 2px solid rgb(255,255,255);
 	padding: 15px;
 	border-radius: 5px;
@@ -697,28 +1479,69 @@ QLineEdit:hover {
 QLineEdit:focus {
 	border: 2px solid rgb(99,101,105);
 }</string>
-                        </property>
-                        <property name="placeholderText">
-                         <string>Planta</string>
-                        </property>
-                       </widget>
+                          </property>
+                          <property name="placeholderText">
+                           <string>4400 / 4401</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
                       </item>
                       <item row="1" column="0" colspan="2">
-                       <widget class="QLineEdit" name="lineEdit_3">
-                        <property name="maximumSize">
-                         <size>
-                          <width>16777215</width>
-                          <height>50</height>
-                         </size>
+                       <layout class="QVBoxLayout" name="verticalLayout_16">
+                        <property name="spacing">
+                         <number>5</number>
                         </property>
-                        <property name="font">
-                         <font>
-                          <family>KonsensRegular</family>
-                          <pointsize>12</pointsize>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">QLineEdit {
+                        <item>
+                         <widget class="QLabel" name="label_25">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>15</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>15</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>KonsensRegular</family>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">padding-left: 10px;</string>
+                          </property>
+                          <property name="text">
+                           <string>Ordem:*</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="lineEdit_3">
+                          <property name="minimumSize">
+                           <size>
+                            <width>368</width>
+                            <height>0</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>50</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>KonsensRegular</family>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QLineEdit {
 	border: 2px solid rgb(255,255,255);
 	padding: 15px;
 	border-radius: 5px;
@@ -732,28 +1555,63 @@ QLineEdit:hover {
 QLineEdit:focus {
 	border: 2px solid rgb(99,101,105);
 }</string>
-                        </property>
-                        <property name="placeholderText">
-                         <string>Ordem</string>
-                        </property>
-                       </widget>
+                          </property>
+                          <property name="placeholderText">
+                           <string>501020304</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
                       </item>
                       <item row="2" column="0">
-                       <widget class="QLineEdit" name="lineEdit_4">
-                        <property name="maximumSize">
-                         <size>
-                          <width>16777215</width>
-                          <height>50</height>
-                         </size>
+                       <layout class="QVBoxLayout" name="verticalLayout_17">
+                        <property name="spacing">
+                         <number>5</number>
                         </property>
-                        <property name="font">
-                         <font>
-                          <family>KonsensRegular</family>
-                          <pointsize>12</pointsize>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">QLineEdit {
+                        <item>
+                         <widget class="QLabel" name="label_26">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>15</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>15</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>KonsensRegular</family>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">padding-left: 10px;</string>
+                          </property>
+                          <property name="text">
+                           <string>Lote:*</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="lineEdit_4">
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>50</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>KonsensRegular</family>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QLineEdit {
 	border: 2px solid rgb(255,255,255);
 	padding: 15px;
 	border-radius: 5px;
@@ -767,28 +1625,139 @@ QLineEdit:hover {
 QLineEdit:focus {
 	border: 2px solid rgb(99,101,105);
 }</string>
+                          </property>
+                          <property name="placeholderText">
+                           <string>ABC12</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                      <item row="2" column="1">
+                       <layout class="QVBoxLayout" name="verticalLayout_18">
+                        <property name="spacing">
+                         <number>5</number>
                         </property>
-                        <property name="placeholderText">
-                         <string>Lote</string>
-                        </property>
-                       </widget>
+                        <item>
+                         <widget class="QLabel" name="label_27">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>15</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>15</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>KonsensRegular</family>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">padding-left: 10px;</string>
+                          </property>
+                          <property name="text">
+                           <string>Item:*</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="lineEdit_5">
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>50</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>KonsensRegular</family>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QLineEdit {
+	border: 2px solid rgb(255,255,255);
+	padding: 15px;
+	border-radius: 5px;
+	background-color: rgb(242,242,242);
+}
+
+QLineEdit:hover {
+	border: 2px solid rgb(167,168,169);
+}
+
+QLineEdit:focus {
+	border: 2px solid rgb(99,101,105);
+}</string>
+                          </property>
+                          <property name="placeholderText">
+                           <string>109.XXX-X</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
                       </item>
                       <item row="3" column="0" colspan="2">
-                       <widget class="QComboBox" name="comboBox">
-                        <property name="maximumSize">
-                         <size>
-                          <width>16777215</width>
-                          <height>50</height>
-                         </size>
+                       <layout class="QVBoxLayout" name="verticalLayout_19">
+                        <property name="spacing">
+                         <number>5</number>
                         </property>
-                        <property name="font">
-                         <font>
-                          <family>KonsensRegular</family>
-                          <pointsize>12</pointsize>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">QComboBox {
+                        <item>
+                         <widget class="QLabel" name="label_28">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>15</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>15</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>KonsensRegular</family>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">padding-left: 10px;</string>
+                          </property>
+                          <property name="text">
+                           <string>Área Responsável pela identificação:*</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QComboBox" name="comboBox">
+                          <property name="minimumSize">
+                           <size>
+                            <width>368</width>
+                            <height>0</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>50</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>KonsensRegular</family>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QComboBox {
 	border: 2px solid rgb(255,255,255);
 	padding: 15px;
 	border-radius: 5px;
@@ -802,43 +1771,69 @@ QComboBox:hover {
 QComboBox:focus {
 	border: 2px solid rgb(99,101,105);
 }</string>
-                        </property>
-                        <property name="placeholderText">
-                         <string>Área responsável pela identificação</string>
-                        </property>
-                        <item>
-                         <property name="text">
-                          <string>1</string>
-                         </property>
+                          </property>
+                          <property name="placeholderText">
+                           <string>Selecione uma opção..</string>
+                          </property>
+                         </widget>
                         </item>
-                        <item>
-                         <property name="text">
-                          <string>2</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>3</string>
-                         </property>
-                        </item>
-                       </widget>
+                       </layout>
                       </item>
-                      <item row="0" column="0">
-                       <widget class="QLineEdit" name="lineEdit">
-                        <property name="maximumSize">
-                         <size>
-                          <width>16777215</width>
-                          <height>50</height>
-                         </size>
+                      <item row="4" column="0" colspan="2">
+                       <layout class="QVBoxLayout" name="verticalLayout_20">
+                        <property name="spacing">
+                         <number>5</number>
                         </property>
-                        <property name="font">
-                         <font>
-                          <family>KonsensRegular</family>
-                          <pointsize>12</pointsize>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">QLineEdit {
+                        <item>
+                         <widget class="QLabel" name="label_29">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>15</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>15</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>KonsensRegular</family>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">padding-left: 10px;</string>
+                          </property>
+                          <property name="text">
+                           <string>Responsável pela identificação:*</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="lineEdit_6">
+                          <property name="minimumSize">
+                           <size>
+                            <width>368</width>
+                            <height>0</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>50</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>KonsensRegular</family>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QLineEdit {
 	border: 2px solid rgb(255,255,255);
 	padding: 15px;
 	border-radius: 5px;
@@ -852,11 +1847,13 @@ QLineEdit:hover {
 QLineEdit:focus {
 	border: 2px solid rgb(99,101,105);
 }</string>
-                        </property>
-                        <property name="placeholderText">
-                         <string>Data</string>
-                        </property>
-                       </widget>
+                          </property>
+                          <property name="placeholderText">
+                           <string>u123XXX</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
                       </item>
                       <item row="5" column="1">
                        <widget class="QPushButton" name="btn_DadoGerais">
@@ -1091,14 +2088,11 @@ color: #853275;</string>
                    <property name="frameShadow">
                     <enum>QFrame::Raised</enum>
                    </property>
-                   <layout class="QHBoxLayout" name="horizontalLayout_11">
+                   <layout class="QHBoxLayout" name="horizontalLayout_17">
                     <item>
                      <layout class="QGridLayout" name="gridLayout_2">
                       <property name="leftMargin">
                        <number>10</number>
-                      </property>
-                      <property name="topMargin">
-                       <number>0</number>
                       </property>
                       <property name="rightMargin">
                        <number>10</number>
@@ -1112,86 +2106,55 @@ color: #853275;</string>
                       <property name="verticalSpacing">
                        <number>0</number>
                       </property>
-                      <item row="1" column="0" colspan="2">
-                       <widget class="QComboBox" name="comboBox_3">
-                        <property name="font">
-                         <font>
-                          <family>KonsensRegular</family>
-                          <pointsize>12</pointsize>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">QComboBox {
-	border: 2px solid rgb(255,255,255);
-	padding: 15px;
-	border-radius: 5px;
-	background-color: rgb(242,242,242);
-}
-
-QComboBox:hover {
-	border: 2px solid rgb(167,168,169);
-}
-
-QComboBox:focus {
-	border: 2px solid rgb(99,101,105);
-}</string>
-                        </property>
-                        <property name="placeholderText">
-                         <string>Área Responsável da NC</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item row="2" column="0" colspan="2">
-                       <widget class="QComboBox" name="comboBox_2">
-                        <property name="maximumSize">
-                         <size>
-                          <width>16777215</width>
-                          <height>50</height>
-                         </size>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>KonsensRegular</family>
-                          <pointsize>12</pointsize>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">QComboBox {
-	border: 2px solid rgb(255,255,255);
-	padding: 15px;
-	border-radius: 5px;
-	background-color: rgb(242,242,242);
-}
-
-QComboBox:hover {
-	border: 2px solid rgb(167,168,169);
-}
-
-QComboBox:focus {
-	border: 2px solid rgb(99,101,105);
-}</string>
-                        </property>
-                        <property name="placeholderText">
-                         <string>Motivo</string>
-                        </property>
-                       </widget>
-                      </item>
                       <item row="0" column="0">
-                       <widget class="QLineEdit" name="lineEdit_12">
-                        <property name="maximumSize">
-                         <size>
-                          <width>16777215</width>
-                          <height>50</height>
-                         </size>
+                       <layout class="QVBoxLayout" name="verticalLayout_21">
+                        <property name="spacing">
+                         <number>5</number>
                         </property>
-                        <property name="font">
-                         <font>
-                          <family>KonsensRegular</family>
-                          <pointsize>12</pointsize>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">QLineEdit {
+                        <item>
+                         <widget class="QLabel" name="label_30">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>15</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>15</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>KonsensRegular</family>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">padding-left: 10px;</string>
+                          </property>
+                          <property name="text">
+                           <string>Qtde. Total:*</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="lineEdit_12">
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>50</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>KonsensRegular</family>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QLineEdit {
 	border: 2px solid rgb(255,255,255);
 	padding: 15px;
 	border-radius: 5px;
@@ -1205,63 +2168,63 @@ QLineEdit:hover {
 QLineEdit:focus {
 	border: 2px solid rgb(99,101,105);
 }</string>
-                        </property>
-                        <property name="placeholderText">
-                         <string>Qtde. Total</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item row="3" column="0" colspan="2">
-                       <widget class="QLineEdit" name="lineEdit_8">
-                        <property name="maximumSize">
-                         <size>
-                          <width>16777215</width>
-                          <height>50</height>
-                         </size>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>KonsensRegular</family>
-                          <pointsize>12</pointsize>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">QLineEdit {
-	border: 2px solid rgb(255,255,255);
-	padding: 15px;
-	border-radius: 5px;
-	background-color: rgb(242,242,242);
-}
-
-QLineEdit:hover {
-	border: 2px solid rgb(167,168,169);
-}
-
-QLineEdit:focus {
-	border: 2px solid rgb(99,101,105);
-}</string>
-                        </property>
-                        <property name="placeholderText">
-                         <string>Ação a ser tomada</string>
-                        </property>
-                       </widget>
+                          </property>
+                          <property name="placeholderText">
+                           <string>100</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
                       </item>
                       <item row="0" column="1">
-                       <widget class="QLineEdit" name="lineEdit_9">
-                        <property name="maximumSize">
-                         <size>
-                          <width>16777215</width>
-                          <height>50</height>
-                         </size>
+                       <layout class="QVBoxLayout" name="verticalLayout_22">
+                        <property name="spacing">
+                         <number>5</number>
                         </property>
-                        <property name="font">
-                         <font>
-                          <family>KonsensRegular</family>
-                          <pointsize>12</pointsize>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">QLineEdit {
+                        <item>
+                         <widget class="QLabel" name="label_31">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>15</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>15</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>KonsensRegular</family>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">padding-left: 10px;</string>
+                          </property>
+                          <property name="text">
+                           <string>Qtde. Reprovada:*</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="lineEdit_9">
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>50</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>KonsensRegular</family>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QLineEdit {
 	border: 2px solid rgb(255,255,255);
 	padding: 15px;
 	border-radius: 5px;
@@ -1275,69 +2238,291 @@ QLineEdit:hover {
 QLineEdit:focus {
 	border: 2px solid rgb(99,101,105);
 }</string>
-                        </property>
-                        <property name="placeholderText">
-                         <string>Qtde. Reprovada</string>
-                        </property>
-                       </widget>
+                          </property>
+                          <property name="placeholderText">
+                           <string>50</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
                       </item>
-                      <item row="5" column="1">
-                       <widget class="QPushButton" name="btn_DadosNcs">
-                        <property name="maximumSize">
-                         <size>
-                          <width>16777215</width>
-                          <height>35</height>
-                         </size>
+                      <item row="1" column="0" colspan="2">
+                       <layout class="QVBoxLayout" name="verticalLayout_23">
+                        <property name="spacing">
+                         <number>5</number>
                         </property>
-                        <property name="font">
-                         <font>
-                          <family>KonsensBold</family>
-                          <pointsize>12</pointsize>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">QPushButton {
-	background-color: rgb(133,50,117);
-	color: white;
-	padding: 10px;
+                        <item>
+                         <widget class="QLabel" name="label_32">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>15</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>15</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>KonsensRegular</family>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">padding-left: 10px;</string>
+                          </property>
+                          <property name="text">
+                           <string>Áres responsável da NC:*</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QComboBox" name="comboBox_3">
+                          <property name="minimumSize">
+                           <size>
+                            <width>368</width>
+                            <height>0</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>KonsensRegular</family>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QComboBox {
+	border: 2px solid rgb(255,255,255);
+	padding: 15px;
 	border-radius: 5px;
+	background-color: rgb(242,242,242);
 }
 
-QPushButton:hover {
-	background-color: #ab4c7d;
+QComboBox:hover {
+	border: 2px solid rgb(167,168,169);
 }
 
-QPushButton:pressed {
-	background-color: #550044;
+QComboBox:focus {
+	border: 2px solid rgb(99,101,105);
 }</string>
+                          </property>
+                          <property name="placeholderText">
+                           <string>Selecione uma opção..</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                      <item row="2" column="0" colspan="2">
+                       <layout class="QVBoxLayout" name="verticalLayout_24">
+                        <property name="spacing">
+                         <number>5</number>
                         </property>
-                        <property name="text">
-                         <string>AVANÇAR</string>
+                        <item>
+                         <widget class="QLabel" name="label_33">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>15</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>15</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>KonsensRegular</family>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">padding-left: 10px;</string>
+                          </property>
+                          <property name="text">
+                           <string>Motivo da NC:*</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QComboBox" name="comboBox_2">
+                          <property name="minimumSize">
+                           <size>
+                            <width>368</width>
+                            <height>0</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>50</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>KonsensRegular</family>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QComboBox {
+	border: 2px solid rgb(255,255,255);
+	padding: 15px;
+	border-radius: 5px;
+	background-color: rgb(242,242,242);
+}
+
+QComboBox:hover {
+	border: 2px solid rgb(167,168,169);
+}
+
+QComboBox:focus {
+	border: 2px solid rgb(99,101,105);
+}</string>
+                          </property>
+                          <property name="placeholderText">
+                           <string>Selecione uma opção..</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                      <item row="3" column="0" colspan="2">
+                       <layout class="QVBoxLayout" name="verticalLayout_25">
+                        <property name="spacing">
+                         <number>5</number>
                         </property>
-                       </widget>
+                        <item>
+                         <widget class="QLabel" name="label_34">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>15</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>15</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>KonsensRegular</family>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">padding-left: 10px;</string>
+                          </property>
+                          <property name="text">
+                           <string>Ação a ser tomada:*</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="lineEdit_8">
+                          <property name="minimumSize">
+                           <size>
+                            <width>368</width>
+                            <height>0</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>50</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>KonsensRegular</family>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QLineEdit {
+	border: 2px solid rgb(255,255,255);
+	padding: 15px;
+	border-radius: 5px;
+	background-color: rgb(242,242,242);
+}
+
+QLineEdit:hover {
+	border: 2px solid rgb(167,168,169);
+}
+
+QLineEdit:focus {
+	border: 2px solid rgb(99,101,105);
+}</string>
+                          </property>
+                          <property name="placeholderText">
+                           <string>Retornou ao setor responsável</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
                       </item>
                       <item row="4" column="0" colspan="2">
-                       <widget class="QTextEdit" name="textEdit">
-                        <property name="minimumSize">
-                         <size>
-                          <width>0</width>
-                          <height>100</height>
-                         </size>
+                       <layout class="QVBoxLayout" name="verticalLayout_26">
+                        <property name="spacing">
+                         <number>5</number>
                         </property>
-                        <property name="maximumSize">
-                         <size>
-                          <width>16777215</width>
-                          <height>100</height>
-                         </size>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>KonsensRegular</family>
-                          <pointsize>12</pointsize>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">QTextEdit {
+                        <item>
+                         <widget class="QLabel" name="label_35">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>15</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>15</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>KonsensRegular</family>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">padding-left: 10px;</string>
+                          </property>
+                          <property name="text">
+                           <string>Observações:</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QTextEdit" name="textEdit">
+                          <property name="minimumSize">
+                           <size>
+                            <width>368</width>
+                            <height>100</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>100</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>KonsensRegular</family>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QTextEdit {
 	border: 2px solid rgb(255,255,255);
 	padding: 15px;
 	border-radius: 5px;
@@ -1352,22 +2537,29 @@ QTextEdit:hover {
 QTextEdit:focus {
 	border: 2px solid rgb(99,101,105);
 }</string>
-                        </property>
-                        <property name="placeholderText">
-                         <string>Observações..</string>
-                        </property>
-                       </widget>
+                          </property>
+                          <property name="placeholderText">
+                           <string>Escreva algo aqui..</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
                       </item>
-                      <item row="5" column="0">
-                       <widget class="QPushButton" name="btnVoltar1">
-                        <property name="font">
-                         <font>
-                          <family>KonsensLight</family>
-                          <pointsize>-1</pointsize>
-                         </font>
+                      <item row="5" column="0" colspan="2">
+                       <layout class="QHBoxLayout" name="horizontalLayout_11">
+                        <property name="spacing">
+                         <number>5</number>
                         </property>
-                        <property name="styleSheet">
-                         <string notr="true">QPushButton {
+                        <item>
+                         <widget class="QPushButton" name="btnVoltar1">
+                          <property name="font">
+                           <font>
+                            <family>KonsensLight</family>
+                            <pointsize>-1</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QPushButton {
 	background-color: #f0f0f0;
 	border: 1px solid #d0d0d0;
 	border-radius: 5px;
@@ -1382,11 +2574,48 @@ QPushButton:hover {
 QPushButton:pressed {
 	background-color: #c0c0c0;
 }</string>
-                        </property>
-                        <property name="text">
-                         <string>VOLTAR</string>
-                        </property>
-                       </widget>
+                          </property>
+                          <property name="text">
+                           <string>VOLTAR</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="btn_DadosNcs">
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>35</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>KonsensBold</family>
+                            <pointsize>12</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QPushButton {
+	background-color: rgb(133,50,117);
+	color: white;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: #ab4c7d;
+}
+
+QPushButton:pressed {
+	background-color: #550044;
+}</string>
+                          </property>
+                          <property name="text">
+                           <string>AVANÇAR</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
                       </item>
                      </layout>
                     </item>
@@ -1588,25 +2817,151 @@ color: #853275;</string>
                    </property>
                    <layout class="QHBoxLayout" name="horizontalLayout_13">
                     <item>
-                     <layout class="QGridLayout" name="gridLayout_3">
-                      <property name="leftMargin">
-                       <number>10</number>
-                      </property>
-                      <property name="topMargin">
-                       <number>0</number>
-                      </property>
-                      <property name="rightMargin">
-                       <number>10</number>
-                      </property>
-                      <property name="bottomMargin">
-                       <number>10</number>
-                      </property>
-                      <property name="horizontalSpacing">
-                       <number>20</number>
-                      </property>
-                      <property name="verticalSpacing">
-                       <number>0</number>
-                      </property>
+                     <layout class="QGridLayout" name="gridLayout_4">
+                      <item row="0" column="0" colspan="2">
+                       <widget class="QGroupBox" name="groupBox">
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>100</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>16777215</width>
+                          <height>100</height>
+                         </size>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <family>KonsensBook</family>
+                          <pointsize>10</pointsize>
+                          <italic>false</italic>
+                         </font>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QGroupBox {
+	border: 1px solid rgb(99,101,105);
+	border-radius: 6px;
+	margin-top: 6px;
+ }
+
+QGroupBox::title {
+	subcontrol-origin: margin;
+	subcontrol-position: top center;
+	padding: 0 3px;
+	background-color: rgb(99,101,105);
+	color: white;
+}</string>
+                        </property>
+                        <property name="title">
+                         <string>Deseja abrir S.RO?*</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                        </property>
+                        <property name="flat">
+                         <bool>false</bool>
+                        </property>
+                        <property name="checkable">
+                         <bool>false</bool>
+                        </property>
+                        <layout class="QHBoxLayout" name="horizontalLayout_15">
+                         <item>
+                          <spacer name="horizontalSpacer_2">
+                           <property name="orientation">
+                            <enum>Qt::Horizontal</enum>
+                           </property>
+                           <property name="sizeHint" stdset="0">
+                            <size>
+                             <width>134</width>
+                             <height>20</height>
+                            </size>
+                           </property>
+                          </spacer>
+                         </item>
+                         <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+                          <widget class="QRadioButton" name="radioButton">
+                           <property name="minimumSize">
+                            <size>
+                             <width>85</width>
+                             <height>0</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>85</width>
+                             <height>16777215</height>
+                            </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <family>KonsensRegular</family>
+                             <pointsize>12</pointsize>
+                            </font>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QRadioButton {
+	padding-left: 15%;
+}</string>
+                           </property>
+                           <property name="text">
+                            <string>SIM</string>
+                           </property>
+                           <property name="checkable">
+                            <bool>false</bool>
+                           </property>
+                           <property name="checked">
+                            <bool>false</bool>
+                           </property>
+                          </widget>
+                         </item>
+                         <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+                          <widget class="QRadioButton" name="radioButton_2">
+                           <property name="minimumSize">
+                            <size>
+                             <width>85</width>
+                             <height>0</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>85</width>
+                             <height>16777215</height>
+                            </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <family>KonsensRegular</family>
+                             <pointsize>12</pointsize>
+                            </font>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QRadioButton {
+	padding-left: 15%;
+}</string>
+                           </property>
+                           <property name="text">
+                            <string>NÃO</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <spacer name="horizontalSpacer_3">
+                           <property name="orientation">
+                            <enum>Qt::Horizontal</enum>
+                           </property>
+                           <property name="sizeHint" stdset="0">
+                            <size>
+                             <width>134</width>
+                             <height>20</height>
+                            </size>
+                           </property>
+                          </spacer>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
                       <item row="1" column="0" colspan="2">
                        <widget class="QGroupBox" name="groupBox_2">
                         <property name="minimumSize">
@@ -1623,13 +2978,13 @@ color: #853275;</string>
                         </property>
                         <property name="font">
                          <font>
-                          <family>KonsensLight</family>
+                          <family>KonsensBook</family>
                           <pointsize>10</pointsize>
                          </font>
                         </property>
                         <property name="styleSheet">
                          <string notr="true">QGroupBox {
-	border: 1px solid rgb(167,168,169);
+	border: 1px solid rgb(99,101,105);
 	border-radius: 6px;
 	margin-top: 6px;
  }
@@ -1638,14 +2993,14 @@ QGroupBox::title {
 	subcontrol-origin: margin;
 	subcontrol-position: top center;
 	padding: 0 3px;
-	background-color: rgb(167,168,169);
+	background-color: rgb(99,101,105);
 	color: white;
 }
 
 </string>
                         </property>
                         <property name="title">
-                         <string>Deseja enviar por e-mail?</string>
+                         <string>Deseja enviar por e-mail?*</string>
                         </property>
                         <layout class="QHBoxLayout" name="horizontalLayout_16">
                          <item>
@@ -1734,197 +3089,515 @@ QGroupBox::title {
                        </widget>
                       </item>
                       <item row="2" column="0" colspan="2">
-                       <widget class="QComboBox" name="comboBox_4">
-                        <property name="maximumSize">
-                         <size>
-                          <width>16777215</width>
-                          <height>50</height>
-                         </size>
-                        </property>
-                        <property name="font">
-                         <font>
-                          <family>KonsensRegular</family>
-                          <pointsize>12</pointsize>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">QComboBox {
-	border: 2px solid rgb(255,255,255);
-	padding: 15px;
-	border-radius: 5px;
-	background-color: rgb(242,242,242);
-}
-
-QComboBox:hover {
-	border: 2px solid rgb(167,168,169);
-}
-
-QComboBox:focus {
-	border: 2px solid rgb(99,101,105);
-}</string>
-                        </property>
-                        <property name="placeholderText">
-                         <string>Selecione o e-mail que deseja enviar..</string>
-                        </property>
-                        <property name="duplicatesEnabled">
+                       <widget class="QGroupBox" name="groupBox_3">
+                        <property name="enabled">
                          <bool>true</bool>
                         </property>
-                        <item>
-                         <property name="text">
-                          <string>1</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>2</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>3</string>
-                         </property>
-                        </item>
-                       </widget>
-                      </item>
-                      <item row="0" column="0" colspan="2">
-                       <widget class="QGroupBox" name="groupBox">
                         <property name="minimumSize">
                          <size>
                           <width>0</width>
-                          <height>100</height>
+                          <height>200</height>
                          </size>
                         </property>
                         <property name="maximumSize">
                          <size>
                           <width>16777215</width>
-                          <height>100</height>
+                          <height>200</height>
                          </size>
                         </property>
                         <property name="font">
                          <font>
-                          <family>KonsensLight</family>
+                          <family>KonsensBook</family>
                           <pointsize>10</pointsize>
-                          <italic>false</italic>
                          </font>
                         </property>
                         <property name="styleSheet">
                          <string notr="true">QGroupBox {
-	border: 1px solid rgb(167,168,169);
-	border-radius: 6px;
+	border: 1px solid rgb(99,101,105);
+	border-left: 1px solid transparent;
+	border-right: 2px solid transparent;
+	border-bottom: 1px solid transparent;
 	margin-top: 6px;
+	padding: 5px;
  }
 
 QGroupBox::title {
 	subcontrol-origin: margin;
-	subcontrol-position: top center;
+	subcontrol-position: top left;
 	padding: 0 3px;
-	background-color: rgb(167,168,169);
+	background-color: rgb(99,101,105);
 	color: white;
-}</string>
+}
+</string>
                         </property>
                         <property name="title">
-                         <string>Deseja abrir S.RO?</string>
+                         <string>Selecione os e-mails que deseja enviar:</string>
                         </property>
-                        <property name="alignment">
-                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-                        </property>
-                        <property name="flat">
-                         <bool>false</bool>
-                        </property>
-                        <property name="checkable">
-                         <bool>false</bool>
-                        </property>
-                        <layout class="QHBoxLayout" name="horizontalLayout_15">
-                         <item>
-                          <spacer name="horizontalSpacer_2">
-                           <property name="orientation">
-                            <enum>Qt::Horizontal</enum>
-                           </property>
-                           <property name="sizeHint" stdset="0">
-                            <size>
-                             <width>134</width>
-                             <height>20</height>
-                            </size>
-                           </property>
-                          </spacer>
-                         </item>
-                         <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
-                          <widget class="QRadioButton" name="radioButton">
-                           <property name="minimumSize">
-                            <size>
-                             <width>85</width>
-                             <height>0</height>
-                            </size>
-                           </property>
-                           <property name="maximumSize">
-                            <size>
-                             <width>85</width>
-                             <height>16777215</height>
-                            </size>
-                           </property>
-                           <property name="font">
-                            <font>
-                             <family>KonsensRegular</family>
-                             <pointsize>12</pointsize>
-                            </font>
-                           </property>
-                           <property name="styleSheet">
-                            <string notr="true">QRadioButton {
-	padding-left: 15%;
-}</string>
-                           </property>
-                           <property name="text">
-                            <string>SIM</string>
-                           </property>
-                           <property name="checked">
+                        <layout class="QGridLayout" name="gridLayout_3">
+                         <property name="leftMargin">
+                          <number>10</number>
+                         </property>
+                         <property name="topMargin">
+                          <number>20</number>
+                         </property>
+                         <property name="rightMargin">
+                          <number>10</number>
+                         </property>
+                         <property name="bottomMargin">
+                          <number>0</number>
+                         </property>
+                         <property name="spacing">
+                          <number>10</number>
+                         </property>
+                         <item row="0" column="0">
+                          <widget class="QCheckBox" name="checkBox">
+                           <property name="enabled">
                             <bool>true</bool>
                            </property>
-                          </widget>
-                         </item>
-                         <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
-                          <widget class="QRadioButton" name="radioButton_2">
-                           <property name="minimumSize">
-                            <size>
-                             <width>85</width>
-                             <height>0</height>
-                            </size>
-                           </property>
-                           <property name="maximumSize">
-                            <size>
-                             <width>85</width>
-                             <height>16777215</height>
-                            </size>
-                           </property>
                            <property name="font">
                             <font>
-                             <family>KonsensRegular</family>
+                             <family>KonsensBook</family>
                              <pointsize>12</pointsize>
+                             <underline>false</underline>
                             </font>
                            </property>
                            <property name="styleSheet">
-                            <string notr="true">QRadioButton {
-	padding-left: 15%;
-}</string>
+                            <string notr="true">QCheckBox {
+	spacing: 5px;
+	padding: 5px;
+}
+
+QCheckBox::indicator {
+	border-radius: 2px;
+	border: 1px solid black;
+	background-color: transparent;
+}
+
+QCheckBox::indicator:hover {
+	border: 1px solid #853275;
+}
+
+QCheckBox::indicator:checked {
+	border-radius: 2px;
+	border: 1px solid black;
+	background-color: #636569;
+}
+
+QCheckBox::indicator:checked:hover {
+	border: 1px solid #853275;
+}
+</string>
                            </property>
                            <property name="text">
-                            <string>NÃO</string>
+                            <string>Acabamento</string>
+                           </property>
+                           <property name="checked">
+                            <bool>false</bool>
+                           </property>
+                           <property name="autoRepeat">
+                            <bool>false</bool>
                            </property>
                           </widget>
                          </item>
-                         <item>
-                          <spacer name="horizontalSpacer_3">
-                           <property name="orientation">
-                            <enum>Qt::Horizontal</enum>
+                         <item row="0" column="1">
+                          <widget class="QCheckBox" name="checkBox_5">
+                           <property name="font">
+                            <font>
+                             <family>KonsensBook</family>
+                             <pointsize>12</pointsize>
+                             <underline>false</underline>
+                            </font>
                            </property>
-                           <property name="sizeHint" stdset="0">
-                            <size>
-                             <width>134</width>
-                             <height>20</height>
-                            </size>
+                           <property name="styleSheet">
+                            <string notr="true">QCheckBox {
+	spacing: 5px;
+	padding: 5px;
+}
+
+QCheckBox::indicator {
+	border-radius: 2px;
+	border: 1px solid black;
+	background-color: transparent;
+}
+
+QCheckBox::indicator:hover {
+	border: 1px solid #853275;
+}
+
+QCheckBox::indicator:checked {
+	border-radius: 2px;
+	border: 1px solid black;
+	background-color: #636569;
+}
+
+QCheckBox::indicator:checked:hover {
+	border: 1px solid #853275;
+}</string>
                            </property>
-                          </spacer>
+                           <property name="text">
+                            <string>TNC</string>
+                           </property>
+                           <property name="checked">
+                            <bool>false</bool>
+                           </property>
+                           <property name="autoRepeat">
+                            <bool>false</bool>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="0" column="2">
+                          <widget class="QCheckBox" name="checkBox_9">
+                           <property name="font">
+                            <font>
+                             <family>KonsensBook</family>
+                             <pointsize>12</pointsize>
+                             <underline>false</underline>
+                            </font>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QCheckBox {
+	spacing: 5px;
+	padding: 5px;
+}
+
+QCheckBox::indicator {
+	border-radius: 2px;
+	border: 1px solid black;
+	background-color: transparent;
+}
+
+QCheckBox::indicator:hover {
+	border: 1px solid #853275;
+}
+
+QCheckBox::indicator:checked {
+	border-radius: 2px;
+	border: 1px solid black;
+	background-color: #636569;
+}
+
+QCheckBox::indicator:checked:hover {
+	border: 1px solid #853275;
+}</string>
+                           </property>
+                           <property name="text">
+                            <string>CNC</string>
+                           </property>
+                           <property name="checked">
+                            <bool>false</bool>
+                           </property>
+                           <property name="autoRepeat">
+                            <bool>false</bool>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="1" column="0">
+                          <widget class="QCheckBox" name="checkBox_2">
+                           <property name="font">
+                            <font>
+                             <family>KonsensBook</family>
+                             <pointsize>12</pointsize>
+                             <underline>false</underline>
+                            </font>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QCheckBox {
+	spacing: 5px;
+	padding: 5px;
+}
+
+QCheckBox::indicator {
+	border-radius: 2px;
+	border: 1px solid black;
+	background-color: transparent;
+}
+
+QCheckBox::indicator:hover {
+	border: 1px solid #853275;
+}
+
+QCheckBox::indicator:checked {
+	border-radius: 2px;
+	border: 1px solid black;
+	background-color: #636569;
+}
+
+QCheckBox::indicator:checked:hover {
+	border: 1px solid #853275;
+}</string>
+                           </property>
+                           <property name="text">
+                            <string>Higienização</string>
+                           </property>
+                           <property name="checked">
+                            <bool>false</bool>
+                           </property>
+                           <property name="autoRepeat">
+                            <bool>false</bool>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="1" column="1">
+                          <widget class="QCheckBox" name="checkBox_6">
+                           <property name="font">
+                            <font>
+                             <family>KonsensBook</family>
+                             <pointsize>12</pointsize>
+                             <underline>false</underline>
+                            </font>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QCheckBox {
+	spacing: 5px;
+	padding: 5px;
+}
+
+QCheckBox::indicator {
+	border-radius: 2px;
+	border: 1px solid black;
+	background-color: transparent;
+}
+
+QCheckBox::indicator:hover {
+	border: 1px solid #853275;
+}
+
+QCheckBox::indicator:checked {
+	border-radius: 2px;
+	border: 1px solid black;
+	background-color: #636569;
+}
+
+QCheckBox::indicator:checked:hover {
+	border: 1px solid #853275;
+}</string>
+                           </property>
+                           <property name="text">
+                            <string>Recebimento</string>
+                           </property>
+                           <property name="checked">
+                            <bool>false</bool>
+                           </property>
+                           <property name="autoRepeat">
+                            <bool>false</bool>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="1" column="2">
+                          <widget class="QCheckBox" name="checkBox_7">
+                           <property name="font">
+                            <font>
+                             <family>KonsensBook</family>
+                             <pointsize>12</pointsize>
+                             <underline>false</underline>
+                            </font>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QCheckBox {
+	spacing: 5px;
+	padding: 5px;
+}
+
+QCheckBox::indicator {
+	border-radius: 2px;
+	border: 1px solid black;
+	background-color: transparent;
+}
+
+QCheckBox::indicator:hover {
+	border: 1px solid #853275;
+}
+
+QCheckBox::indicator:checked {
+	border-radius: 2px;
+	border: 1px solid black;
+	background-color: #636569;
+}
+
+QCheckBox::indicator:checked:hover {
+	border: 1px solid #853275;
+}</string>
+                           </property>
+                           <property name="text">
+                            <string>Usinagem</string>
+                           </property>
+                           <property name="checked">
+                            <bool>false</bool>
+                           </property>
+                           <property name="autoRepeat">
+                            <bool>false</bool>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="2" column="0">
+                          <widget class="QCheckBox" name="checkBox_3">
+                           <property name="font">
+                            <font>
+                             <family>KonsensBook</family>
+                             <pointsize>12</pointsize>
+                             <underline>false</underline>
+                            </font>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QCheckBox {
+	spacing: 5px;
+	padding: 5px;
+}
+
+QCheckBox::indicator {
+	border-radius: 2px;
+	border: 1px solid black;
+	background-color: transparent;
+}
+
+QCheckBox::indicator:hover {
+	border: 1px solid #853275;
+}
+
+QCheckBox::indicator:checked {
+	border-radius: 2px;
+	border: 1px solid black;
+	background-color: #636569;
+}
+
+QCheckBox::indicator:checked:hover {
+	border: 1px solid #853275;
+}</string>
+                           </property>
+                           <property name="text">
+                            <string>TRS</string>
+                           </property>
+                           <property name="checked">
+                            <bool>false</bool>
+                           </property>
+                           <property name="autoRepeat">
+                            <bool>false</bool>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="2" column="1" colspan="2">
+                          <widget class="QCheckBox" name="checkBox_8">
+                           <property name="font">
+                            <font>
+                             <family>KonsensBook</family>
+                             <pointsize>12</pointsize>
+                             <underline>false</underline>
+                            </font>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QCheckBox {
+	spacing: 5px;
+	padding: 5px;
+}
+
+QCheckBox::indicator {
+	border-radius: 2px;
+	border: 1px solid black;
+	background-color: transparent;
+}
+
+QCheckBox::indicator:hover {
+	border: 1px solid #853275;
+}
+
+QCheckBox::indicator:checked {
+	border-radius: 2px;
+	border: 1px solid black;
+	background-color: #636569;
+}
+
+QCheckBox::indicator:checked:hover {
+	border: 1px solid #853275;
+}</string>
+                           </property>
+                           <property name="text">
+                            <string>USI - Analista e Líderes</string>
+                           </property>
+                           <property name="checked">
+                            <bool>false</bool>
+                           </property>
+                           <property name="autoRepeat">
+                            <bool>false</bool>
+                           </property>
+                          </widget>
+                         </item>
+                         <item row="3" column="0">
+                          <widget class="QCheckBox" name="checkBox_4">
+                           <property name="font">
+                            <font>
+                             <family>KonsensBook</family>
+                             <pointsize>12</pointsize>
+                             <underline>false</underline>
+                            </font>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QCheckBox {
+	spacing: 5px;
+	padding: 5px;
+}
+
+QCheckBox::indicator {
+	border-radius: 2px;
+	border: 1px solid black;
+	background-color: transparent;
+}
+
+QCheckBox::indicator:hover {
+	border: 1px solid #853275;
+}
+
+QCheckBox::indicator:checked {
+	border-radius: 2px;
+	border: 1px solid black;
+	background-color: #636569;
+}
+
+QCheckBox::indicator:checked:hover {
+	border: 1px solid #853275;
+}</string>
+                           </property>
+                           <property name="text">
+                            <string>PCP</string>
+                           </property>
+                           <property name="checked">
+                            <bool>false</bool>
+                           </property>
+                           <property name="autoRepeat">
+                            <bool>false</bool>
+                           </property>
+                          </widget>
                          </item>
                         </layout>
+                       </widget>
+                      </item>
+                      <item row="3" column="0">
+                       <widget class="QPushButton" name="btnVoltar2">
+                        <property name="font">
+                         <font>
+                          <family>KonsensLight</family>
+                          <pointsize>-1</pointsize>
+                         </font>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QPushButton {
+	background-color: #f0f0f0;
+	border: 1px solid #d0d0d0;
+	border-radius: 5px;
+	padding: 5px;
+ 	font-size: 16px;
+ }
+
+QPushButton:hover {
+	background-color: #e0e0e0;
+}
+
+QPushButton:pressed {
+	background-color: #c0c0c0;
+}</string>
+                        </property>
+                        <property name="text">
+                         <string>VOLTAR</string>
+                        </property>
                        </widget>
                       </item>
                       <item row="3" column="1">
@@ -1959,36 +3632,6 @@ QPushButton:pressed {
                         </property>
                         <property name="text">
                          <string>SALVAR</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item row="3" column="0">
-                       <widget class="QPushButton" name="btnVoltar2">
-                        <property name="font">
-                         <font>
-                          <family>KonsensLight</family>
-                          <pointsize>-1</pointsize>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">QPushButton {
-	background-color: #f0f0f0;
-	border: 1px solid #d0d0d0;
-	border-radius: 5px;
-	padding: 5px;
- 	font-size: 16px;
- }
-
-QPushButton:hover {
-	background-color: #e0e0e0;
-}
-
-QPushButton:pressed {
-	background-color: #c0c0c0;
-}</string>
-                        </property>
-                        <property name="text">
-                         <string>VOLTAR</string>
                         </property>
                        </widget>
                       </item>
