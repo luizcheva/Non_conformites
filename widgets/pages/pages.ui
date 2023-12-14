@@ -29,7 +29,7 @@
    <string notr="true">background-color: #ffffff;</string>
   </property>
   <property name="currentIndex">
-   <number>4</number>
+   <number>1</number>
   </property>
   <widget class="QWidget" name="page_home">
    <layout class="QVBoxLayout" name="verticalLayout"/>
@@ -130,7 +130,7 @@ QGroupBox::title {
            <number>0</number>
           </property>
           <item row="0" column="0">
-           <widget class="QComboBox" name="comboBox_4">
+           <widget class="QComboBox" name="cmb_catgPergunta">
             <property name="minimumSize">
              <size>
               <width>250</width>
@@ -185,7 +185,7 @@ QComboBox:focus {
            </spacer>
           </item>
           <item row="1" column="0">
-           <widget class="QLineEdit" name="lineEdit_7">
+           <widget class="QLineEdit" name="text_pergunta">
             <property name="minimumSize">
              <size>
               <width>250</width>
@@ -227,7 +227,7 @@ QLineEdit:focus {
            </widget>
           </item>
           <item row="1" column="1">
-           <widget class="QPushButton" name="pushButton_2">
+           <widget class="QPushButton" name="btn_buscarGeral">
             <property name="font">
              <font>
               <family>KonsensBook</family>
@@ -341,7 +341,7 @@ QGroupBox::title {
              </widget>
             </item>
             <item>
-             <widget class="QDateEdit" name="dateEdit">
+             <widget class="QDateEdit" name="pesq_periodoInicial">
               <property name="minimumSize">
                <size>
                 <width>250</width>
@@ -412,7 +412,7 @@ QDateEdit:focus {
              </widget>
             </item>
             <item>
-             <widget class="QDateEdit" name="dateEdit_2">
+             <widget class="QDateEdit" name="pesq_periodoFinal">
               <property name="minimumSize">
                <size>
                 <width>250</width>
@@ -452,7 +452,7 @@ QDateEdit:focus {
            </layout>
           </item>
           <item row="2" column="1">
-           <widget class="QPushButton" name="pushButton_3">
+           <widget class="QPushButton" name="btn_buscarPeriodo">
             <property name="font">
              <font>
               <family>KonsensBook</family>
@@ -561,6 +561,9 @@ QTableWidget::item:selected {
         <property name="selectionBehavior">
          <enum>QAbstractItemView::SelectRows</enum>
         </property>
+        <property name="rowCount">
+         <number>10</number>
+        </property>
         <attribute name="horizontalHeaderVisible">
          <bool>true</bool>
         </attribute>
@@ -582,6 +585,16 @@ QTableWidget::item:selected {
         <attribute name="verticalHeaderHighlightSections">
          <bool>false</bool>
         </attribute>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
         <column>
          <property name="text">
           <string>ID</string>
@@ -673,6 +686,24 @@ QTableWidget::item:selected {
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_27">
          <item>
+          <widget class="QLabel" name="lbl_totalRegistros">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Trebuchet MS</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>Total de registro(s): 0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
           <spacer name="verticalSpacer_7">
            <property name="orientation">
             <enum>Qt::Vertical</enum>
@@ -686,12 +717,67 @@ QTableWidget::item:selected {
           </spacer>
          </item>
          <item>
+          <widget class="QPushButton" name="btn_limparFiltros">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Trebuchet MS</family>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	background-color: transparent;
+	color: #636569;
+	padding: 5px;
+	border: None;
+	text-align: center;
+}
+
+
+QPushButton:hover {
+	color: #853275;
+}
+
+QPushButton:pressed {
+	color: #A7A8A9;
+}</string>
+           </property>
+           <property name="text">
+            <string>Limpar filtros</string>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QPushButton" name="btnAlterarRegistro">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <family>Trebuchet MS</family>
+             <pointsize>10</pointsize>
+            </font>
            </property>
            <property name="cursor">
             <cursorShape>PointingHandCursor</cursorShape>
@@ -2909,7 +2995,7 @@ QGroupBox::title {
                             <string>SIM</string>
                            </property>
                            <property name="checkable">
-                            <bool>false</bool>
+                            <bool>true</bool>
                            </property>
                            <property name="checked">
                             <bool>false</bool>

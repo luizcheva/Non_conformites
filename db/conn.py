@@ -35,9 +35,12 @@ class DataBase():
         coluna = column
         pesquisa = search
         self.cursor.execute(
-            f'SELECT * FROM {table} WHERE {coluna} = {pesquisa};'
+            f"SELECT * FROM {table} WHERE {coluna} LIKE '%{pesquisa}%';"
         )
-        data = self.cursor.fetchall()
+        columns = [column[0] for column in self.cursor.description]
+        data = [
+            dict(zip(columns, row)) for row in self.cursor.fetchall()
+        ]
         return data
 
     def selectColumn(self, table_name='nao_conformidade', column=''):

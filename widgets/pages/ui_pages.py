@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'pagesoLRsrV.ui'
+## Form generated from reading UI file 'pagesReXkYi.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.3
 ##
@@ -81,15 +81,15 @@ class Ui_StackedWidget(object):
         self.gridLayout_5.setHorizontalSpacing(20)
         self.gridLayout_5.setVerticalSpacing(0)
         self.gridLayout_5.setContentsMargins(20, 0, 20, 20)
-        self.comboBox_4 = QComboBox(self.groupBox_4)
-        self.comboBox_4.setObjectName(u"comboBox_4")
-        self.comboBox_4.setMinimumSize(QSize(250, 30))
-        self.comboBox_4.setMaximumSize(QSize(16777215, 30))
+        self.cmb_catgPergunta = QComboBox(self.groupBox_4)
+        self.cmb_catgPergunta.setObjectName(u"cmb_catgPergunta")
+        self.cmb_catgPergunta.setMinimumSize(QSize(250, 30))
+        self.cmb_catgPergunta.setMaximumSize(QSize(16777215, 30))
         font2 = QFont()
         font2.setFamilies([u"Trebuchet MS"])
         font2.setPointSize(10)
-        self.comboBox_4.setFont(font2)
-        self.comboBox_4.setStyleSheet(u"QComboBox {\n"
+        self.cmb_catgPergunta.setFont(font2)
+        self.cmb_catgPergunta.setStyleSheet(u"QComboBox {\n"
 "	border: 2px solid rgb(255,255,255);\n"
 "	padding: 5px;\n"
 "	padding-left: 15px;\n"
@@ -105,18 +105,18 @@ class Ui_StackedWidget(object):
 "	border: 2px solid rgb(99,101,105);\n"
 "}")
 
-        self.gridLayout_5.addWidget(self.comboBox_4, 0, 0, 1, 1)
+        self.gridLayout_5.addWidget(self.cmb_catgPergunta, 0, 0, 1, 1)
 
         self.horizontalSpacer_7 = QSpacerItem(91, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.gridLayout_5.addItem(self.horizontalSpacer_7, 0, 1, 1, 1)
 
-        self.lineEdit_7 = QLineEdit(self.groupBox_4)
-        self.lineEdit_7.setObjectName(u"lineEdit_7")
-        self.lineEdit_7.setMinimumSize(QSize(250, 30))
-        self.lineEdit_7.setMaximumSize(QSize(16777215, 30))
-        self.lineEdit_7.setFont(font2)
-        self.lineEdit_7.setStyleSheet(u"QLineEdit {\n"
+        self.text_pergunta = QLineEdit(self.groupBox_4)
+        self.text_pergunta.setObjectName(u"text_pergunta")
+        self.text_pergunta.setMinimumSize(QSize(250, 30))
+        self.text_pergunta.setMaximumSize(QSize(16777215, 30))
+        self.text_pergunta.setFont(font2)
+        self.text_pergunta.setStyleSheet(u"QLineEdit {\n"
 "	border: 2px solid rgb(255,255,255);\n"
 "	padding:5px;\n"
 "	padding-left: 15px;\n"
@@ -132,14 +132,14 @@ class Ui_StackedWidget(object):
 "	border: 2px solid rgb(99,101,105);\n"
 "}")
 
-        self.gridLayout_5.addWidget(self.lineEdit_7, 1, 0, 1, 1)
+        self.gridLayout_5.addWidget(self.text_pergunta, 1, 0, 1, 1)
 
-        self.pushButton_2 = QPushButton(self.groupBox_4)
-        self.pushButton_2.setObjectName(u"pushButton_2")
+        self.btn_buscarGeral = QPushButton(self.groupBox_4)
+        self.btn_buscarGeral.setObjectName(u"btn_buscarGeral")
         font3 = QFont()
         font3.setFamilies([u"KonsensBook"])
-        self.pushButton_2.setFont(font3)
-        self.pushButton_2.setStyleSheet(u"QPushButton {\n"
+        self.btn_buscarGeral.setFont(font3)
+        self.btn_buscarGeral.setStyleSheet(u"QPushButton {\n"
 "	background-color: #f0f0f0;\n"
 "	border: 1px solid #d0d0d0;\n"
 "	border-radius: 5px;\n"
@@ -155,7 +155,7 @@ class Ui_StackedWidget(object):
 "	background-color: #c0c0c0;\n"
 "}")
 
-        self.gridLayout_5.addWidget(self.pushButton_2, 1, 1, 1, 1)
+        self.gridLayout_5.addWidget(self.btn_buscarGeral, 1, 1, 1, 1)
 
 
         self.horizontalLayout_20.addWidget(self.groupBox_4)
@@ -197,12 +197,12 @@ class Ui_StackedWidget(object):
 
         self.verticalLayout_28.addWidget(self.label_36)
 
-        self.dateEdit = QDateEdit(self.groupBox_5)
-        self.dateEdit.setObjectName(u"dateEdit")
-        self.dateEdit.setMinimumSize(QSize(250, 30))
-        self.dateEdit.setMaximumSize(QSize(16777215, 30))
-        self.dateEdit.setFont(font2)
-        self.dateEdit.setStyleSheet(u"QDateEdit {\n"
+        self.pesq_periodoInicial = QDateEdit(self.groupBox_5)
+        self.pesq_periodoInicial.setObjectName(u"pesq_periodoInicial")
+        self.pesq_periodoInicial.setMinimumSize(QSize(250, 30))
+        self.pesq_periodoInicial.setMaximumSize(QSize(16777215, 30))
+        self.pesq_periodoInicial.setFont(font2)
+        self.pesq_periodoInicial.setStyleSheet(u"QDateEdit {\n"
 "	background-color: rgb(242,242,242);\n"
 "	border-radius: 5px;\n"
 "	padding-left: 15px;\n"
@@ -217,7 +217,7 @@ class Ui_StackedWidget(object):
 "	border: 2px solid rgb(99,101,105);\n"
 "}")
 
-        self.verticalLayout_28.addWidget(self.dateEdit)
+        self.verticalLayout_28.addWidget(self.pesq_periodoInicial)
 
 
         self.gridLayout_6.addLayout(self.verticalLayout_28, 0, 0, 1, 1)
@@ -235,12 +235,12 @@ class Ui_StackedWidget(object):
 
         self.verticalLayout_29.addWidget(self.label_37)
 
-        self.dateEdit_2 = QDateEdit(self.groupBox_5)
-        self.dateEdit_2.setObjectName(u"dateEdit_2")
-        self.dateEdit_2.setMinimumSize(QSize(250, 30))
-        self.dateEdit_2.setMaximumSize(QSize(16777215, 30))
-        self.dateEdit_2.setFont(font2)
-        self.dateEdit_2.setStyleSheet(u"QDateEdit {\n"
+        self.pesq_periodoFinal = QDateEdit(self.groupBox_5)
+        self.pesq_periodoFinal.setObjectName(u"pesq_periodoFinal")
+        self.pesq_periodoFinal.setMinimumSize(QSize(250, 30))
+        self.pesq_periodoFinal.setMaximumSize(QSize(16777215, 30))
+        self.pesq_periodoFinal.setFont(font2)
+        self.pesq_periodoFinal.setStyleSheet(u"QDateEdit {\n"
 "	background-color: rgb(242,242,242);\n"
 "	border-radius: 5px;\n"
 "	padding-left: 15px;\n"
@@ -255,15 +255,15 @@ class Ui_StackedWidget(object):
 "	border: 2px solid rgb(99,101,105);\n"
 "}")
 
-        self.verticalLayout_29.addWidget(self.dateEdit_2)
+        self.verticalLayout_29.addWidget(self.pesq_periodoFinal)
 
 
         self.gridLayout_6.addLayout(self.verticalLayout_29, 1, 0, 2, 1)
 
-        self.pushButton_3 = QPushButton(self.groupBox_5)
-        self.pushButton_3.setObjectName(u"pushButton_3")
-        self.pushButton_3.setFont(font3)
-        self.pushButton_3.setStyleSheet(u"QPushButton {\n"
+        self.btn_buscarPeriodo = QPushButton(self.groupBox_5)
+        self.btn_buscarPeriodo.setObjectName(u"btn_buscarPeriodo")
+        self.btn_buscarPeriodo.setFont(font3)
+        self.btn_buscarPeriodo.setStyleSheet(u"QPushButton {\n"
 "	background-color: #f0f0f0;\n"
 "	border: 1px solid #d0d0d0;\n"
 "	border-radius: 5px;\n"
@@ -279,7 +279,7 @@ class Ui_StackedWidget(object):
 "	background-color: #c0c0c0;\n"
 "}")
 
-        self.gridLayout_6.addWidget(self.pushButton_3, 2, 1, 1, 1)
+        self.gridLayout_6.addWidget(self.btn_buscarPeriodo, 2, 1, 1, 1)
 
 
         self.horizontalLayout_20.addWidget(self.groupBox_5)
@@ -326,6 +326,8 @@ class Ui_StackedWidget(object):
         self.tab_dados.setHorizontalHeaderItem(12, __qtablewidgetitem12)
         __qtablewidgetitem13 = QTableWidgetItem()
         self.tab_dados.setHorizontalHeaderItem(13, __qtablewidgetitem13)
+        if (self.tab_dados.rowCount() < 10):
+            self.tab_dados.setRowCount(10)
         self.tab_dados.setObjectName(u"tab_dados")
         font5 = QFont()
         font5.setFamilies([u"KonsensBook"])
@@ -368,6 +370,7 @@ class Ui_StackedWidget(object):
 "}")
         self.tab_dados.setEditTriggers(QAbstractItemView.NoEditTriggers)
         self.tab_dados.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.tab_dados.setRowCount(10)
         self.tab_dados.horizontalHeader().setVisible(True)
         self.tab_dados.horizontalHeader().setCascadingSectionResizes(False)
         self.tab_dados.horizontalHeader().setMinimumSectionSize(100)
@@ -386,9 +389,48 @@ class Ui_StackedWidget(object):
         self.frame_14.setLineWidth(1)
         self.verticalLayout_27 = QVBoxLayout(self.frame_14)
         self.verticalLayout_27.setObjectName(u"verticalLayout_27")
+        self.lbl_totalRegistros = QLabel(self.frame_14)
+        self.lbl_totalRegistros.setObjectName(u"lbl_totalRegistros")
+        self.lbl_totalRegistros.setMaximumSize(QSize(16777215, 30))
+        font6 = QFont()
+        font6.setFamilies([u"Trebuchet MS"])
+        self.lbl_totalRegistros.setFont(font6)
+
+        self.verticalLayout_27.addWidget(self.lbl_totalRegistros)
+
         self.verticalSpacer_7 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_27.addItem(self.verticalSpacer_7)
+
+        self.btn_limparFiltros = QPushButton(self.frame_14)
+        self.btn_limparFiltros.setObjectName(u"btn_limparFiltros")
+        self.btn_limparFiltros.setVisible(False)
+        self.btn_limparFiltros.setMaximumSize(QSize(16777215, 30))
+        font7 = QFont()
+        font7.setFamilies([u"Trebuchet MS"])
+        font7.setPointSize(9)
+        self.btn_limparFiltros.setFont(font7)
+        self.btn_limparFiltros.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_limparFiltros.setLayoutDirection(Qt.LeftToRight)
+        self.btn_limparFiltros.setStyleSheet(u"QPushButton {\n"
+"	background-color: transparent;\n"
+"	color: #636569;\n"
+"	padding: 5px;\n"
+"	border: None;\n"
+"	text-align: center;\n"
+"}\n"
+"\n"
+"\n"
+"QPushButton:hover {\n"
+"	color: #853275;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"	color: #A7A8A9;\n"
+"}")
+        self.btn_limparFiltros.setCheckable(False)
+
+        self.verticalLayout_27.addWidget(self.btn_limparFiltros)
 
         self.btnAlterarRegistro = QPushButton(self.frame_14)
         self.btnAlterarRegistro.setObjectName(u"btnAlterarRegistro")
@@ -397,6 +439,7 @@ class Ui_StackedWidget(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.btnAlterarRegistro.sizePolicy().hasHeightForWidth())
         self.btnAlterarRegistro.setSizePolicy(sizePolicy)
+        self.btnAlterarRegistro.setFont(font2)
         self.btnAlterarRegistro.setCursor(QCursor(Qt.PointingHandCursor))
         self.btnAlterarRegistro.setStyleSheet(u"QPushButton {\n"
 "	background-color: rgb(133,50,117);\n"
@@ -526,10 +569,10 @@ class Ui_StackedWidget(object):
         self.label_8.setObjectName(u"label_8")
         self.label_8.setMinimumSize(QSize(100, 0))
         self.label_8.setMaximumSize(QSize(100, 16777215))
-        font6 = QFont()
-        font6.setFamilies([u"KonsensRegular"])
-        font6.setPointSize(11)
-        self.label_8.setFont(font6)
+        font8 = QFont()
+        font8.setFamilies([u"KonsensRegular"])
+        font8.setPointSize(11)
+        self.label_8.setFont(font8)
 
         self.horizontalLayout_2.addWidget(self.label_8)
 
@@ -554,7 +597,7 @@ class Ui_StackedWidget(object):
         self.label_9.setObjectName(u"label_9")
         self.label_9.setMinimumSize(QSize(100, 0))
         self.label_9.setMaximumSize(QSize(100, 16777215))
-        self.label_9.setFont(font6)
+        self.label_9.setFont(font8)
         self.label_9.setStyleSheet(u"color: #e6e6e6;")
 
         self.horizontalLayout_3.addWidget(self.label_9)
@@ -580,7 +623,7 @@ class Ui_StackedWidget(object):
         self.label_10.setObjectName(u"label_10")
         self.label_10.setMinimumSize(QSize(100, 0))
         self.label_10.setMaximumSize(QSize(100, 16777215))
-        self.label_10.setFont(font6)
+        self.label_10.setFont(font8)
         self.label_10.setStyleSheet(u"color: #e6e6e6;")
 
         self.horizontalLayout_4.addWidget(self.label_10)
@@ -939,10 +982,10 @@ class Ui_StackedWidget(object):
         self.btn_DadoGerais = QPushButton(self.frame_7)
         self.btn_DadoGerais.setObjectName(u"btn_DadoGerais")
         self.btn_DadoGerais.setMaximumSize(QSize(16777215, 35))
-        font7 = QFont()
-        font7.setFamilies([u"KonsensBold"])
-        font7.setPointSize(12)
-        self.btn_DadoGerais.setFont(font7)
+        font9 = QFont()
+        font9.setFamilies([u"KonsensBold"])
+        font9.setPointSize(12)
+        self.btn_DadoGerais.setFont(font9)
         self.btn_DadoGerais.setStyleSheet(u"QPushButton {\n"
 "	background-color: rgb(133,50,117);\n"
 "	color: white;\n"
@@ -1281,9 +1324,9 @@ class Ui_StackedWidget(object):
         self.horizontalLayout_11.setObjectName(u"horizontalLayout_11")
         self.btnVoltar1 = QPushButton(self.frame_10)
         self.btnVoltar1.setObjectName(u"btnVoltar1")
-        font8 = QFont()
-        font8.setFamilies([u"KonsensLight"])
-        self.btnVoltar1.setFont(font8)
+        font10 = QFont()
+        font10.setFamilies([u"KonsensLight"])
+        self.btnVoltar1.setFont(font10)
         self.btnVoltar1.setStyleSheet(u"QPushButton {\n"
 "	background-color: #f0f0f0;\n"
 "	border: 1px solid #d0d0d0;\n"
@@ -1305,7 +1348,7 @@ class Ui_StackedWidget(object):
         self.btn_DadosNcs = QPushButton(self.frame_10)
         self.btn_DadosNcs.setObjectName(u"btn_DadosNcs")
         self.btn_DadosNcs.setMaximumSize(QSize(16777215, 35))
-        self.btn_DadosNcs.setFont(font7)
+        self.btn_DadosNcs.setFont(font9)
         self.btn_DadosNcs.setStyleSheet(u"QPushButton {\n"
 "	background-color: rgb(133,50,117);\n"
 "	color: white;\n"
@@ -1423,11 +1466,11 @@ class Ui_StackedWidget(object):
         self.group_SRo.setObjectName(u"group_SRo")
         self.group_SRo.setMinimumSize(QSize(0, 100))
         self.group_SRo.setMaximumSize(QSize(16777215, 100))
-        font9 = QFont()
-        font9.setFamilies([u"KonsensBook"])
-        font9.setPointSize(10)
-        font9.setItalic(False)
-        self.group_SRo.setFont(font9)
+        font11 = QFont()
+        font11.setFamilies([u"KonsensBook"])
+        font11.setPointSize(10)
+        font11.setItalic(False)
+        self.group_SRo.setFont(font11)
         self.group_SRo.setStyleSheet(u"QGroupBox {\n"
 "	border: 1px solid rgb(99,101,105);\n"
 "	border-radius: 6px;\n"
@@ -1458,7 +1501,7 @@ class Ui_StackedWidget(object):
         self.btnSimRo.setStyleSheet(u"QRadioButton {\n"
 "	padding-left: 15%;\n"
 "}")
-        self.btnSimRo.setCheckable(False)
+        self.btnSimRo.setCheckable(True)
         self.btnSimRo.setChecked(False)
 
         self.horizontalLayout_15.addWidget(self.btnSimRo, 0, Qt.AlignHCenter|Qt.AlignVCenter)
@@ -1485,10 +1528,10 @@ class Ui_StackedWidget(object):
         self.group_Email.setObjectName(u"group_Email")
         self.group_Email.setMinimumSize(QSize(0, 100))
         self.group_Email.setMaximumSize(QSize(16777215, 100))
-        font10 = QFont()
-        font10.setFamilies([u"KonsensBook"])
-        font10.setPointSize(10)
-        self.group_Email.setFont(font10)
+        font12 = QFont()
+        font12.setFamilies([u"KonsensBook"])
+        font12.setPointSize(10)
+        self.group_Email.setFont(font12)
         self.group_Email.setStyleSheet(u"QGroupBox {\n"
 "	border: 1px solid rgb(99,101,105);\n"
 "	border-radius: 6px;\n"
@@ -1540,7 +1583,7 @@ class Ui_StackedWidget(object):
         self.group_addressEmail.setEnabled(True)
         self.group_addressEmail.setMinimumSize(QSize(0, 200))
         self.group_addressEmail.setMaximumSize(QSize(16777215, 200))
-        self.group_addressEmail.setFont(font10)
+        self.group_addressEmail.setFont(font12)
         self.group_addressEmail.setStyleSheet(u"QGroupBox {\n"
 "	border: 1px solid rgb(99,101,105);\n"
 "	border-left: 1px solid transparent;\n"
@@ -1565,11 +1608,11 @@ class Ui_StackedWidget(object):
         self.check_acabamento = QCheckBox(self.group_addressEmail)
         self.check_acabamento.setObjectName(u"check_acabamento")
         self.check_acabamento.setEnabled(True)
-        font11 = QFont()
-        font11.setFamilies([u"KonsensBook"])
-        font11.setPointSize(12)
-        font11.setUnderline(False)
-        self.check_acabamento.setFont(font11)
+        font13 = QFont()
+        font13.setFamilies([u"KonsensBook"])
+        font13.setPointSize(12)
+        font13.setUnderline(False)
+        self.check_acabamento.setFont(font13)
         self.check_acabamento.setStyleSheet(u"QCheckBox {\n"
 "	spacing: 5px;\n"
 "	padding: 5px;\n"
@@ -1602,7 +1645,7 @@ class Ui_StackedWidget(object):
 
         self.check_tnc = QCheckBox(self.group_addressEmail)
         self.check_tnc.setObjectName(u"check_tnc")
-        self.check_tnc.setFont(font11)
+        self.check_tnc.setFont(font13)
         self.check_tnc.setStyleSheet(u"QCheckBox {\n"
 "	spacing: 5px;\n"
 "	padding: 5px;\n"
@@ -1634,7 +1677,7 @@ class Ui_StackedWidget(object):
 
         self.check_cnc = QCheckBox(self.group_addressEmail)
         self.check_cnc.setObjectName(u"check_cnc")
-        self.check_cnc.setFont(font11)
+        self.check_cnc.setFont(font13)
         self.check_cnc.setStyleSheet(u"QCheckBox {\n"
 "	spacing: 5px;\n"
 "	padding: 5px;\n"
@@ -1666,7 +1709,7 @@ class Ui_StackedWidget(object):
 
         self.check_higienizacao = QCheckBox(self.group_addressEmail)
         self.check_higienizacao.setObjectName(u"check_higienizacao")
-        self.check_higienizacao.setFont(font11)
+        self.check_higienizacao.setFont(font13)
         self.check_higienizacao.setStyleSheet(u"QCheckBox {\n"
 "	spacing: 5px;\n"
 "	padding: 5px;\n"
@@ -1698,7 +1741,7 @@ class Ui_StackedWidget(object):
 
         self.check_recebimento = QCheckBox(self.group_addressEmail)
         self.check_recebimento.setObjectName(u"check_recebimento")
-        self.check_recebimento.setFont(font11)
+        self.check_recebimento.setFont(font13)
         self.check_recebimento.setStyleSheet(u"QCheckBox {\n"
 "	spacing: 5px;\n"
 "	padding: 5px;\n"
@@ -1730,7 +1773,7 @@ class Ui_StackedWidget(object):
 
         self.check_usinagem = QCheckBox(self.group_addressEmail)
         self.check_usinagem.setObjectName(u"check_usinagem")
-        self.check_usinagem.setFont(font11)
+        self.check_usinagem.setFont(font13)
         self.check_usinagem.setStyleSheet(u"QCheckBox {\n"
 "	spacing: 5px;\n"
 "	padding: 5px;\n"
@@ -1762,7 +1805,7 @@ class Ui_StackedWidget(object):
 
         self.check_trs = QCheckBox(self.group_addressEmail)
         self.check_trs.setObjectName(u"check_trs")
-        self.check_trs.setFont(font11)
+        self.check_trs.setFont(font13)
         self.check_trs.setStyleSheet(u"QCheckBox {\n"
 "	spacing: 5px;\n"
 "	padding: 5px;\n"
@@ -1794,7 +1837,7 @@ class Ui_StackedWidget(object):
 
         self.check_usiAnaLid = QCheckBox(self.group_addressEmail)
         self.check_usiAnaLid.setObjectName(u"check_usiAnaLid")
-        self.check_usiAnaLid.setFont(font11)
+        self.check_usiAnaLid.setFont(font13)
         self.check_usiAnaLid.setStyleSheet(u"QCheckBox {\n"
 "	spacing: 5px;\n"
 "	padding: 5px;\n"
@@ -1826,7 +1869,7 @@ class Ui_StackedWidget(object):
 
         self.check_pcp = QCheckBox(self.group_addressEmail)
         self.check_pcp.setObjectName(u"check_pcp")
-        self.check_pcp.setFont(font11)
+        self.check_pcp.setFont(font13)
         self.check_pcp.setStyleSheet(u"QCheckBox {\n"
 "	spacing: 5px;\n"
 "	padding: 5px;\n"
@@ -1861,7 +1904,7 @@ class Ui_StackedWidget(object):
 
         self.btnVoltar2 = QPushButton(self.frame_13)
         self.btnVoltar2.setObjectName(u"btnVoltar2")
-        self.btnVoltar2.setFont(font8)
+        self.btnVoltar2.setFont(font10)
         self.btnVoltar2.setStyleSheet(u"QPushButton {\n"
 "	background-color: #f0f0f0;\n"
 "	border: 1px solid #d0d0d0;\n"
@@ -1883,7 +1926,7 @@ class Ui_StackedWidget(object):
         self.btn_Disposicao = QPushButton(self.frame_13)
         self.btn_Disposicao.setObjectName(u"btn_Disposicao")
         self.btn_Disposicao.setMaximumSize(QSize(16777215, 35))
-        self.btn_Disposicao.setFont(font7)
+        self.btn_Disposicao.setFont(font9)
         self.btn_Disposicao.setStyleSheet(u"QPushButton {\n"
 "	background-color: rgb(133,50,117);\n"
 "	color: white;\n"
@@ -1948,7 +1991,7 @@ class Ui_StackedWidget(object):
 
         self.retranslateUi(StackedWidget)
 
-        StackedWidget.setCurrentIndex(4)
+        StackedWidget.setCurrentIndex(1)
         self.stackedWidget.setCurrentIndex(2)
 
 
@@ -1958,13 +2001,13 @@ class Ui_StackedWidget(object):
     def retranslateUi(self, StackedWidget):
         StackedWidget.setWindowTitle(QCoreApplication.translate("StackedWidget", u"StackedWidget", None))
         self.groupBox_4.setTitle(QCoreApplication.translate("StackedWidget", u"PESQUISAR", None))
-        self.comboBox_4.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"Selecione uma categoria..", None))
-        self.lineEdit_7.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"Digite sua busca..", None))
-        self.pushButton_2.setText(QCoreApplication.translate("StackedWidget", u"BUSCAR", None))
+        self.cmb_catgPergunta.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"Selecione uma categoria..", None))
+        self.text_pergunta.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"Digite sua busca..", None))
+        self.btn_buscarGeral.setText(QCoreApplication.translate("StackedWidget", u"BUSCAR", None))
         self.groupBox_5.setTitle(QCoreApplication.translate("StackedWidget", u"FILTROS DE DATAS", None))
         self.label_36.setText(QCoreApplication.translate("StackedWidget", u"Per\u00edodo Inicial:", None))
         self.label_37.setText(QCoreApplication.translate("StackedWidget", u"Per\u00edodo Final:", None))
-        self.pushButton_3.setText(QCoreApplication.translate("StackedWidget", u"BUSCAR", None))
+        self.btn_buscarPeriodo.setText(QCoreApplication.translate("StackedWidget", u"BUSCAR", None))
         ___qtablewidgetitem = self.tab_dados.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("StackedWidget", u"ID", None));
         ___qtablewidgetitem1 = self.tab_dados.horizontalHeaderItem(1)
@@ -1993,6 +2036,8 @@ class Ui_StackedWidget(object):
         ___qtablewidgetitem12.setText(QCoreApplication.translate("StackedWidget", u"S.RO", None));
         ___qtablewidgetitem13 = self.tab_dados.horizontalHeaderItem(13)
         ___qtablewidgetitem13.setText(QCoreApplication.translate("StackedWidget", u"OBSERVA\u00c7\u00c3O", None));
+        self.lbl_totalRegistros.setText(QCoreApplication.translate("StackedWidget", u"Total de registro(s): 0", None))
+        self.btn_limparFiltros.setText(QCoreApplication.translate("StackedWidget", u"Limpar filtros", None))
         self.btnAlterarRegistro.setText(QCoreApplication.translate("StackedWidget", u"ALTERAR", None))
         self.label_4.setText(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p align=\"right\"><img src=\"images/neo_Logo1.png\"/></p></body></html>", None))
         self.label_3.setText(QCoreApplication.translate("StackedWidget", u"Deletar um registro", None))
