@@ -376,6 +376,20 @@ QDateEdit:focus {
 	border: 2px solid rgb(99,101,105);
 }</string>
               </property>
+              <property name="minimumDate">
+               <date>
+                <year>2023</year>
+                <month>1</month>
+                <day>1</day>
+               </date>
+              </property>
+              <property name="date">
+               <date>
+                <year>2023</year>
+                <month>1</month>
+                <day>1</day>
+               </date>
+              </property>
              </widget>
             </item>
            </layout>
@@ -446,6 +460,20 @@ QDateEdit:hover {
 QDateEdit:focus {
 	border: 2px solid rgb(99,101,105);
 }</string>
+              </property>
+              <property name="minimumDate">
+               <date>
+                <year>2023</year>
+                <month>1</month>
+                <day>1</day>
+               </date>
+              </property>
+              <property name="date">
+               <date>
+                <year>2023</year>
+                <month>1</month>
+                <day>1</day>
+               </date>
               </property>
              </widget>
             </item>
@@ -719,7 +747,7 @@ QTableWidget::item:selected {
          <item>
           <widget class="QPushButton" name="btn_limparFiltros">
            <property name="enabled">
-            <bool>false</bool>
+            <bool>true</bool>
            </property>
            <property name="maximumSize">
             <size>
@@ -1222,7 +1250,7 @@ font: 10pt &quot;KonsensLight&quot; bold;</string>
              <string notr="true">background-color: #F9F8F9;</string>
             </property>
             <property name="currentIndex">
-             <number>2</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="page_geral">
              <layout class="QHBoxLayout" name="horizontalLayout_7">

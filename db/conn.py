@@ -70,6 +70,22 @@ class DataBase():
         self.closeDB()
         return "OK"
 
+    def pesquisaPeriodo(
+        self, table_name='nao_conformidade', data_inicio='', data_fim=''
+    ):
+        dataInicio = str(datetime.strftime(data_inicio, '%Y-%m-%d'))
+        dataFim = (datetime.strftime(data_fim, '%Y-%m-%d'))
+        sql = (
+            f"SELECT * FROM {table_name} WHERE DATA >= '{dataInicio}' "
+            f"AND DATA <= '{dataFim}';"
+        )
+        self.cursor.execute(sql)
+        columns = [column[0] for column in self.cursor.description]
+        data = [
+            dict(zip(columns, row)) for row in self.cursor.fetchall()
+        ]
+        return data
+
     def closeDB(self):
         try:
             self.cursor.close
@@ -86,22 +102,3 @@ class DataBase():
         data_formatada = data_hora.strftime("%d/%m/%Y")
 
         return data_formatada
-
-
-if __name__ == '__main__':
-    db = DataBase()
-    consulta = db.selectTable()
-
-    for text in consulta:
-        data_ant = text["DATA"]
-        datac = db.convertDate(data_ant)
-        # print(datac)
-
-        try:
-            item_int = int(text["ITEM"])
-        except ValueError:
-            item_int = text["ITEM"]
-
-        print(item_int)
-
-    db.closeDB()

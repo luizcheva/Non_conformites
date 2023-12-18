@@ -1,9 +1,11 @@
 from widgets.pages.ui_pages import Ui_StackedWidget
-from PySide6.QtCore import Slot
+from PySide6.QtCore import Slot, QDate
 from PySide6.QtWidgets import QLabel
 from information import Message
 from db.insertDB import insertNew
 from widgets.requests import requestsBD
+from widgets.tables import tableEdit
+from widgets.combobox import UploadCB
 from datetime import datetime
 
 
@@ -93,4 +95,23 @@ class EventsBtn():
             self.ui_page.text_pergunta.text(),
             self.ui_page
         )
+        self.ui_page.btn_limparFiltros.setVisible(True)
+
+    def clearFil(self):
+        self.ui_page.cmb_catgPergunta.clear()
+        cb = UploadCB()
+        cb.fiedsBuscar(self.ui_page.cmb_catgPergunta)
+        self.ui_page.text_pergunta.clear()
+        self.ui_page.pesq_periodoInicial.setDate(QDate(2023, 1, 1))
+        self.ui_page.pesq_periodoFinal.setDate(QDate(2023, 1, 1))
+        tb = tableEdit(self.ui_page)
+        tb.carregaTable()
+        self.ui_page.btn_limparFiltros.setVisible(False)
+
+    def requestTime(self):
+        data_inicio = self.ui_page.pesq_periodoInicial.text()
+        data_fim = self.ui_page.pesq_periodoFinal.text()
+
+        request = requestsBD()
+        request.searchPeriodo(self.ui_page, data_inicio, data_fim)
         self.ui_page.btn_limparFiltros.setVisible(True)

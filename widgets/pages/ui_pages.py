@@ -202,6 +202,7 @@ class Ui_StackedWidget(object):
         self.pesq_periodoInicial.setMinimumSize(QSize(250, 30))
         self.pesq_periodoInicial.setMaximumSize(QSize(16777215, 30))
         self.pesq_periodoInicial.setFont(font2)
+        self.pesq_periodoInicial.setMinimumDate(QDate(2023, 1, 1))
         self.pesq_periodoInicial.setStyleSheet(u"QDateEdit {\n"
 "	background-color: rgb(242,242,242);\n"
 "	border-radius: 5px;\n"
@@ -240,6 +241,7 @@ class Ui_StackedWidget(object):
         self.pesq_periodoFinal.setMinimumSize(QSize(250, 30))
         self.pesq_periodoFinal.setMaximumSize(QSize(16777215, 30))
         self.pesq_periodoFinal.setFont(font2)
+        self.pesq_periodoFinal.setMinimumDate(QDate(2023, 1, 1))
         self.pesq_periodoFinal.setStyleSheet(u"QDateEdit {\n"
 "	background-color: rgb(242,242,242);\n"
 "	border-radius: 5px;\n"

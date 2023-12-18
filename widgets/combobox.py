@@ -1,37 +1,34 @@
-from widgets.pages.ui_pages import Ui_StackedWidget
 from db.conn import DataBase
+from PySide6.QtWidgets import QComboBox
 
 
 class UploadCB():
-    def __init__(self, ui_pages: Ui_StackedWidget) -> None:
-        self.ui_pages = ui_pages
-
-    def AreasIdentificacao(self):
+    def AreasIdentificacao(self, combobox: QComboBox):
         setores = ('CQ_ACQ', 'CQ_HIG', 'CQ_INF', 'CQ_LAB', 'CQ_TRS')
         for setor in setores:
-            self.ui_pages.cmb_areaResp.addItem(setor)
+            combobox.addItem(setor)
 
-    def AreaNC(self):
+    def AreaNC(self, combobox: QComboBox):
         conn = DataBase()
         cursor = conn.selectColumn('Sectors', 'SECTOR')
 
         for values in cursor:
             for setor in values:
-                self.ui_pages.cmb_areaNC.addItem(setor)
+                combobox.addItem(setor)
 
         conn.closeDB()
 
-    def motivosNC(self):
+    def motivosNC(self, combobox: QComboBox):
         conn = DataBase()
         cursor = conn.selectColumn('Reasons', 'DESCRIPTION')
 
         for values in cursor:
             for motivo in values:
-                self.ui_pages.cmb_Motivos.addItem(motivo)
+                combobox.addItem(motivo)
 
         conn.closeDB()
 
-    def fiedsBuscar(self):
+    def fiedsBuscar(self, combobox: QComboBox):
         conn = DataBase()
         cursor = conn.cursor.execute(
             'SELECT * FROM nao_conformidade ORDER BY ID DESC LIMIT 1;'
@@ -39,6 +36,6 @@ class UploadCB():
 
         for col in cursor.description:
             nome_col = col[0]
-            self.ui_pages.cmb_catgPergunta.addItem(nome_col)
+            combobox.addItem(nome_col)
 
         conn.closeDB()

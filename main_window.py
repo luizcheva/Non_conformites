@@ -7,6 +7,7 @@ from widgets.pages.ui_main import (
 from widgets.pages.ui_menu import LayoutMenu
 from widgets.pages.ui_statusBar import LayoutTopBar, LayoutBottomBar
 from PySide6.QtCore import QPropertyAnimation, QEasingCurve, Slot
+from widgets.dialog import ShowDialog
 
 
 class MainWindows(QMainWindow):
@@ -67,10 +68,14 @@ class MainWindows(QMainWindow):
         self.lMenuLyt.edit_btn.clicked.connect(self.show_page_edit)
         self.lMenuLyt.del_btn.clicked.connect(self.show_page_del)
         self.lMenuLyt.settings_btn.clicked.connect(
-            self.show_page_settings
+            self.openDialog
         )
 
         self.setCentralWidget(self.cf)
+
+    def openDialog(self):
+        dialog = ShowDialog(self)
+        dialog.exec()
 
     def toggle_button(self):
         menu_width = self.left_menu.width()
