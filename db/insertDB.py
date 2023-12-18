@@ -1,13 +1,19 @@
-from widgets.pages.ui_pages import Ui_StackedWidget
 from datetime import datetime
-from PySide6.QtWidgets import QRadioButton
+from PySide6.QtWidgets import (
+    QRadioButton, QLineEdit, QTextEdit,
+    QGroupBox, QComboBox
+)
 from db.conn import DataBase
 from information import Message
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from main_window import MainWindows
 
 
 class insertNew():
-    def __init__(self, ui_pages: Ui_StackedWidget) -> None:
-        self.ui_page = ui_pages
+    def __init__(self, windows: 'MainWindows') -> None:
+        self.windows = windows
+        self.ui_page = self.windows.content_page.ui_page
 
     def salvarDados(self):
         item = self.ui_page.text_item.text()
@@ -56,3 +62,19 @@ class insertNew():
         if inserir == "OK":
             msg = Message('Parabens', 'Registro adicionado com sucesso')
             msg.informationMsg()
+            self.clearData()
+
+    def clearData(self):
+        for child in self.ui_page.stackedWidget.findChildren(QLineEdit):
+            child.clear()
+
+        for child in self.ui_page.stackedWidget.findChildren(QGroupBox):
+            for child1 in child.findChildren(QRadioButton):
+                if isinstance(child1, QRadioButton):
+                    child1.setChecked(False)
+
+        for child in self.ui_page.stackedWidget.findChildren(QComboBox):
+            child.setCurrentIndex(-1)
+
+        for child in self.ui_page.stackedWidget.findChildren(QTextEdit):
+            child.clear()

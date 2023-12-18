@@ -7,6 +7,8 @@ from widgets.tables import tableEdit
 from widgets.combobox import UploadCB
 from widgets.dialog import ShowDialog
 from information import Message
+from db.insertDB import insertNew
+from validation.form_validator import FormValidator
 if TYPE_CHECKING:
     from main_window import MainWindows
 
@@ -66,7 +68,7 @@ class ContentPage(QStackedWidget):
         self.ui_page.btn_DadosNcs.clicked.connect(self.events.show_dadosDisp)
         self.ui_page.btnVoltar1.clicked.connect(self.events.btnVoltar1)
         self.ui_page.btnVoltar2.clicked.connect(self.events.btnVoltar2)
-        self.ui_page.btn_Disposicao.clicked.connect(self.events.salvarInfo)
+        self.ui_page.btn_Disposicao.clicked.connect(self.salvarInfo)
         self.ui_page.btn_buscarGeral.clicked.connect(self.events.requests)
         self.ui_page.btn_buscarPeriodo.clicked.connect(self.events.requestTime)
         self.ui_page.btn_limparFiltros.clicked.connect(self.events.clearFil)
@@ -77,6 +79,36 @@ class ContentPage(QStackedWidget):
         self.ui_page.text_qtdeRep.setValidator(QIntValidator())
         self.ui_page.text_data.setInputMask('99/99/9999')
         self.ui_page.text_data.editingFinished.connect(self.events.dataValida)
+        self.ui_page.text_data.setProperty("validator", "date")
+        self.ui_page.text_planta.setProperty("validator", "text")
+        self.ui_page.text_ordem.setProperty("validator", "number")
+        self.ui_page.text_lote.setProperty("validator", "required")
+        self.ui_page.text_item.setProperty("validator", "required")
+        self.ui_page.cmb_areaResp.setProperty("validator", "combo")
+        self.ui_page.text_respIden.setProperty("validator", "required")
+        self.ui_page.text_qtde.setProperty("validator", "number")
+        self.ui_page.text_qtdeRep.setProperty("validator", "number")
+        self.ui_page.cmb_areaNC.setProperty("validator", "combo")
+        self.ui_page.cmb_Motivos.setProperty("validator", "combo")
+        self.ui_page.text_acao.setProperty("validator", "required")
+        self.ui_page.group_SRo.setProperty("validator", "radio_group")
+        self.ui_page.group_Email.setProperty("validator", "radio_group")
+
+    def salvarInfo(self):
+        msg = Message(
+           'Salvar dados no Banco de dados',
+           'Deseja realmente salvar os dados?'
+        )
+        result = msg.questionMsg()
+        if result == msg.StandardButton.Yes:
+            if not FormValidator.validate_form(self.windows):
+                return
+            inserir = insertNew(self.windows)
+            inserir.salvarDados()
+            self.table_edit.carregaTable()
+            self.ui_page.stackedWidget.setCurrentWidget(
+                self.ui_page.page_geral
+            )
 
     def editReg(self):
         selected_item = self.table_edit.table.selectedItems()

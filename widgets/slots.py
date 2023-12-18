@@ -2,7 +2,6 @@ from widgets.pages.ui_pages import Ui_StackedWidget
 from PySide6.QtCore import Slot, QDate
 from PySide6.QtWidgets import QLabel
 from information import Message
-from db.insertDB import insertNew
 from widgets.requests import requestsBD
 from widgets.tables import tableEdit
 from widgets.combobox import UploadCB
@@ -10,7 +9,7 @@ from datetime import datetime
 
 
 class EventsBtn():
-    def __init__(self, ui_page: Ui_StackedWidget) -> None:
+    def __init__(self, ui_page: Ui_StackedWidget):
         self.ui_page = ui_page
 
     def reset_labels(self):
@@ -77,16 +76,6 @@ class EventsBtn():
             'border-radius: 10%; font: 10pt "KonsensLight" bold;'
         )
         self.ui_page.label_9.setStyleSheet('color: black;')
-
-    def salvarInfo(self):
-        msg = Message(
-           'Salvar dados no Banco de dados',
-           'Deseja realmente salvar os dados?'
-        )
-        result = msg.questionMsg()
-        if result == msg.StandardButton.Yes:
-            inserir = insertNew(self.ui_page)
-            inserir.salvarDados()
 
     def requests(self):
         request = requestsBD()
