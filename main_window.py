@@ -7,6 +7,9 @@ from widgets.pages.ui_main import (
 from widgets.pages.ui_menu import LayoutMenu
 from widgets.pages.ui_statusBar import LayoutTopBar, LayoutBottomBar
 from PySide6.QtCore import QPropertyAnimation, QEasingCurve, Slot
+from db.conn import DataBase
+import os
+from information import Message
 
 
 class MainWindows(QMainWindow):
@@ -111,6 +114,20 @@ class MainWindows(QMainWindow):
         self.top_bar_layout.right_lbl.setText('| Editar Registro')
 
     def show_page_del(self):
+        db = DataBase()
+        user_access = db.users()
+        usuario_atual = os.environ.get('USERNAME')
+
+        if usuario_atual not in user_access:
+            msg = Message(
+                'Usuário não permitido',
+                'Desculpe, você não possui acesso a essa seção!'
+                '\n Caso deseja excluir algum registro falar com seu líder'
+                'direto ou o responsável do sistema.'
+            )
+            msg.errorMsg()
+            return
+
         self.reset_selection()
         self.content_page.setCurrentWidget(self.content_page.ui_page.page_del)
         self.lMenuLyt.del_btn.set_active(True)

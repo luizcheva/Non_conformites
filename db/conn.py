@@ -102,3 +102,23 @@ class DataBase():
         data_formatada = data_hora.strftime("%d/%m/%Y")
 
         return data_formatada
+
+    def users(self):
+        table_name = 'usuarios'
+        sql = f'SELECT USERNAME FROM {table_name}'
+        self.cursor.execute(sql)
+
+        data = self.cursor.fetchall()
+        data_tuple = tuple(zip(*data))
+        self.closeDB
+        return data_tuple[0]
+
+
+if __name__ == '__main__':
+    db = DataBase()
+    users = db.users()
+    print(len(users))
+
+    for u in users:
+        for us in u:
+            print(us)

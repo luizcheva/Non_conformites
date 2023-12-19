@@ -1,5 +1,5 @@
 from db.conn import DataBase
-from PySide6.QtWidgets import QTableWidgetItem
+from PySide6.QtWidgets import QTableWidgetItem, QTableWidget
 from widgets.pages.ui_pages import Ui_StackedWidget
 
 
@@ -7,9 +7,9 @@ class tableEdit():
     def __init__(self, ui_pages: Ui_StackedWidget = '') -> None:
         self.db_instance = DataBase()
         self.ui_page = ui_pages
-        self.table = self.ui_page.tab_dados
 
-    def carregaTable(self):
+    def carregaTable(self, table: QTableWidget):
+        self.table = table
         results = self.db_instance.selectTable()
 
         self.table.clearContents()
@@ -55,6 +55,9 @@ class tableEdit():
 
         self.db_instance.closeDB()
         self.ui_page.lbl_totalRegistros.setText(
+            f'Total de registro(s): {len(results)}'
+        )
+        self.ui_page.lblTotalRegistros_Del.setText(
             f'Total de registro(s): {len(results)}'
         )
 

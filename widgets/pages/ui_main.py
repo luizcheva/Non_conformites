@@ -50,7 +50,8 @@ class ContentPage(QStackedWidget):
 
         # UPLOADED TABLE
         self.table_edit = tableEdit(self.ui_page)
-        self.table_edit.carregaTable()
+        self.table_edit.carregaTable(self.ui_page.tab_dados)
+        self.table_edit.carregaTable(self.ui_page.tabDados_del)
 
         # UPLOADED COMBOBOX
         self.cb = UploadCB()
@@ -111,7 +112,7 @@ class ContentPage(QStackedWidget):
             )
 
     def editReg(self):
-        selected_item = self.table_edit.table.selectedItems()
+        selected_item = self.table_edit.ui_page.tab_dados.selectedItems()
         is_sro = False
         if not selected_item:
             msg = Message(
