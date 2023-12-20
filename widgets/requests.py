@@ -18,7 +18,7 @@ class requestsBD():
         if len(cursor) > 0:
             window = ui_page
             tb = tableEdit(window)
-            tb.carregaTable_pesquisa(cursor)
+            tb.carregaTable_pesquisa(ui_page.tab_dados, cursor)
 
         else:
             msg = Message(
@@ -54,7 +54,7 @@ class requestsBD():
             if len(cursor) > 0:
                 window = ui_page
                 tb = tableEdit(window)
-                tb.carregaTable_pesquisa(cursor)
+                tb.carregaTable_pesquisa(ui_page.tab_dados, cursor)
 
             else:
                 msg = Message(

@@ -29,7 +29,7 @@
    <string notr="true">background-color: #F9F8F9;</string>
   </property>
   <property name="currentIndex">
-   <number>2</number>
+   <number>1</number>
   </property>
   <widget class="QWidget" name="page_home">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -1223,6 +1223,9 @@ QTableWidget::item:selected {
         </property>
         <property name="editTriggers">
          <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::SingleSelection</enum>
         </property>
         <property name="selectionBehavior">
          <enum>QAbstractItemView::SelectRows</enum>

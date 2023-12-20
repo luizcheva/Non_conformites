@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'pagesckWCFP.ui'
+## Form generated from reading UI file 'pageswsKKDC.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.3
 ##
@@ -621,6 +621,7 @@ class Ui_StackedWidget(object):
 "	color: white;\n"
 "}")
         self.tab_dados.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        self.tab_dados.setSelectionMode(QAbstractItemView.SingleSelection)
         self.tab_dados.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.tab_dados.setRowCount(10)
         self.tab_dados.horizontalHeader().setVisible(True)
@@ -2662,7 +2663,7 @@ class Ui_StackedWidget(object):
 
         self.retranslateUi(StackedWidget)
 
-        StackedWidget.setCurrentIndex(2)
+        StackedWidget.setCurrentIndex(1)
         self.stackedWidget.setCurrentIndex(2)
 
 
