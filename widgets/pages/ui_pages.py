@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'pagestzsozv.ui'
+## Form generated from reading UI file 'pagesckWCFP.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.3
 ##
@@ -18,9 +18,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QAbstractItemView, QApplication, QCheckBox, QComboBox,
     QDateEdit, QFrame, QGridLayout, QGroupBox,
     QHBoxLayout, QHeaderView, QLabel, QLineEdit,
-    QPushButton, QRadioButton, QSizePolicy, QSpacerItem,
-    QStackedWidget, QTableWidget, QTableWidgetItem, QTextEdit,
-    QVBoxLayout, QWidget)
+    QListWidget, QListWidgetItem, QPushButton, QRadioButton,
+    QSizePolicy, QSpacerItem, QStackedWidget, QTableWidget,
+    QTableWidgetItem, QTextEdit, QVBoxLayout, QWidget)
 # import resources_rc
 
 class Ui_StackedWidget(object):
@@ -750,10 +750,10 @@ class Ui_StackedWidget(object):
         self.frame_18.setStyleSheet(u"background-color: #F9F8F9;")
         self.frame_18.setFrameShape(QFrame.StyledPanel)
         self.frame_18.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_30 = QVBoxLayout(self.frame_18)
-        self.verticalLayout_30.setSpacing(0)
-        self.verticalLayout_30.setObjectName(u"verticalLayout_30")
-        self.verticalLayout_30.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_5 = QVBoxLayout(self.frame_18)
+        self.verticalLayout_5.setSpacing(0)
+        self.verticalLayout_5.setObjectName(u"verticalLayout_5")
+        self.verticalLayout_5.setContentsMargins(0, 0, 0, 0)
         self.frame_19 = QFrame(self.frame_18)
         self.frame_19.setObjectName(u"frame_19")
         sizePolicy.setHeightForWidth(self.frame_19.sizePolicy().hasHeightForWidth())
@@ -848,9 +848,15 @@ class Ui_StackedWidget(object):
         self.horizontalLayout_23.addItem(self.horizontalSpacer_14)
 
 
-        self.verticalLayout_30.addWidget(self.frame_19)
+        self.verticalLayout_5.addWidget(self.frame_19)
 
-        self.tabDados_del = QTableWidget(self.frame_18)
+        self.widget_2 = QWidget(self.frame_18)
+        self.widget_2.setObjectName(u"widget_2")
+        self.horizontalLayout_28 = QHBoxLayout(self.widget_2)
+        self.horizontalLayout_28.setSpacing(5)
+        self.horizontalLayout_28.setObjectName(u"horizontalLayout_28")
+        self.horizontalLayout_28.setContentsMargins(0, 0, 5, 0)
+        self.tabDados_del = QTableWidget(self.widget_2)
         if (self.tabDados_del.columnCount() < 14):
             self.tabDados_del.setColumnCount(14)
         __qtablewidgetitem14 = QTableWidgetItem()
@@ -967,7 +973,122 @@ class Ui_StackedWidget(object):
         self.tabDados_del.verticalHeader().setVisible(False)
         self.tabDados_del.verticalHeader().setHighlightSections(False)
 
-        self.verticalLayout_30.addWidget(self.tabDados_del)
+        self.horizontalLayout_28.addWidget(self.tabDados_del)
+
+        self.verticalLayout_36 = QVBoxLayout()
+        self.verticalLayout_36.setObjectName(u"verticalLayout_36")
+        self.verticalSpacer_9 = QSpacerItem(20, 138, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout_36.addItem(self.verticalSpacer_9)
+
+        self.verticalLayout_35 = QVBoxLayout()
+        self.verticalLayout_35.setSpacing(10)
+        self.verticalLayout_35.setObjectName(u"verticalLayout_35")
+        self.btnAddId = QPushButton(self.widget_2)
+        self.btnAddId.setObjectName(u"btnAddId")
+        self.btnAddId.setMinimumSize(QSize(60, 30))
+        self.btnAddId.setMaximumSize(QSize(60, 30))
+        self.btnAddId.setStyleSheet(u"QPushButton {\n"
+"	background-color: #f0f0f0;\n"
+"	border: 1px solid #d0d0d0;\n"
+"	border-radius: 5px;\n"
+"	padding: 5px;\n"
+" 	font-size: 16px;\n"
+" }\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: #e0e0e0;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"	background-color: #c0c0c0;\n"
+"}")
+
+        self.verticalLayout_35.addWidget(self.btnAddId)
+
+        self.btnDelId = QPushButton(self.widget_2)
+        self.btnDelId.setObjectName(u"btnDelId")
+        self.btnDelId.setMinimumSize(QSize(60, 30))
+        self.btnDelId.setMaximumSize(QSize(60, 30))
+        self.btnDelId.setStyleSheet(u"QPushButton {\n"
+"	background-color: #f0f0f0;\n"
+"	border: 1px solid #d0d0d0;\n"
+"	border-radius: 5px;\n"
+"	padding: 5px;\n"
+" 	font-size: 16px;\n"
+" }\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: #e0e0e0;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"	background-color: #c0c0c0;\n"
+"}")
+
+        self.verticalLayout_35.addWidget(self.btnDelId)
+
+
+        self.verticalLayout_36.addLayout(self.verticalLayout_35)
+
+        self.verticalSpacer_10 = QSpacerItem(20, 158, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout_36.addItem(self.verticalSpacer_10)
+
+
+        self.horizontalLayout_28.addLayout(self.verticalLayout_36)
+
+        self.verticalLayout_30 = QVBoxLayout()
+        self.verticalLayout_30.setSpacing(0)
+        self.verticalLayout_30.setObjectName(u"verticalLayout_30")
+        self.lblListIds = QLabel(self.widget_2)
+        self.lblListIds.setObjectName(u"lblListIds")
+        self.lblListIds.setMinimumSize(QSize(200, 30))
+        self.lblListIds.setMaximumSize(QSize(200, 30))
+        font10 = QFont()
+        font10.setFamilies([u"Trebuchet MS"])
+        font10.setPointSize(12)
+        self.lblListIds.setFont(font10)
+        self.lblListIds.setStyleSheet(u"QLabel {\n"
+"	background-color: #853275;\n"
+"	color: #fff;\n"
+"	padding: 5px;\n"
+"	border-top-left-radius:5px;\n"
+"	border-top-right-radius:5px;\n"
+"	margin-left:5px;\n"
+"}")
+        self.lblListIds.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_30.addWidget(self.lblListIds)
+
+        self.list_IDs = QListWidget(self.widget_2)
+        self.list_IDs.setObjectName(u"list_IDs")
+        self.list_IDs.setMinimumSize(QSize(200, 0))
+        self.list_IDs.setMaximumSize(QSize(200, 16777215))
+        self.list_IDs.setFont(font9)
+        self.list_IDs.setStyleSheet(u"QListWidget {\n"
+"	margin-bottom: 10px;\n"
+"	margin-left: 5px;\n"
+"}\n"
+"\n"
+"QListWidget::item:hover {\n"
+"	background-color: #A7A8A9;\n"
+"	color: white;\n"
+"}\n"
+"\n"
+"QListWidget::item:selected {\n"
+"	background-color: #636569;\n"
+"	color: white;\n"
+"}")
+        self.list_IDs.setItemAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_30.addWidget(self.list_IDs, 0, Qt.AlignRight)
+
+
+        self.horizontalLayout_28.addLayout(self.verticalLayout_30)
+
+
+        self.verticalLayout_5.addWidget(self.widget_2)
 
         self.frame_20 = QFrame(self.frame_18)
         self.frame_20.setObjectName(u"frame_20")
@@ -1030,7 +1151,7 @@ class Ui_StackedWidget(object):
         self.horizontalLayout_24.addWidget(self.btnDeleteRegister)
 
 
-        self.verticalLayout_30.addWidget(self.frame_20)
+        self.verticalLayout_5.addWidget(self.frame_20)
 
 
         self.verticalLayout_3.addWidget(self.frame_18)
@@ -1062,14 +1183,6 @@ class Ui_StackedWidget(object):
         StackedWidget.addWidget(self.page_del)
         self.page_settings = QWidget()
         self.page_settings.setObjectName(u"page_settings")
-        self.verticalLayout_5 = QVBoxLayout(self.page_settings)
-        self.verticalLayout_5.setObjectName(u"verticalLayout_5")
-        self.label_5 = QLabel(self.page_settings)
-        self.label_5.setObjectName(u"label_5")
-        self.label_5.setAlignment(Qt.AlignCenter)
-
-        self.verticalLayout_5.addWidget(self.label_5)
-
         StackedWidget.addWidget(self.page_settings)
         self.page_add = QWidget()
         self.page_add.setObjectName(u"page_add")
@@ -1128,10 +1241,10 @@ class Ui_StackedWidget(object):
         self.label_8.setObjectName(u"label_8")
         self.label_8.setMinimumSize(QSize(100, 0))
         self.label_8.setMaximumSize(QSize(100, 16777215))
-        font10 = QFont()
-        font10.setFamilies([u"KonsensRegular"])
-        font10.setPointSize(11)
-        self.label_8.setFont(font10)
+        font11 = QFont()
+        font11.setFamilies([u"KonsensRegular"])
+        font11.setPointSize(11)
+        self.label_8.setFont(font11)
 
         self.horizontalLayout_2.addWidget(self.label_8)
 
@@ -1139,6 +1252,7 @@ class Ui_StackedWidget(object):
         self.horizontalLayout_5.addLayout(self.horizontalLayout_2)
 
         self.horizontalLayout_3 = QHBoxLayout()
+        self.horizontalLayout_3.setSpacing(5)
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
         self.label_6 = QLabel(self.frame_4)
         self.label_6.setObjectName(u"label_6")
@@ -1156,7 +1270,7 @@ class Ui_StackedWidget(object):
         self.label_9.setObjectName(u"label_9")
         self.label_9.setMinimumSize(QSize(100, 0))
         self.label_9.setMaximumSize(QSize(100, 16777215))
-        self.label_9.setFont(font10)
+        self.label_9.setFont(font11)
         self.label_9.setStyleSheet(u"color: #e6e6e6;")
 
         self.horizontalLayout_3.addWidget(self.label_9)
@@ -1165,6 +1279,7 @@ class Ui_StackedWidget(object):
         self.horizontalLayout_5.addLayout(self.horizontalLayout_3)
 
         self.horizontalLayout_4 = QHBoxLayout()
+        self.horizontalLayout_4.setSpacing(5)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
         self.label_7 = QLabel(self.frame_4)
         self.label_7.setObjectName(u"label_7")
@@ -1182,7 +1297,7 @@ class Ui_StackedWidget(object):
         self.label_10.setObjectName(u"label_10")
         self.label_10.setMinimumSize(QSize(100, 0))
         self.label_10.setMaximumSize(QSize(100, 16777215))
-        self.label_10.setFont(font10)
+        self.label_10.setFont(font11)
         self.label_10.setStyleSheet(u"color: #e6e6e6;")
 
         self.horizontalLayout_4.addWidget(self.label_10)
@@ -1541,10 +1656,10 @@ class Ui_StackedWidget(object):
         self.btn_DadoGerais = QPushButton(self.frame_7)
         self.btn_DadoGerais.setObjectName(u"btn_DadoGerais")
         self.btn_DadoGerais.setMaximumSize(QSize(16777215, 35))
-        font11 = QFont()
-        font11.setFamilies([u"KonsensBold"])
-        font11.setPointSize(12)
-        self.btn_DadoGerais.setFont(font11)
+        font12 = QFont()
+        font12.setFamilies([u"KonsensBold"])
+        font12.setPointSize(12)
+        self.btn_DadoGerais.setFont(font12)
         self.btn_DadoGerais.setStyleSheet(u"QPushButton {\n"
 "	background-color: rgb(133,50,117);\n"
 "	color: white;\n"
@@ -1883,9 +1998,9 @@ class Ui_StackedWidget(object):
         self.horizontalLayout_11.setObjectName(u"horizontalLayout_11")
         self.btnVoltar1 = QPushButton(self.frame_10)
         self.btnVoltar1.setObjectName(u"btnVoltar1")
-        font12 = QFont()
-        font12.setFamilies([u"KonsensLight"])
-        self.btnVoltar1.setFont(font12)
+        font13 = QFont()
+        font13.setFamilies([u"KonsensLight"])
+        self.btnVoltar1.setFont(font13)
         self.btnVoltar1.setStyleSheet(u"QPushButton {\n"
 "	background-color: #f0f0f0;\n"
 "	border: 1px solid #d0d0d0;\n"
@@ -1907,7 +2022,7 @@ class Ui_StackedWidget(object):
         self.btn_DadosNcs = QPushButton(self.frame_10)
         self.btn_DadosNcs.setObjectName(u"btn_DadosNcs")
         self.btn_DadosNcs.setMaximumSize(QSize(16777215, 35))
-        self.btn_DadosNcs.setFont(font11)
+        self.btn_DadosNcs.setFont(font12)
         self.btn_DadosNcs.setStyleSheet(u"QPushButton {\n"
 "	background-color: rgb(133,50,117);\n"
 "	color: white;\n"
@@ -2025,11 +2140,11 @@ class Ui_StackedWidget(object):
         self.group_SRo.setObjectName(u"group_SRo")
         self.group_SRo.setMinimumSize(QSize(0, 100))
         self.group_SRo.setMaximumSize(QSize(16777215, 100))
-        font13 = QFont()
-        font13.setFamilies([u"KonsensBook"])
-        font13.setPointSize(10)
-        font13.setItalic(False)
-        self.group_SRo.setFont(font13)
+        font14 = QFont()
+        font14.setFamilies([u"KonsensBook"])
+        font14.setPointSize(10)
+        font14.setItalic(False)
+        self.group_SRo.setFont(font14)
         self.group_SRo.setStyleSheet(u"QGroupBox {\n"
 "	border: 1px solid rgb(99,101,105);\n"
 "	border-radius: 6px;\n"
@@ -2164,11 +2279,11 @@ class Ui_StackedWidget(object):
         self.check_acabamento = QCheckBox(self.group_addressEmail)
         self.check_acabamento.setObjectName(u"check_acabamento")
         self.check_acabamento.setEnabled(True)
-        font14 = QFont()
-        font14.setFamilies([u"KonsensBook"])
-        font14.setPointSize(12)
-        font14.setUnderline(False)
-        self.check_acabamento.setFont(font14)
+        font15 = QFont()
+        font15.setFamilies([u"KonsensBook"])
+        font15.setPointSize(12)
+        font15.setUnderline(False)
+        self.check_acabamento.setFont(font15)
         self.check_acabamento.setStyleSheet(u"QCheckBox {\n"
 "	spacing: 5px;\n"
 "	padding: 5px;\n"
@@ -2201,7 +2316,7 @@ class Ui_StackedWidget(object):
 
         self.check_tnc = QCheckBox(self.group_addressEmail)
         self.check_tnc.setObjectName(u"check_tnc")
-        self.check_tnc.setFont(font14)
+        self.check_tnc.setFont(font15)
         self.check_tnc.setStyleSheet(u"QCheckBox {\n"
 "	spacing: 5px;\n"
 "	padding: 5px;\n"
@@ -2233,7 +2348,7 @@ class Ui_StackedWidget(object):
 
         self.check_cnc = QCheckBox(self.group_addressEmail)
         self.check_cnc.setObjectName(u"check_cnc")
-        self.check_cnc.setFont(font14)
+        self.check_cnc.setFont(font15)
         self.check_cnc.setStyleSheet(u"QCheckBox {\n"
 "	spacing: 5px;\n"
 "	padding: 5px;\n"
@@ -2265,7 +2380,7 @@ class Ui_StackedWidget(object):
 
         self.check_higienizacao = QCheckBox(self.group_addressEmail)
         self.check_higienizacao.setObjectName(u"check_higienizacao")
-        self.check_higienizacao.setFont(font14)
+        self.check_higienizacao.setFont(font15)
         self.check_higienizacao.setStyleSheet(u"QCheckBox {\n"
 "	spacing: 5px;\n"
 "	padding: 5px;\n"
@@ -2297,7 +2412,7 @@ class Ui_StackedWidget(object):
 
         self.check_recebimento = QCheckBox(self.group_addressEmail)
         self.check_recebimento.setObjectName(u"check_recebimento")
-        self.check_recebimento.setFont(font14)
+        self.check_recebimento.setFont(font15)
         self.check_recebimento.setStyleSheet(u"QCheckBox {\n"
 "	spacing: 5px;\n"
 "	padding: 5px;\n"
@@ -2329,7 +2444,7 @@ class Ui_StackedWidget(object):
 
         self.check_usinagem = QCheckBox(self.group_addressEmail)
         self.check_usinagem.setObjectName(u"check_usinagem")
-        self.check_usinagem.setFont(font14)
+        self.check_usinagem.setFont(font15)
         self.check_usinagem.setStyleSheet(u"QCheckBox {\n"
 "	spacing: 5px;\n"
 "	padding: 5px;\n"
@@ -2361,7 +2476,7 @@ class Ui_StackedWidget(object):
 
         self.check_trs = QCheckBox(self.group_addressEmail)
         self.check_trs.setObjectName(u"check_trs")
-        self.check_trs.setFont(font14)
+        self.check_trs.setFont(font15)
         self.check_trs.setStyleSheet(u"QCheckBox {\n"
 "	spacing: 5px;\n"
 "	padding: 5px;\n"
@@ -2393,7 +2508,7 @@ class Ui_StackedWidget(object):
 
         self.check_usiAnaLid = QCheckBox(self.group_addressEmail)
         self.check_usiAnaLid.setObjectName(u"check_usiAnaLid")
-        self.check_usiAnaLid.setFont(font14)
+        self.check_usiAnaLid.setFont(font15)
         self.check_usiAnaLid.setStyleSheet(u"QCheckBox {\n"
 "	spacing: 5px;\n"
 "	padding: 5px;\n"
@@ -2425,7 +2540,7 @@ class Ui_StackedWidget(object):
 
         self.check_pcp = QCheckBox(self.group_addressEmail)
         self.check_pcp.setObjectName(u"check_pcp")
-        self.check_pcp.setFont(font14)
+        self.check_pcp.setFont(font15)
         self.check_pcp.setStyleSheet(u"QCheckBox {\n"
 "	spacing: 5px;\n"
 "	padding: 5px;\n"
@@ -2460,7 +2575,7 @@ class Ui_StackedWidget(object):
 
         self.btnVoltar2 = QPushButton(self.frame_13)
         self.btnVoltar2.setObjectName(u"btnVoltar2")
-        self.btnVoltar2.setFont(font12)
+        self.btnVoltar2.setFont(font13)
         self.btnVoltar2.setStyleSheet(u"QPushButton {\n"
 "	background-color: #f0f0f0;\n"
 "	border: 1px solid #d0d0d0;\n"
@@ -2482,7 +2597,7 @@ class Ui_StackedWidget(object):
         self.btn_Disposicao = QPushButton(self.frame_13)
         self.btn_Disposicao.setObjectName(u"btn_Disposicao")
         self.btn_Disposicao.setMaximumSize(QSize(16777215, 35))
-        self.btn_Disposicao.setFont(font11)
+        self.btn_Disposicao.setFont(font12)
         self.btn_Disposicao.setStyleSheet(u"QPushButton {\n"
 "	background-color: rgb(133,50,117);\n"
 "	color: white;\n"
@@ -2547,7 +2662,7 @@ class Ui_StackedWidget(object):
 
         self.retranslateUi(StackedWidget)
 
-        StackedWidget.setCurrentIndex(0)
+        StackedWidget.setCurrentIndex(2)
         self.stackedWidget.setCurrentIndex(2)
 
 
@@ -2644,10 +2759,12 @@ class Ui_StackedWidget(object):
         self.tabDados_del.setSortingEnabled(False)
         self.tabDados_del.setSortingEnabled(__sortingEnabled)
 
+        self.btnAddId.setText(QCoreApplication.translate("StackedWidget", u">>", None))
+        self.btnDelId.setText(QCoreApplication.translate("StackedWidget", u"<<", None))
+        self.lblListIds.setText(QCoreApplication.translate("StackedWidget", u"ID's a serem apagado(s):", None))
         self.lblTotalRegistros_Del.setText(QCoreApplication.translate("StackedWidget", u"Total de registro(s): 0", None))
         self.btnDeleteRegister.setText(QCoreApplication.translate("StackedWidget", u"DELETAR", None))
         self.logoNeo_del.setText(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p align=\"right\"><img src=\"images/neo_Logo1.png\"/></p></body></html>", None))
-        self.label_5.setText(QCoreApplication.translate("StackedWidget", u"Configura\u00e7\u00f5es", None))
         self.label_2.setText(QCoreApplication.translate("StackedWidget", u"1", None))
         self.label_8.setText(QCoreApplication.translate("StackedWidget", u"Dados Gerais", None))
         self.label_6.setText(QCoreApplication.translate("StackedWidget", u"2", None))

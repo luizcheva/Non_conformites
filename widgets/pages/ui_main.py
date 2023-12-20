@@ -9,6 +9,7 @@ from widgets.dialog import ShowDialog
 from information import Message
 from db.insertDB import insertNew
 from validation.form_validator import FormValidator
+from widgets.list import listView
 if TYPE_CHECKING:
     from main_window import MainWindows
 
@@ -47,6 +48,7 @@ class ContentPage(QStackedWidget):
         self.ui_page.setupUi(self)
         self.setCurrentWidget(self.ui_page.page_home)
         self.ui_page.stackedWidget.setCurrentWidget(self.ui_page.page_geral)
+        self.lista = listView(self.ui_page)
 
         # UPLOADED TABLE
         self.table_edit = tableEdit(self.ui_page)
@@ -74,6 +76,9 @@ class ContentPage(QStackedWidget):
         self.ui_page.btn_buscarPeriodo.clicked.connect(self.events.requestTime)
         self.ui_page.btn_limparFiltros.clicked.connect(self.events.clearFil)
         self.ui_page.btnAlterarRegistro.clicked.connect(self.editReg)
+        self.ui_page.btnAddId.clicked.connect(self.addIDtoList)
+        self.ui_page.btnDeleteRegister.clicked.connect(self.lista.deleteItems)
+        self.ui_page.btnDelId.clicked.connect(self.deleteIDtoList)
 
     def validaCampos(self):
         self.ui_page.text_qtde.setValidator(QIntValidator())
@@ -146,3 +151,9 @@ class ContentPage(QStackedWidget):
             is_sro
         )
         dialog.exec()
+
+    def addIDtoList(self):
+        self.lista.uploadList(self.ui_page.tabDados_del)
+
+    def deleteIDtoList(self):
+        self.lista.removeItem()

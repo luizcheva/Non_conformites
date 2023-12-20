@@ -1,6 +1,7 @@
 import sqlite3
 from pathlib import Path
 from datetime import datetime
+from information import Message
 
 ROOT_DIR = Path(__file__).parent
 DB_NAME = 'db.sqlite3'
@@ -112,6 +113,23 @@ class DataBase():
         data_tuple = tuple(zip(*data))
         self.closeDB
         return data_tuple[0]
+
+    def deleteRegister(self, table_name='nao_conformidade', id_number=''):
+        try:
+            id_ = int(id_number)
+            sql = f'DELETE FROM {table_name} WHERE ID = {id_};'
+            self.cursor.execute(sql)
+            self.connection.commit()
+            self.closeDB()
+            return True
+        except ValueError:
+            msg = Message(
+                'Error ao deletar',
+                f'Desculpe, erro ao deleta o ID "{id_number}".'
+            )
+            msg.errorMsg()
+
+        return False
 
 
 if __name__ == '__main__':

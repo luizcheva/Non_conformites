@@ -94,7 +94,7 @@ class EventsBtn():
         self.ui_page.pesq_periodoInicial.setDate(QDate(2023, 1, 1))
         self.ui_page.pesq_periodoFinal.setDate(QDate(2023, 1, 1))
         tb = tableEdit(self.ui_page)
-        tb.carregaTable()
+        tb.carregaTable(self.ui_page.tab_dados)
         self.ui_page.btn_limparFiltros.setVisible(False)
 
     def requestTime(self):

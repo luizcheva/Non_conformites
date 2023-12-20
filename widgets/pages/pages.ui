@@ -29,7 +29,7 @@
    <string notr="true">background-color: #F9F8F9;</string>
   </property>
   <property name="currentIndex">
-   <number>4</number>
+   <number>2</number>
   </property>
   <widget class="QWidget" name="page_home">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -1575,7 +1575,7 @@ QPushButton:pressed {
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_30">
+      <layout class="QVBoxLayout" name="verticalLayout_5">
        <property name="spacing">
         <number>0</number>
        </property>
@@ -1803,18 +1803,36 @@ QPushButton:pressed {
         </widget>
        </item>
        <item>
-        <widget class="QTableWidget" name="tabDados_del">
-         <property name="font">
-          <font>
-           <family>KonsensBook</family>
-           <pointsize>12</pointsize>
-          </font>
-         </property>
-         <property name="cursor" stdset="0">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QTableWidget  {
+        <widget class="QWidget" name="widget_2" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_28">
+          <property name="spacing">
+           <number>5</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>5</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QTableWidget" name="tabDados_del">
+            <property name="font">
+             <font>
+              <family>KonsensBook</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="cursor" stdset="0">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QTableWidget  {
 	background-color: #f5f5f5;
 	border: 1px solid rgb(99,101,105);
 	gridline-color: #d1d1d1;
@@ -1850,206 +1868,404 @@ QTableWidget::item:selected {
 	background-color: #636569;
 	color: white;
 }</string>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::NoFrame</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Sunken</enum>
-         </property>
-         <property name="editTriggers">
-          <set>QAbstractItemView::NoEditTriggers</set>
-         </property>
-         <property name="tabKeyNavigation">
-          <bool>true</bool>
-         </property>
-         <property name="dragEnabled">
-          <bool>false</bool>
-         </property>
-         <property name="selectionBehavior">
-          <enum>QAbstractItemView::SelectRows</enum>
-         </property>
-         <property name="gridStyle">
-          <enum>Qt::SolidLine</enum>
-         </property>
-         <property name="rowCount">
-          <number>11</number>
-         </property>
-         <attribute name="horizontalHeaderVisible">
-          <bool>true</bool>
-         </attribute>
-         <attribute name="horizontalHeaderCascadingSectionResizes">
-          <bool>false</bool>
-         </attribute>
-         <attribute name="horizontalHeaderMinimumSectionSize">
-          <number>100</number>
-         </attribute>
-         <attribute name="horizontalHeaderDefaultSectionSize">
-          <number>130</number>
-         </attribute>
-         <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
-          <bool>false</bool>
-         </attribute>
-         <attribute name="verticalHeaderVisible">
-          <bool>false</bool>
-         </attribute>
-         <attribute name="verticalHeaderHighlightSections">
-          <bool>false</bool>
-         </attribute>
-         <row/>
-         <row/>
-         <row/>
-         <row/>
-         <row/>
-         <row/>
-         <row/>
-         <row/>
-         <row/>
-         <row/>
-         <row/>
-         <column>
-          <property name="text">
-           <string>ID</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>ITEM</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>ORDEM</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>LOTE</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>ÁREA RESPONSÁVEL</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>OPERAÇÃO</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>MOTIVO</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>QTDE.</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>QTDE. REPROVADA</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>ACAO</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>DATA</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>RESPONSÁVEL</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>S.RO</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>OBSERVAÇÃO</string>
-          </property>
-         </column>
-         <item row="0" column="0">
-          <property name="text">
-           <string/>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-         </item>
-         <item row="0" column="1">
-          <property name="text">
-           <string/>
-          </property>
-         </item>
-         <item row="0" column="2">
-          <property name="text">
-           <string/>
-          </property>
-         </item>
-         <item row="0" column="3">
-          <property name="text">
-           <string/>
-          </property>
-         </item>
-         <item row="0" column="4">
-          <property name="text">
-           <string/>
-          </property>
-         </item>
-         <item row="0" column="5">
-          <property name="text">
-           <string/>
-          </property>
-         </item>
-         <item row="0" column="6">
-          <property name="text">
-           <string/>
-          </property>
-         </item>
-         <item row="0" column="7">
-          <property name="text">
-           <string/>
-          </property>
-         </item>
-         <item row="0" column="8">
-          <property name="text">
-           <string/>
-          </property>
-         </item>
-         <item row="0" column="9">
-          <property name="text">
-           <string/>
-          </property>
-         </item>
-         <item row="0" column="10">
-          <property name="text">
-           <string/>
-          </property>
-         </item>
-         <item row="0" column="11">
-          <property name="text">
-           <string/>
-          </property>
-         </item>
-         <item row="0" column="12">
-          <property name="text">
-           <string/>
-          </property>
-         </item>
-         <item row="0" column="13">
-          <property name="text">
-           <string/>
-          </property>
-         </item>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Sunken</enum>
+            </property>
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
+            <property name="tabKeyNavigation">
+             <bool>true</bool>
+            </property>
+            <property name="dragEnabled">
+             <bool>false</bool>
+            </property>
+            <property name="selectionBehavior">
+             <enum>QAbstractItemView::SelectRows</enum>
+            </property>
+            <property name="gridStyle">
+             <enum>Qt::SolidLine</enum>
+            </property>
+            <property name="rowCount">
+             <number>11</number>
+            </property>
+            <attribute name="horizontalHeaderVisible">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="horizontalHeaderCascadingSectionResizes">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="horizontalHeaderMinimumSectionSize">
+             <number>100</number>
+            </attribute>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>130</number>
+            </attribute>
+            <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderHighlightSections">
+             <bool>false</bool>
+            </attribute>
+            <row/>
+            <row/>
+            <row/>
+            <row/>
+            <row/>
+            <row/>
+            <row/>
+            <row/>
+            <row/>
+            <row/>
+            <row/>
+            <column>
+             <property name="text">
+              <string>ID</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>ITEM</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>ORDEM</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>LOTE</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>ÁREA RESPONSÁVEL</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>OPERAÇÃO</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>MOTIVO</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>QTDE.</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>QTDE. REPROVADA</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>ACAO</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>DATA</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>RESPONSÁVEL</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>S.RO</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>OBSERVAÇÃO</string>
+             </property>
+            </column>
+            <item row="0" column="0">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="checkState">
+              <enum>Unchecked</enum>
+             </property>
+            </item>
+            <item row="0" column="1">
+             <property name="text">
+              <string/>
+             </property>
+            </item>
+            <item row="0" column="2">
+             <property name="text">
+              <string/>
+             </property>
+            </item>
+            <item row="0" column="3">
+             <property name="text">
+              <string/>
+             </property>
+            </item>
+            <item row="0" column="4">
+             <property name="text">
+              <string/>
+             </property>
+            </item>
+            <item row="0" column="5">
+             <property name="text">
+              <string/>
+             </property>
+            </item>
+            <item row="0" column="6">
+             <property name="text">
+              <string/>
+             </property>
+            </item>
+            <item row="0" column="7">
+             <property name="text">
+              <string/>
+             </property>
+            </item>
+            <item row="0" column="8">
+             <property name="text">
+              <string/>
+             </property>
+            </item>
+            <item row="0" column="9">
+             <property name="text">
+              <string/>
+             </property>
+            </item>
+            <item row="0" column="10">
+             <property name="text">
+              <string/>
+             </property>
+            </item>
+            <item row="0" column="11">
+             <property name="text">
+              <string/>
+             </property>
+            </item>
+            <item row="0" column="12">
+             <property name="text">
+              <string/>
+             </property>
+            </item>
+            <item row="0" column="13">
+             <property name="text">
+              <string/>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_36">
+            <item>
+             <spacer name="verticalSpacer_9">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>138</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_35">
+              <property name="spacing">
+               <number>10</number>
+              </property>
+              <item>
+               <widget class="QPushButton" name="btnAddId">
+                <property name="minimumSize">
+                 <size>
+                  <width>60</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>60</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+	background-color: #f0f0f0;
+	border: 1px solid #d0d0d0;
+	border-radius: 5px;
+	padding: 5px;
+ 	font-size: 16px;
+ }
+
+QPushButton:hover {
+	background-color: #e0e0e0;
+}
+
+QPushButton:pressed {
+	background-color: #c0c0c0;
+}</string>
+                </property>
+                <property name="text">
+                 <string>&gt;&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnDelId">
+                <property name="minimumSize">
+                 <size>
+                  <width>60</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>60</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+	background-color: #f0f0f0;
+	border: 1px solid #d0d0d0;
+	border-radius: 5px;
+	padding: 5px;
+ 	font-size: 16px;
+ }
+
+QPushButton:hover {
+	background-color: #e0e0e0;
+}
+
+QPushButton:pressed {
+	background-color: #c0c0c0;
+}</string>
+                </property>
+                <property name="text">
+                 <string>&lt;&lt;</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_10">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>158</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_30">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="lblListIds">
+              <property name="minimumSize">
+               <size>
+                <width>200</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>200</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>Trebuchet MS</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+	background-color: #853275;
+	color: #fff;
+	padding: 5px;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+	margin-left:5px;
+}</string>
+              </property>
+              <property name="text">
+               <string>ID's a serem apagado(s):</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignRight">
+             <widget class="QListWidget" name="list_IDs">
+              <property name="minimumSize">
+               <size>
+                <width>200</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>200</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>KonsensBook</family>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QListWidget {
+	margin-bottom: 10px;
+	margin-left: 5px;
+}
+
+QListWidget::item:hover {
+	background-color: #A7A8A9;
+	color: white;
+}
+
+QListWidget::item:selected {
+	background-color: #636569;
+	color: white;
+}</string>
+              </property>
+              <property name="itemAlignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
         </widget>
        </item>
        <item>
@@ -2274,20 +2490,7 @@ QPushButton:pressed {
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="page_settings">
-   <layout class="QVBoxLayout" name="verticalLayout_5">
-    <item>
-     <widget class="QLabel" name="label_5">
-      <property name="text">
-       <string>Configurações</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
+  <widget class="QWidget" name="page_settings"/>
   <widget class="QWidget" name="page_add">
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <property name="spacing">
