@@ -5,6 +5,7 @@ from widgets.pages.ui_main import (
     LeftMenu, ContentObject, StatusBar, ContentPage
 )
 from widgets.pages.ui_menu import LayoutMenu
+from widgets.pages.settings import Settings_
 from widgets.pages.ui_statusBar import LayoutTopBar, LayoutBottomBar
 from PySide6.QtCore import QPropertyAnimation, QEasingCurve, Slot
 from db.conn import DataBase
@@ -73,6 +74,12 @@ class MainWindows(QMainWindow):
             self.show_page_settings
         )
 
+        # UPLOADING PAGE SETTINGS DATA
+        self.page_settings = Settings_(self)
+
+        # HIDE CLEAR FILTER BTN
+        self.content_page.ui_page.btn_limparFiltros.setVisible(False)
+
         self.setCentralWidget(self.cf)
 
     def toggle_button(self):
@@ -122,7 +129,7 @@ class MainWindows(QMainWindow):
             msg = Message(
                 'Usuário não permitido',
                 'Desculpe, você não possui acesso a essa seção!'
-                '\n Caso deseja excluir algum registro falar com seu líder'
+                '\n Caso deseja excluir algum registro falar com seu líder '
                 'direto ou o responsável do sistema.'
             )
             msg.errorMsg()

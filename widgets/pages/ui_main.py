@@ -79,6 +79,7 @@ class ContentPage(QStackedWidget):
         self.ui_page.btnAddId.clicked.connect(self.addIDtoList)
         self.ui_page.btnDeleteRegister.clicked.connect(self.lista.deleteItems)
         self.ui_page.btnDelId.clicked.connect(self.deleteIDtoList)
+        self.ui_page.btnBuscar_del.clicked.connect(self.events.searchDel)
 
     def validaCampos(self):
         self.ui_page.text_qtde.setValidator(QIntValidator())
@@ -111,7 +112,7 @@ class ContentPage(QStackedWidget):
                 return
             inserir = insertNew(self.windows)
             inserir.salvarDados()
-            self.table_edit.carregaTable()
+            self.table_edit.carregaTable(self.ui_page.tab_dados)
             self.ui_page.stackedWidget.setCurrentWidget(
                 self.ui_page.page_geral
             )

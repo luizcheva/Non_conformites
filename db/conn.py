@@ -131,6 +131,43 @@ class DataBase():
 
         return False
 
+    def uploadListUser(self, table_name='nao_conformidade', colaborador=''):
+        try:
+            sql = f"SELECT * FROM {table_name} WHERE \
+                    RESPONSAVEL LIKE '%{colaborador}%';"
+            self.cursor.execute(sql)
+            columns = [column[0] for column in self.cursor.description]
+            data = [
+                dict(zip(columns, row)) for row in self.cursor.fetchall()
+            ]
+            self.closeDB()
+            return data
+        except Exception:
+            return
+
+    def searchAll(self, table_name='nao_conformidade', text=''):
+        sql = f"SELECT * FROM {table_name} WHERE ID LIKE '%{text}%' " \
+                f"OR ITEM LIKE '%{text}%' OR ORDEM LIKE '%{text}%' " \
+                f"OR LOTE LIKE '%{text}%' " \
+                f"OR AREA_RESPONSAVEL LIKE '%{text}%' " \
+                f"OR OPERACAO LIKE '%{text}%' " \
+                f"OR NAO_CONFORMIDADE LIKE '%{text}%' " \
+                f"OR QUANTIDADE LIKE '%{text}%' " \
+                f"OR QUANTIDADE_REPROVADA LIKE '%{text}%' " \
+                f"OR ACAO LIKE '%{text}%' OR DATA LIKE '%{text}%' " \
+                f"OR RESPONSAVEL LIKE '%{text}%' OR S_RO LIKE '%{text}%' " \
+                f"OR OBS LIKE '%{text}%';"
+        try:
+            self.cursor.execute(sql)
+            columns = [column[0] for column in self.cursor.description]
+            data = [
+                dict(zip(columns, row)) for row in self.cursor.fetchall()
+            ]
+            self.closeDB()
+            return data
+        except Exception:
+            return
+
 
 if __name__ == '__main__':
     db = DataBase()

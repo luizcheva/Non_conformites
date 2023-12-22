@@ -6,6 +6,7 @@ from widgets.requests import requestsBD
 from widgets.tables import tableEdit
 from widgets.combobox import UploadCB
 from datetime import datetime
+from db.conn import DataBase
 
 
 class EventsBtn():
@@ -104,3 +105,17 @@ class EventsBtn():
         request = requestsBD()
         request.searchPeriodo(self.ui_page, data_inicio, data_fim)
         self.ui_page.btn_limparFiltros.setVisible(True)
+
+    def searchDel(self):
+        text = self.ui_page.txtBuscar_del.text()
+        request = DataBase()
+        results = request.searchAll('nao_conformidade', text)
+
+        if results is None:
+            return
+
+        tb = tableEdit(self.ui_page)
+        tb.carregaTable_pesquisa(self.ui_page.tabDados_del, results)
+        self.ui_page.lblTotalRegistros_Del.setText(
+            f'Total de registro(s): {len(results)}'
+        )

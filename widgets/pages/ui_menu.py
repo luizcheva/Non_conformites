@@ -82,7 +82,7 @@ class LayoutMenu(QVBoxLayout):
         settings_layout.setSpacing(0)
 
         self.settings_btn = PyPushButton(
-            text='Configurações', icon_path='btn_settings.svg',
+            text='Informações', icon_path='btn_settings.svg',
         )
 
         settings_layout.addWidget(self.settings_btn)
