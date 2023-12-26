@@ -32,7 +32,7 @@ class Settings_():
         self.ui_page.lcd_TotalSRO.display(contador)
 
         tb = tableEdit(self.ui_page)
-        tb.carregaTable_pesquisa(
+        tb.carregaTable_Col(
             self.ui_page.tab_DadosColaborador,
             data_results
         )

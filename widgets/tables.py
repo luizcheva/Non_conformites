@@ -55,10 +55,10 @@ class tableEdit():
 
         self.db_instance.closeDB()
         self.ui_page.lbl_totalRegistros.setText(
-            f'Total de registro(s): {len(results)}'
+            f'Total de registro(s): {self.table.rowCount()}'
         )
         self.ui_page.lblTotalRegistros_Del.setText(
-            f'Total de registro(s): {len(results)}'
+            f'Total de registro(s): {self.table.rowCount()}'
         )
 
     def carregaTable_pesquisa(self, table: QTableWidget, lista: dict = {}):
@@ -105,5 +105,49 @@ class tableEdit():
 
         self.db_instance.closeDB()
         self.ui_page.lbl_totalRegistros.setText(
-            f'Total de registro(s): {len(lista)}'
+            f'Total de registro(s): {table.rowCount()}'
         )
+
+    def carregaTable_Col(self, table: QTableWidget, lista: dict = {}):
+        table.clearContents()
+        table.setRowCount(0)
+
+        for row, text in enumerate(lista):
+            table.insertRow(row)
+            table.setItem(row, 0, QTableWidgetItem(str(text["ID"])))
+            try:
+                item = int(text["ITEM"])
+            except ValueError:
+                item = text["ITEM"]
+
+            table.setItem(row, 1, QTableWidgetItem(str(item)))
+            table.setItem(row, 2, QTableWidgetItem(str(text["ORDEM"])))
+            table.setItem(row, 3, QTableWidgetItem(str(text["LOTE"])))
+            table.setItem(
+                row, 4, QTableWidgetItem(str(text["AREA_RESPONSAVEL"]))
+            )
+            table.setItem(row, 5, QTableWidgetItem(str(text["OPERACAO"])))
+            table.setItem(
+                row, 6, QTableWidgetItem(str(text["NAO_CONFORMIDADE"]))
+            )
+            table.setItem(
+                row, 7, QTableWidgetItem(str(text["QUANTIDADE"]))
+            )
+            table.setItem(
+                row, 8, QTableWidgetItem(str(text["QUANTIDADE_REPROVADA"]))
+            )
+            table.setItem(row, 9, QTableWidgetItem(str(text["ACAO"])))
+
+            data_format = self.db_instance.convertDate(text["DATA"])
+            table.setItem(row, 10, QTableWidgetItem(str(data_format)))
+            table.setItem(
+                row, 11, QTableWidgetItem(str(text["RESPONSAVEL"]))
+            )
+
+            s_ro = 'Não'
+            if str(text["S_RO"]) == 'true':
+                s_ro = 'Sim'
+            table.setItem(row, 12, QTableWidgetItem(str(s_ro)))
+            table.setItem(row, 13, QTableWidgetItem(str(text["OBS"])))
+
+        self.db_instance.closeDB()

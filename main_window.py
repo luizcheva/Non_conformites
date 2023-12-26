@@ -65,6 +65,9 @@ class MainWindows(QMainWindow):
         # LAYOUT BOTTOM BAR
         self.bottom_bar_layout = LayoutBottomBar(self.bottom_status_bar)
 
+        # UPLOADING PAGE SETTINGS DATA
+        self.page_settings = Settings_(self)
+
         # EVENTS BTNS
         self.lMenuLyt.home_btn.clicked.connect(self.show_page_home)
         self.lMenuLyt.new_btn.clicked.connect(self.show_page_add)
@@ -73,9 +76,6 @@ class MainWindows(QMainWindow):
         self.lMenuLyt.settings_btn.clicked.connect(
             self.show_page_settings
         )
-
-        # UPLOADING PAGE SETTINGS DATA
-        self.page_settings = Settings_(self)
 
         # HIDE CLEAR FILTER BTN
         self.content_page.ui_page.btn_limparFiltros.setVisible(False)

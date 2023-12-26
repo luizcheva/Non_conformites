@@ -51,9 +51,7 @@ class ContentPage(QStackedWidget):
         self.lista = listView(self.ui_page)
 
         # UPLOADED TABLE
-        self.table_edit = tableEdit(self.ui_page)
-        self.table_edit.carregaTable(self.ui_page.tab_dados)
-        self.table_edit.carregaTable(self.ui_page.tabDados_del)
+        self.atualizarTabelas()
 
         # UPLOADED COMBOBOX
         self.cb = UploadCB()
@@ -116,6 +114,7 @@ class ContentPage(QStackedWidget):
             self.ui_page.stackedWidget.setCurrentWidget(
                 self.ui_page.page_geral
             )
+            self.atualizarTabelas()
 
     def editReg(self):
         selected_item = self.table_edit.ui_page.tab_dados.selectedItems()
@@ -152,9 +151,15 @@ class ContentPage(QStackedWidget):
             is_sro
         )
         dialog.exec()
+        self.atualizarTabelas()
 
     def addIDtoList(self):
         self.lista.uploadList(self.ui_page.tabDados_del)
 
     def deleteIDtoList(self):
         self.lista.removeItem()
+
+    def atualizarTabelas(self):
+        self.table_edit = tableEdit(self.ui_page)
+        self.table_edit.carregaTable(self.ui_page.tab_dados)
+        self.table_edit.carregaTable(self.ui_page.tabDados_del)

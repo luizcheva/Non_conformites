@@ -71,6 +71,30 @@ class DataBase():
         self.closeDB()
         return "OK"
 
+    def updateData(
+        self, table_name='nao_conformidade', fullDataSet: tuple = ()
+    ):
+        sql = f"UPDATE {table_name} SET " \
+                "ITEM = ?, ORDEM = ?, " \
+                "LOTE = ?, AREA_RESPONSAVEL = ?, " \
+                "OPERACAO = ?, NAO_CONFORMIDADE = ?, " \
+                "QUANTIDADE = ?, QUANTIDADE_REPROVADA = ?, " \
+                "ACAO = ?, DATA = ?, " \
+                "RESPONSAVEL = ?, S_RO = ?, " \
+                "OBS = ? WHERE ID = ?;"
+        try:
+            self.cursor.execute(sql, fullDataSet)
+            self.connection.commit()
+            self.closeDB()
+            return "OK"
+        except ValueError as err:
+            msg = Message(
+                'Error ao editar o registro.',
+                f'Desculpe, algo inesperado aconteceu.\n Erro: {err}'
+            )
+            msg.errorMsg()
+            pass
+
     def pesquisaPeriodo(
         self, table_name='nao_conformidade', data_inicio='', data_fim=''
     ):

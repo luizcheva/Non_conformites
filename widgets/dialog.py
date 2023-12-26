@@ -3,6 +3,8 @@ from PySide6.QtCore import Qt
 from widgets.pages.ui_dialog import Ui_Dialog
 from information import Message
 from widgets.combobox import UploadCB
+from datetime import datetime
+from db.conn import DataBase
 
 
 class ShowDialog(QDialog):
@@ -23,6 +25,11 @@ class ShowDialog(QDialog):
         data, planta, ordem, lote, item, area, responsavel,
         qtde, qtde_rep, area_nc, motivo, acao, obs, sro
     ):
+        try:
+            self.id_number = int(id)
+        except ValueError:
+            pass
+
         self.ui.text_data.setText(data)
         self.ui.text_planta.setText(planta)
         self.ui.text_ordem.setText(ordem)
@@ -41,13 +48,66 @@ class ShowDialog(QDialog):
         else:
             self.ui.btnNaoRo.setChecked(True)
 
-        self.setWindowTitle(f'Alteração do registro: {id}')
+        self.setWindowTitle(f'Alteração do registro: {self.id_number}')
 
     def events(self):
         self.ui.btnVoltar1.clicked.connect(self.fechar)
+        self.ui.btn_DadosNcs.clicked.connect(self.editData)
 
     def fechar(self):
         msg = Message('Atenção', 'Deseja cancelar a edição do registro?')
         resposta = msg.questionMsg()
         if resposta == QMessageBox.StandardButton.Yes:
             self.accept()
+
+    def editData(self):
+        question = Message(
+            'Atenção',
+            f'Deseja editar o registro "{self.id_number}"? '
+        )
+        result = question.questionMsg()
+
+        if not result == QMessageBox.StandardButton.Yes:
+            return
+
+        try:
+            data_format = datetime.strptime(
+                    self.ui.text_data.text(), "%d/%m/%Y"
+                )
+            sro_value = 'true' if self.ui.btnSimRo.isChecked() else 'false'
+
+            data_value = (
+                self.ui.text_item.text(),
+                int(self.ui.text_ordem.text()),
+                self.ui.text_lote.text(),
+                self.ui.cmb_areaNC.currentText(),
+                self.ui.cmb_areaResp.currentText(),
+                self.ui.cmb_Motivos.currentText(),
+                float(self.ui.text_qtde.text()),
+                float(self.ui.text_qtdeRep.text()),
+                self.ui.text_acao.text(),
+                str(data_format),
+                self.ui.text_respIden.text(),
+                sro_value,
+                self.ui.text_Obs.toPlainText(),
+                self.id_number
+            )
+
+            db = DataBase()
+            db.updateData('nao_conformidade', data_value)
+
+            msg = Message(
+                'Sucesso',
+                'Registro editado com sucesso.'
+            )
+            msg.informationMsg()
+
+            self.accept()
+        except Exception as err:
+            print(err)
+            msg = Message(
+                'Error ao converter',
+                f'Valores Inválidos.\n Error: "{err}"'
+            )
+            msg.errorMsg()
+            return
