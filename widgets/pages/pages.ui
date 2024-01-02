@@ -29,7 +29,7 @@
    <string notr="true">background-color: #F4F4F4;</string>
   </property>
   <property name="currentIndex">
-   <number>2</number>
+   <number>4</number>
   </property>
   <widget class="QWidget" name="page_home">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -3500,7 +3500,7 @@ font: 10pt &quot;KonsensLight&quot; bold;</string>
              <string notr="true">background-color: #F9F8F9;</string>
             </property>
             <property name="currentIndex">
-             <number>1</number>
+             <number>2</number>
             </property>
             <widget class="QWidget" name="page_geral">
              <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -4211,6 +4211,9 @@ QLineEdit:hover {
 QLineEdit:focus {
 	border: 2px solid rgb(99,101,105);
 }</string>
+                          </property>
+                          <property name="readOnly">
+                           <bool>true</bool>
                           </property>
                           <property name="placeholderText">
                            <string>u123XXX</string>
@@ -5434,6 +5437,9 @@ QGroupBox::title {
                            <property name="text">
                             <string>NÃO</string>
                            </property>
+                           <property name="checked">
+                            <bool>true</bool>
+                           </property>
                           </widget>
                          </item>
                          <item>
@@ -5455,7 +5461,7 @@ QGroupBox::title {
                       <item row="2" column="0" colspan="2">
                        <widget class="QGroupBox" name="group_addressEmail">
                         <property name="enabled">
-                         <bool>true</bool>
+                         <bool>false</bool>
                         </property>
                         <property name="minimumSize">
                          <size>
@@ -5486,8 +5492,7 @@ QGroupBox::title {
  }
 
 QGroupBox::title {
-	subcontrol-origin: margin;
-	subcontrol-position: top left;
+	subcontrol-position: top center;
 	padding: 0 3px;
 	background-color: rgb(99,101,105);
 	color: white;
@@ -5516,7 +5521,7 @@ QGroupBox::title {
                          <item row="0" column="0">
                           <widget class="QCheckBox" name="check_acabamento">
                            <property name="enabled">
-                            <bool>true</bool>
+                            <bool>false</bool>
                            </property>
                            <property name="font">
                             <font>

@@ -1,10 +1,12 @@
 from PySide6.QtWidgets import QDialog, QMessageBox
 from PySide6.QtCore import Qt
+from PySide6.QtGui import QIntValidator
 from widgets.pages.ui_dialog import Ui_Dialog
 from information import Message
 from widgets.combobox import UploadCB
 from datetime import datetime
 from db.conn import DataBase
+from validation.form_validator import FormValidator
 
 
 class ShowDialog(QDialog):
@@ -19,6 +21,7 @@ class ShowDialog(QDialog):
         self.cb.AreaNC(self.ui.cmb_areaNC)
         self.cb.motivosNC(self.ui.cmb_Motivos)
         self.events()
+        self.validaCampos()
 
     def initUI(
         self, id,
@@ -70,6 +73,9 @@ class ShowDialog(QDialog):
         if not result == QMessageBox.StandardButton.Yes:
             return
 
+        if not FormValidator.validate_form(self):
+            return
+
         try:
             data_format = datetime.strptime(
                     self.ui.text_data.text(), "%d/%m/%Y"
@@ -111,3 +117,36 @@ class ShowDialog(QDialog):
             )
             msg.errorMsg()
             return
+
+    def validaCampos(self):
+        self.ui.text_qtde.setValidator(QIntValidator())
+        self.ui.text_qtdeRep.setValidator(QIntValidator())
+        self.ui.text_data.setInputMask('99/99/9999')
+        self.ui.text_data.editingFinished.connect(self.dataValida)
+        self.ui.text_data.setProperty("validator", "date")
+        self.ui.text_planta.setProperty("validator", "text")
+        self.ui.text_ordem.setProperty("validator", "number")
+        self.ui.text_lote.setProperty("validator", "required")
+        self.ui.text_item.setProperty("validator", "required")
+        self.ui.cmb_areaResp.setProperty("validator", "combo")
+        self.ui.text_respIden.setProperty("validator", "required")
+        self.ui.text_qtde.setProperty("validator", "number")
+        self.ui.text_qtdeRep.setProperty("validator", "number")
+        self.ui.cmb_areaNC.setProperty("validator", "combo")
+        self.ui.cmb_Motivos.setProperty("validator", "combo")
+        self.ui.text_acao.setProperty("validator", "required")
+        self.ui.group_SRo.setProperty("validator", "radio_group")
+        self.ui.group_Email.setProperty("validator", "radio_group")
+
+    def dataValida(self):
+        data_str = self.ui.text_data.text()
+        try:
+            data = datetime.strptime(data_str, '%d/%m/%Y')
+            return data
+        except ValueError:
+            msg = Message('Data Errada', f'A data {data_str} é inválida.')
+            msg.errorMsg()
+            self.ui.text_data.clear()
+            self.ui.text_data.setFocus()
+
+        return None

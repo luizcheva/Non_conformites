@@ -1,3 +1,4 @@
+import os
 from PySide6.QtWidgets import (
     QMainWindow, QFrame, QHBoxLayout, QVBoxLayout, QPushButton, QWidget
 )
@@ -9,8 +10,8 @@ from widgets.pages.settings import Settings_
 from widgets.pages.ui_statusBar import LayoutTopBar, LayoutBottomBar
 from PySide6.QtCore import QPropertyAnimation, QEasingCurve, Slot
 from db.conn import DataBase
-import os
 from information import Message
+from datetime import datetime
 
 
 class MainWindows(QMainWindow):
@@ -79,6 +80,12 @@ class MainWindows(QMainWindow):
 
         # HIDE CLEAR FILTER BTN
         self.content_page.ui_page.btn_limparFiltros.setVisible(False)
+
+        # COMPLETING WITH USER AND DATE
+        data_hoje = datetime.now()
+        data_hoje = data_hoje.strftime("%d/%m/%Y")
+        self.content_page.ui_page.text_data.setText(data_hoje)
+        self.content_page.ui_page.text_respIden.setText(os.getlogin())
 
         self.setCentralWidget(self.cf)
 

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'pagesqBBoiJ.ui'
+## Form generated from reading UI file 'pages.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.5.3
+## Created by: Qt User Interface Compiler version 6.6.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -22,7 +22,7 @@ from PySide6.QtWidgets import (QAbstractItemView, QApplication, QCheckBox, QComb
     QRadioButton, QSizePolicy, QSpacerItem, QStackedWidget,
     QTableWidget, QTableWidgetItem, QTextEdit, QVBoxLayout,
     QWidget)
-# import resources_rc
+import resources_rc
 
 class Ui_StackedWidget(object):
     def setupUi(self, StackedWidget):
@@ -1960,6 +1960,7 @@ class Ui_StackedWidget(object):
 "QLineEdit:focus {\n"
 "	border: 2px solid rgb(99,101,105);\n"
 "}")
+        self.text_respIden.setReadOnly(True)
 
         self.verticalLayout_20.addWidget(self.text_respIden)
 
@@ -2552,6 +2553,7 @@ class Ui_StackedWidget(object):
         self.btn_NaoEmail.setMaximumSize(QSize(85, 16777215))
         self.btn_NaoEmail.setFont(font)
         self.btn_NaoEmail.setStyleSheet(u"padding-left: 15%;")
+        self.btn_NaoEmail.setChecked(True)
 
         self.horizontalLayout_16.addWidget(self.btn_NaoEmail)
 
@@ -2564,7 +2566,7 @@ class Ui_StackedWidget(object):
 
         self.group_addressEmail = QGroupBox(self.frame_13)
         self.group_addressEmail.setObjectName(u"group_addressEmail")
-        self.group_addressEmail.setEnabled(True)
+        self.group_addressEmail.setEnabled(False)
         self.group_addressEmail.setMinimumSize(QSize(0, 200))
         self.group_addressEmail.setMaximumSize(QSize(16777215, 200))
         self.group_addressEmail.setFont(font9)
@@ -2578,8 +2580,7 @@ class Ui_StackedWidget(object):
 " }\n"
 "\n"
 "QGroupBox::title {\n"
-"	subcontrol-origin: margin;\n"
-"	subcontrol-position: top left;\n"
+"	subcontrol-position: top center;\n"
 "	padding: 0 3px;\n"
 "	background-color: rgb(99,101,105);\n"
 "	color: white;\n"
@@ -2591,7 +2592,6 @@ class Ui_StackedWidget(object):
         self.gridLayout_3.setContentsMargins(10, 20, 10, 0)
         self.check_acabamento = QCheckBox(self.group_addressEmail)
         self.check_acabamento.setObjectName(u"check_acabamento")
-        self.check_acabamento.setEnabled(True)
         font17 = QFont()
         font17.setFamilies([u"KonsensBook"])
         font17.setPointSize(12)
@@ -2975,8 +2975,8 @@ class Ui_StackedWidget(object):
 
         self.retranslateUi(StackedWidget)
 
-        StackedWidget.setCurrentIndex(3)
-        self.stackedWidget.setCurrentIndex(1)
+        StackedWidget.setCurrentIndex(4)
+        self.stackedWidget.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(StackedWidget)
@@ -2984,16 +2984,16 @@ class Ui_StackedWidget(object):
 
     def retranslateUi(self, StackedWidget):
         StackedWidget.setWindowTitle(QCoreApplication.translate("StackedWidget", u"StackedWidget", None))
-        self.label_39.setText(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p align=\"right\"><img src=\"images/neo_Logo1.png\"/></p></body></html>", None))
-        self.label_3.setText(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p><img src=\"images/background_image.png\"/></p></body></html>", None))
-        self.label_38.setText(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p><img src=\"images/30anos_menor.png\"/></p></body></html>", None))
-        self.label_40.setText(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p><img src=\"images/new_design.png\"/></p></body></html>", None))
+        self.label_39.setText(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p align=\"right\"><img src=\":/images/neo_Logo1.png\"/></p></body></html>", None))
+        self.label_3.setText(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p><img src=\":/images/background_image.png\"/></p></body></html>", None))
+        self.label_38.setText(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p><img src=\":/images/30anos_menor.png\"/></p></body></html>", None))
+        self.label_40.setText(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p><img src=\":/images/new_design.png\"/></p></body></html>", None))
         self.label_41.setText(QCoreApplication.translate("StackedWidget", u"NOVA APAR\u00caNCIA", None))
         self.label_42.setText(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p><span style=\" font-size:8pt;\">Bem-vindos ao novo sistema de N\u00e3o Conformidades. Uma maneira mais \u00e1gil e r\u00e1pida de preenchimento da n\u00e3o conformidade.</span></p></body></html>", None))
-        self.label_43.setText(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p><img src=\"images/rapidez.png\"/></p></body></html>", None))
+        self.label_43.setText(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p><img src=\":/images/rapidez.png\"/></p></body></html>", None))
         self.label_44.setText(QCoreApplication.translate("StackedWidget", u"MAIS RAPIDEZ", None))
         self.label_45.setText(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p><span style=\" font-size:8pt;\">Agilidade e rapidez no processo de inser\u00e7\u00e3o, edi\u00e7\u00e3o e abertura de S.RO diretamente pelo sistema.</span></p></body></html>", None))
-        self.label_46.setText(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p><img src=\"images/duvidas.png\"/></p></body></html>", None))
+        self.label_46.setText(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p><img src=\":/images/duvidas.png\"/></p></body></html>", None))
         self.label_47.setText(QCoreApplication.translate("StackedWidget", u"D\u00daVIDAS?", None))
         self.label_48.setText(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p><span style=\" font-size:8pt;\">Caso possua alguma d\u00favida e/ou sugest\u00e3o de melhoria, em qualquer processo, favor contatar o seu L\u00edder direto ou o respons\u00e1vel pelo sistema.</span></p></body></html>", None))
         self.groupBox_4.setTitle(QCoreApplication.translate("StackedWidget", u"PESQUISAR", None))
@@ -3035,7 +3035,7 @@ class Ui_StackedWidget(object):
         self.lbl_totalRegistros.setText(QCoreApplication.translate("StackedWidget", u"Total de registro(s): 0", None))
         self.btn_limparFiltros.setText(QCoreApplication.translate("StackedWidget", u"Limpar filtros", None))
         self.btnAlterarRegistro.setText(QCoreApplication.translate("StackedWidget", u"ALTERAR", None))
-        self.label_4.setText(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p align=\"right\"><img src=\"images/neo_Logo1.png\"/></p></body></html>", None))
+        self.label_4.setText(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p align=\"right\"><img src=\":/images/neo_Logo1.png\"/></p></body></html>", None))
         self.grpBusca_del.setTitle(QCoreApplication.translate("StackedWidget", u"PESQUISAR", None))
         self.txtBuscar_del.setPlaceholderText(QCoreApplication.translate("StackedWidget", u"Buscar", None))
         self.btnBuscar_del.setText(QCoreApplication.translate("StackedWidget", u"BUSCAR", None))
@@ -3077,12 +3077,12 @@ class Ui_StackedWidget(object):
         self.lblListIds.setText(QCoreApplication.translate("StackedWidget", u"ID's a serem apagado(s):", None))
         self.lblTotalRegistros_Del.setText(QCoreApplication.translate("StackedWidget", u"Total de registro(s): 0", None))
         self.btnDeleteRegister.setText(QCoreApplication.translate("StackedWidget", u"DELETAR", None))
-        self.logoNeo_del.setText(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p align=\"right\"><img src=\"images/neo_Logo1.png\"/></p></body></html>", None))
-        self.imgCol.setText(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p><img src=\"images/user.png\"/></p></body></html>", None))
+        self.logoNeo_del.setText(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p align=\"right\"><img src=\":/images/neo_Logo1.png\"/></p></body></html>", None))
+        self.imgCol.setText(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p><img src=\":/images/user.png\"/></p></body></html>", None))
         self.text_Colaborador.setText(QCoreApplication.translate("StackedWidget", u"uXXXXXX", None))
-        self.imgTotalReg.setText(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p><img src=\"images/total_registro.png\"/></p></body></html>", None))
+        self.imgTotalReg.setText(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p><img src=\":/images/total_registro.png\"/></p></body></html>", None))
         self.label_50.setText(QCoreApplication.translate("StackedWidget", u"Total de registro(s)", None))
-        self.img_TotalSRo.setText(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p><img src=\"images/total_sro.png\"/></p></body></html>", None))
+        self.img_TotalSRo.setText(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p><img src=\":/images/total_sro.png\"/></p></body></html>", None))
         self.label_52.setText(QCoreApplication.translate("StackedWidget", u"Total de S.RO", None))
         self.groupDadosColaboradores.setTitle(QCoreApplication.translate("StackedWidget", u"Registro(s) adicionados pelo seu usu\u00e1rio", None))
         self.label_2.setText(QCoreApplication.translate("StackedWidget", u"1", None))
@@ -3150,6 +3150,6 @@ class Ui_StackedWidget(object):
         self.check_pcp.setText(QCoreApplication.translate("StackedWidget", u"PCP", None))
         self.btnVoltar2.setText(QCoreApplication.translate("StackedWidget", u"VOLTAR", None))
         self.btn_Disposicao.setText(QCoreApplication.translate("StackedWidget", u"SALVAR", None))
-        self.label.setText(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p align=\"right\"><img src=\"images/neo_Logo1.png\"/></p></body></html>", None))
+        self.label.setText(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p align=\"right\"><img src=\":/images/neo_Logo1.png\"/></p></body></html>", None))
     # retranslateUi
 

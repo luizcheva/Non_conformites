@@ -62,7 +62,7 @@ QToolBox::tab:selected {
 }</string>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="group_geral">
       <property name="geometry">
@@ -605,6 +605,9 @@ QLineEdit:focus {
 	border: 2px solid rgb(99,101,105);
 }</string>
               </property>
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
               <property name="placeholderText">
                <string>u123XXX</string>
               </property>
@@ -618,6 +621,14 @@ QLineEdit:focus {
       </layout>
      </widget>
      <widget class="QWidget" name="group_Nc">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>766</width>
+        <height>422</height>
+       </rect>
+      </property>
       <attribute name="label">
        <string>Dados da NCs</string>
       </attribute>

@@ -78,6 +78,8 @@ class ContentPage(QStackedWidget):
         self.ui_page.btnDeleteRegister.clicked.connect(self.lista.deleteItems)
         self.ui_page.btnDelId.clicked.connect(self.deleteIDtoList)
         self.ui_page.btnBuscar_del.clicked.connect(self.events.searchDel)
+        self.ui_page.btn_NaoEmail.clicked.connect(self.desabilitaEmail)
+        self.ui_page.btn_SimEmail.clicked.connect(self.habilitaEmail)
 
     def validaCampos(self):
         self.ui_page.text_qtde.setValidator(QIntValidator())
@@ -110,7 +112,6 @@ class ContentPage(QStackedWidget):
                 return
             inserir = insertNew(self.windows)
             inserir.salvarDados()
-            self.table_edit.carregaTable(self.ui_page.tab_dados)
             self.ui_page.stackedWidget.setCurrentWidget(
                 self.ui_page.page_geral
             )
@@ -163,3 +164,9 @@ class ContentPage(QStackedWidget):
         self.table_edit = tableEdit(self.ui_page)
         self.table_edit.carregaTable(self.ui_page.tab_dados)
         self.table_edit.carregaTable(self.ui_page.tabDados_del)
+
+    def habilitaEmail(self):
+        self.ui_page.group_addressEmail.setEnabled(True)
+
+    def desabilitaEmail(self):
+        self.ui_page.group_addressEmail.setEnabled(False)

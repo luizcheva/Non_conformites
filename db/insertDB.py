@@ -6,6 +6,7 @@ from PySide6.QtWidgets import (
 from db.conn import DataBase
 from information import Message
 from typing import TYPE_CHECKING
+import os
 if TYPE_CHECKING:
     from main_window import MainWindows
 
@@ -63,6 +64,7 @@ class insertNew():
             msg = Message('Parabens', 'Registro adicionado com sucesso')
             msg.informationMsg()
             self.clearData()
+            self.camposPadrao()
 
     def clearData(self):
         for child in self.ui_page.stackedWidget.findChildren(QLineEdit):
@@ -78,3 +80,9 @@ class insertNew():
 
         for child in self.ui_page.stackedWidget.findChildren(QTextEdit):
             child.clear()
+
+    def camposPadrao(self):
+        data_hoje = datetime.now()
+        data_hoje = data_hoje.strftime("%d/%m/%Y")
+        self.ui_page.text_data.setText(data_hoje)
+        self.ui_page.text_respIden.setText(os.getlogin())
