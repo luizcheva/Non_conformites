@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QFrame, QStackedWidget
+from PySide6.QtWidgets import QFrame, QStackedWidget, QCheckBox
 from PySide6.QtGui import QIntValidator
 from widgets.pages.ui_pages import Ui_StackedWidget
 from typing import TYPE_CHECKING
@@ -110,6 +110,24 @@ class ContentPage(QStackedWidget):
         if result == msg.StandardButton.Yes:
             if not FormValidator.validate_form(self.windows):
                 return
+
+            if self.ui_page.btn_SimEmail.isChecked():
+                self.list_email = ()
+                for opt in self.ui_page.group_addressEmail.findChildren(
+                    QCheckBox
+                ):
+                    if isinstance(opt, QCheckBox):
+                        if opt.isChecked():
+                            self.list_email += (opt.text(),)
+                if len(self.list_email) == 0:
+                    msg_email = Message(
+                        'Nenhum e-mail selecionado',
+                        'Desculpe, não foi selecionado nenhum e-mail '
+                        'para envio.'
+                    )
+                    msg_email.errorMsg()
+                    return
+
             inserir = insertNew(self.windows)
             inserir.salvarDados()
             self.ui_page.stackedWidget.setCurrentWidget(

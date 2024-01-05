@@ -20,7 +20,7 @@ class MainWindows(QMainWindow):
 
         self.setWindowTitle('Registros de Não Conformidades - NEODENT')
         self.resize(1200, 720)
-        self.setMinimumSize(960, 540)
+        self.setMinimumSize(1100, 700)
 
         self.cf = QFrame()
         self.main_window = QHBoxLayout(self.cf)

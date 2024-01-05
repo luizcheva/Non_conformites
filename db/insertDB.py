@@ -1,12 +1,14 @@
+import os
 from datetime import datetime
 from PySide6.QtWidgets import (
     QRadioButton, QLineEdit, QTextEdit,
     QGroupBox, QComboBox
 )
+from PySide6.QtCore import QObject, QThread, Signal
 from db.conn import DataBase
 from information import Message
+from libary.web_automation import WebAutomator
 from typing import TYPE_CHECKING
-import os
 if TYPE_CHECKING:
     from main_window import MainWindows
 
@@ -62,6 +64,8 @@ class insertNew():
 
         if inserir == "OK":
             msg = Message('Parabens', 'Registro adicionado com sucesso')
+            if sro == 'true':
+                self.realizaTarefa()
             msg.informationMsg()
             self.clearData()
             self.camposPadrao()
@@ -86,3 +90,52 @@ class insertNew():
         data_hoje = data_hoje.strftime("%d/%m/%Y")
         self.ui_page.text_data.setText(data_hoje)
         self.ui_page.text_respIden.setText(os.getlogin())
+
+    def realizaTarefa(self):
+        self.msg = Message(
+            'Aguarde a abertura do S.RO'
+        )
+        self._worker = Worker()
+        self._thread = QThread()
+        worker = self._worker
+        thread = self._thread
+
+        worker.moveToThread(thread)
+
+        thread.started.connect(worker.run)
+        worker.finished.connect(thread.quit)
+
+        thread.finished.connect(thread.deleteLater)
+        worker.finished.connect(worker.deleteLater)
+
+        worker.started.connect(self.abrirSRO)
+        worker.finished.connect(self.finalizaSRO)
+
+        thread.start()
+        self.msg.informationMsg()
+
+    def abrirSRO(self):
+        scrapping = WebAutomator('Lc622398@')
+        scrapping.open_sro(
+            4400,
+            self.ui_page.text_item.text(),
+            self.ui_page.text_lote.text(),
+            int(self.ui_page.text_ordem.text()),
+            int(self.ui_page.text_qtde.text()),
+            int(self.ui_page.text_qtdeRep.text()),
+            self.ui_page.text_Obs.toPlainText(),
+            self.ui_page.cmb_Motivos.currentText()
+        )
+        scrapping.wait_for_browser_close()
+
+    def finalizaSRO(self):
+        self.msg.accept()
+
+
+class Worker(QObject):
+    started = Signal()
+    finished = Signal()
+
+    def run(self):
+        self.started.emit()
+        self.finished.emit()

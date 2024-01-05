@@ -52,6 +52,9 @@ class ShowDialog(QDialog):
             self.ui.btnNaoRo.setChecked(True)
 
         self.setWindowTitle(f'Alteração do registro: {self.id_number}')
+        self.ui.group_SRo.setDisabled(True)
+        self.ui.group_Email.setDisabled(True)
+        self.ui.group_addressEmail.setDisabled(True)
 
     def events(self):
         self.ui.btnVoltar1.clicked.connect(self.fechar)
