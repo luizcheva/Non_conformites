@@ -2,7 +2,7 @@ import os
 from datetime import datetime
 from PySide6.QtWidgets import (
     QRadioButton, QLineEdit, QTextEdit,
-    QGroupBox, QComboBox
+    QGroupBox, QComboBox, QInputDialog
 )
 from PySide6.QtCore import QObject, QThread, Signal
 from db.conn import DataBase
@@ -65,7 +65,21 @@ class insertNew():
         if inserir == "OK":
             msg = Message('Parabens', 'Registro adicionado com sucesso')
             if sro == 'true':
+                while True:
+                    self.senha, ok_pressed = QInputDialog.getText(
+                        self.windows, 'Senha', 'Digite a senha do SE Suite:',
+                        QLineEdit.Password
+                    )
+                    if ok_pressed and self.senha:
+                        print(self.senha)
+                        break
+
+                self.msg_sro = Message(
+                    'Abertura de S.RO',
+                    'Aguarde...'
+                )
                 self.realizaTarefa()
+                self.msg_sro.noButtons()
             msg.informationMsg()
             self.clearData()
             self.camposPadrao()
@@ -92,9 +106,6 @@ class insertNew():
         self.ui_page.text_respIden.setText(os.getlogin())
 
     def realizaTarefa(self):
-        self.msg = Message(
-            'Aguarde a abertura do S.RO'
-        )
         self._worker = Worker()
         self._thread = QThread()
         worker = self._worker
@@ -112,10 +123,9 @@ class insertNew():
         worker.finished.connect(self.finalizaSRO)
 
         thread.start()
-        self.msg.informationMsg()
 
     def abrirSRO(self):
-        scrapping = WebAutomator('Lc622398@')
+        scrapping = WebAutomator(self.senha)
         scrapping.open_sro(
             4400,
             self.ui_page.text_item.text(),
@@ -129,7 +139,7 @@ class insertNew():
         scrapping.wait_for_browser_close()
 
     def finalizaSRO(self):
-        self.msg.accept()
+        self.msg_sro.accept()
 
 
 class Worker(QObject):

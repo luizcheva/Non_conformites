@@ -2592,6 +2592,7 @@ class Ui_StackedWidget(object):
         self.gridLayout_3.setContentsMargins(10, 20, 10, 0)
         self.check_acabamento = QCheckBox(self.group_addressEmail)
         self.check_acabamento.setObjectName(u"check_acabamento")
+        self.check_acabamento.setEnabled(False)
         font17 = QFont()
         font17.setFamilies([u"KonsensBook"])
         font17.setPointSize(12)

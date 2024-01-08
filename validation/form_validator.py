@@ -86,6 +86,7 @@ class FormValidator:
                 FormValidator.show_error_message(
                     "Erro de validação",
                     "Você esqueceu de selecionar uma opção nos demais campos."
+                    f"\n{child.objectName}"
                 )
                 return False
 

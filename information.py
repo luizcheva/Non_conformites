@@ -7,6 +7,7 @@ class Message(QMessageBox):
         super().__init__()
         self.title = title
         self.texto = text
+        self.setMinimumWidth(400)
 
     def errorMsg(self):
         self.setIcon(QMessageBox.Icon.Critical)
@@ -18,6 +19,13 @@ class Message(QMessageBox):
         self.setIcon(QMessageBox.Icon.Information)
         self.setWindowTitle(self.title)
         self.setText(self.texto)
+        self.exec()
+
+    def noButtons(self):
+        self.setIcon(QMessageBox.Icon.Information)
+        self.setWindowTitle(self.title)
+        self.setText(self.texto)
+        self.setStandardButtons(QMessageBox.StandardButton.NoButton)
         self.exec()
 
     def questionMsg(self):

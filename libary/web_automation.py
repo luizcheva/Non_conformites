@@ -82,40 +82,59 @@ class WebAutomator:
                         break
                 break
 
-        WebDriverWait(self.driver, 10).until(EC.number_of_windows_to_be(2))
+        WebDriverWait(self.driver, 30).until(EC.number_of_windows_to_be(2))
         windows = self.driver.window_handles
         self.driver.switch_to.window(windows[1])
-        frames = self.driver.find_elements(By.TAG_NAME, 'iframe')
-        for frame in frames:
-            print(frame)
 
-        WebDriverWait(self.driver, 10).until(EC.frame_to_be_available_and_switch_to_it((By.TAG_NAME, 'iframe')))
-        self.driver.switch_to.frame(0)
-        self.driver.switch_to.frame(3)
+        WebDriverWait(self.driver, 30).until(EC.frame_to_be_available_and_switch_to_it((By.TAG_NAME, 'iframe')))
+        try:
+            self.driver.switch_to.frame(3)
+        except Exception:
+            self.driver.switch_to.frame(0)
+            self.driver.switch_to.frame(3)
 
         WebDriverWait(self.driver, 10).\
                 until(EC.presence_of_element_located((By.XPATH, "//*[@id='app']/div/form/div/div[1]/div/div/div/div[2]/div[1]/div/input")))
 
+        WebDriverWait(self.driver, 1)
         self.driver.find_element(By.XPATH, "//*[@id='app']/div/form/div/div[1]/div/div/div/div[2]/div[1]/div/input").send_keys(planta)
+        WebDriverWait(self.driver, 0.5)
         self.driver.find_element(By.XPATH, "//*[@id='app']/div/form/div/div[1]/div/div/div/div[2]/div[1]/div/input").send_keys(Keys.ENTER)
+        WebDriverWait(self.driver, 0.5)
         self.driver.find_element(By.XPATH, "//*[@id='app']/div/form/div/div[1]/div/div/div/div[2]/div[1]/div/input").send_keys(Keys.TAB)
+        WebDriverWait(self.driver, 0.5)
         self.driver.find_element(By.XPATH, "/html/body/div/div/form/div/div[2]/div/div/div/div/div[2]/div[1]/div/input").send_keys(Keys.TAB)
+        WebDriverWait(self.driver, 0.5)
         self.driver.find_element(By.XPATH, "/html/body/div/div/form/div/div[7]/div/div[2]/div/div/div/textarea").send_keys(item)
+        WebDriverWait(self.driver, 0.5)
         self.driver.find_element(By.XPATH, "//*[@id='value_1327']").send_keys(lote)
+        WebDriverWait(self.driver, 0.5)
         self.driver.find_element(By.XPATH, "//*[@id='value_1328']").send_keys(ordem)
+        WebDriverWait(self.driver, 0.5)
         self.driver.find_element(By.XPATH, "//*[@id='value_1329']").send_keys(qtde)
+        WebDriverWait(self.driver, 0.5)
         self.driver.find_element(By.XPATH, "//*[@id='value_1330']").send_keys(qtde_rep)
+        WebDriverWait(self.driver, 0.5)
         self.driver.find_element(By.XPATH, "//*[@id='app']/div/form/div/div[12]/div/div/div/div[2]/div[1]/div/input").send_keys('Peças')
+        WebDriverWait(self.driver, 0.5)
         self.driver.find_element(By.XPATH, "//*[@id='app']/div/form/div/div[12]/div/div/div/div[2]/div[1]/div/input").send_keys(Keys.ENTER)
+        WebDriverWait(self.driver, 0.5)
         self.driver.find_element(By.XPATH, "//*[@id='app']/div/form/div/div[12]/div/div/div/div[2]/div[1]/div/input").send_keys(Keys.TAB)
+        WebDriverWait(self.driver, 0.5)
         data = datetime.now()
         data = data.strftime("%d%m%Y")
         self.driver.find_element(By.XPATH, "/html/body/div/div/form/div/div[13]/div/div[2]/div/div/input").send_keys(data)
+        WebDriverWait(self.driver, 0.5)
         self.driver.find_element(By.XPATH, "//*[@id='value_1331']").send_keys(Keys.TAB)
+        WebDriverWait(self.driver, 0.5)
         self.driver.find_element(By.XPATH, "//*[@id='app']/div/form/div/div[14]/div/div/div/div[2]/div[1]/div/input").send_keys('Controle de Qualidade')
+        WebDriverWait(self.driver, 0.5)
         self.driver.find_element(By.XPATH, "//*[@id='app']/div/form/div/div[14]/div/div/div/div[2]/div[1]/div/input").send_keys(Keys.ENTER)
+        WebDriverWait(self.driver, 0.5)
         self.driver.find_element(By.XPATH, "//*[@id='app']/div/form/div/div[14]/div/div/div/div[2]/div[1]/div/input").send_keys(Keys.TAB)
+        WebDriverWait(self.driver, 0.5)
         self.driver.find_element(By.XPATH, "/html/body/div/div/form/div/div[15]/div/div[2]/div/div/div/textarea").send_keys('N/A')
+        WebDriverWait(self.driver, 0.5)
         self.driver.find_element(By.XPATH, "/html/body/div/div/form/div/div[16]/div/div[2]/div/div/div/textarea").send_keys(obs)
 
 
