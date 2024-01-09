@@ -1,8 +1,6 @@
-import os
 from datetime import datetime
 from PySide6.QtWidgets import (
-    QRadioButton, QLineEdit, QTextEdit,
-    QGroupBox, QComboBox, QInputDialog
+    QRadioButton, QLineEdit, QInputDialog
 )
 from PySide6.QtCore import QObject, QThread, Signal
 from db.conn import DataBase
@@ -81,29 +79,6 @@ class insertNew():
                 self.realizaTarefa()
                 self.msg_sro.noButtons()
             msg.informationMsg()
-            self.clearData()
-            self.camposPadrao()
-
-    def clearData(self):
-        for child in self.ui_page.stackedWidget.findChildren(QLineEdit):
-            child.clear()
-
-        for child in self.ui_page.stackedWidget.findChildren(QGroupBox):
-            for child1 in child.findChildren(QRadioButton):
-                if isinstance(child1, QRadioButton):
-                    child1.setChecked(False)
-
-        for child in self.ui_page.stackedWidget.findChildren(QComboBox):
-            child.setCurrentIndex(-1)
-
-        for child in self.ui_page.stackedWidget.findChildren(QTextEdit):
-            child.clear()
-
-    def camposPadrao(self):
-        data_hoje = datetime.now()
-        data_hoje = data_hoje.strftime("%d/%m/%Y")
-        self.ui_page.text_data.setText(data_hoje)
-        self.ui_page.text_respIden.setText(os.getlogin())
 
     def realizaTarefa(self):
         self._worker = Worker()

@@ -1,4 +1,9 @@
-from PySide6.QtWidgets import QFrame, QStackedWidget, QCheckBox
+import os
+from datetime import datetime
+from PySide6.QtWidgets import (
+    QFrame, QStackedWidget, QCheckBox, QLineEdit,
+    QGroupBox, QRadioButton, QComboBox, QTextEdit
+)
 from PySide6.QtGui import QIntValidator
 from widgets.pages.ui_pages import Ui_StackedWidget
 from typing import TYPE_CHECKING
@@ -10,6 +15,7 @@ from information import Message
 from db.insertDB import insertNew
 from validation.form_validator import FormValidator
 from widgets.list import listView
+from widgets.email import NewEmail
 if TYPE_CHECKING:
     from main_window import MainWindows
 
@@ -112,13 +118,13 @@ class ContentPage(QStackedWidget):
                 return
 
             if self.ui_page.btn_SimEmail.isChecked():
-                self.list_email = ()
+                self.list_email = []
                 for opt in self.ui_page.group_addressEmail.findChildren(
                     QCheckBox
                 ):
                     if isinstance(opt, QCheckBox):
                         if opt.isChecked():
-                            self.list_email += (opt.text(),)
+                            self.list_email.append(opt.text())
                 if len(self.list_email) == 0:
                     msg_email = Message(
                         'Nenhum e-mail selecionado',
@@ -130,6 +136,12 @@ class ContentPage(QStackedWidget):
 
             inserir = insertNew(self.windows)
             inserir.salvarDados()
+
+            if self.ui_page.btn_SimEmail.isChecked():
+                self.enviarEmail()
+
+            self.clearData()
+            self.camposPadrao()
             self.ui_page.stackedWidget.setCurrentWidget(
                 self.ui_page.page_geral
             )
@@ -188,3 +200,43 @@ class ContentPage(QStackedWidget):
 
     def desabilitaEmail(self):
         self.ui_page.group_addressEmail.setEnabled(False)
+
+    def enviarEmail(self):
+        self.windows.bottom_bar_layout.left_lbl.setText(
+            'Aguarde estamos enviando o e-mail.'
+        )
+        email = NewEmail()
+        ordem = self.ui_page.text_ordem.text()
+        print(ordem)
+        email.new_email(
+            self.list_email,
+            4400,
+            self.ui_page.cmb_Motivos.currentText(),
+            int(self.ui_page.text_ordem.text()),
+            self.ui_page.text_item.text(),
+            self.ui_page.text_lote.text()
+        )
+        self.windows.bottom_bar_layout.left_lbl.setText(
+            'Criado por: Luiz Cheva'
+        )
+
+    def clearData(self):
+        for child in self.ui_page.stackedWidget.findChildren(QLineEdit):
+            child.clear()
+
+        for child in self.ui_page.stackedWidget.findChildren(QGroupBox):
+            for child1 in child.findChildren(QRadioButton):
+                if isinstance(child1, QRadioButton):
+                    child1.setChecked(False)
+
+        for child in self.ui_page.stackedWidget.findChildren(QComboBox):
+            child.setCurrentIndex(-1)
+
+        for child in self.ui_page.stackedWidget.findChildren(QTextEdit):
+            child.clear()
+
+    def camposPadrao(self):
+        data_hoje = datetime.now()
+        data_hoje = data_hoje.strftime("%d/%m/%Y")
+        self.ui_page.text_data.setText(data_hoje)
+        self.ui_page.text_respIden.setText(os.getlogin())
