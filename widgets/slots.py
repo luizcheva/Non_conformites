@@ -1,12 +1,14 @@
 from widgets.pages.ui_pages import Ui_StackedWidget
 from PySide6.QtCore import Slot, QDate
-from PySide6.QtWidgets import QLabel
+from PySide6.QtWidgets import QLabel, QMessageBox
 from information import Message
 from widgets.requests import requestsBD
 from widgets.tables import tableEdit
 from widgets.combobox import UploadCB
 from datetime import datetime
 from db.conn import DataBase
+from identify import verificaUsuario
+import os
 
 
 class EventsBtn():
@@ -118,4 +120,71 @@ class EventsBtn():
         tb.carregaTable_pesquisa(self.ui_page.tabDados_del, results)
         self.ui_page.lblTotalRegistros_Del.setText(
             f'Total de registro(s): {len(results)}'
+        )
+
+    def plantaSelecionada4400(self):
+        mudar = Message(
+            'Alterar a planta?',
+            'Deseja aterar a planta para 4400 (Neodent)?'
+        )
+        request = mudar.questionMsg()
+        if not request == QMessageBox.StandardButton.Yes:
+            return
+
+        db = DataBase()
+        usuario = os.environ.get("USERNAME")
+        query = f'UPDATE usuarios SET PLANTA=4400 WHERE USERNAME="{usuario}";'
+        db.cursor.execute(query)
+        db.connection.commit()
+        db.closeDB()
+
+        self.ui_page.btn4400.setDisabled(True)
+        self.ui_page.btn4401.setDisabled(False)
+        self.atualizarTabelas()
+
+    def plantaSelecionada4401(self):
+        mudar = Message(
+            'Alterar a planta?',
+            'Deseja aterar a planta para 4401 (CLEARCORRECT)?'
+        )
+        request = mudar.questionMsg()
+        if not request == QMessageBox.StandardButton.Yes:
+            return
+
+        db = DataBase()
+        usuario = os.environ.get("USERNAME")
+        query = f'UPDATE usuarios SET PLANTA=4401 WHERE USERNAME="{usuario}";'
+        db.cursor.execute(query)
+        db.connection.commit()
+        db.closeDB()
+
+        self.ui_page.btn4401.setDisabled(True)
+        self.ui_page.btn4400.setDisabled(False)
+        self.atualizarTabelas()
+
+    def atualizarTabelas(self):
+        tb = tableEdit(self.ui_page)
+        tb.carregaTable(self.ui_page.tab_dados)
+        tb.carregaTable(self.ui_page.tabDados_del)
+
+        user = os.environ.get("USERNAME")
+        planta = verificaUsuario().identificacao()
+        db = DataBase()
+        results = db.uploadListUser(planta, user)
+
+        if results is None:
+            return
+
+        self.ui_page.lcd_totalRegistro.display(len(results))
+        contador = 0.0
+        for data in results:
+            if data['S_RO'] == 'true':
+                contador += 1
+
+        self.ui_page.lcd_TotalSRO.display(contador)
+
+        tb = tableEdit(self.ui_page)
+        tb.carregaTable_Col(
+            self.ui_page.tab_DadosColaborador,
+            results
         )

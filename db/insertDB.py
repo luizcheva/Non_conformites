@@ -58,7 +58,8 @@ class insertNew():
             'obs': f'{obs}'
         }
         db = DataBase()
-        inserir = db.insertData('nao_conformidade', values)
+        planta = self.ui_page.text_planta.text()
+        inserir = db.insertData(planta, values)
 
         if inserir == "OK":
             msg = Message('Parabens', 'Registro adicionado com sucesso')

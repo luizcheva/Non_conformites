@@ -31,7 +31,7 @@ class UploadCB():
     def fiedsBuscar(self, combobox: QComboBox):
         conn = DataBase()
         cursor = conn.cursor.execute(
-            'SELECT * FROM nao_conformidade ORDER BY ID DESC LIMIT 1;'
+            'SELECT * FROM [4400] ORDER BY ID DESC LIMIT 1;'
         )
 
         for col in cursor.description:

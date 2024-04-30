@@ -29,7 +29,7 @@
    <string notr="true">background-color: #F4F4F4;</string>
   </property>
   <property name="currentIndex">
-   <number>4</number>
+   <number>3</number>
   </property>
   <widget class="QWidget" name="page_home">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -2495,34 +2495,6 @@ QPushButton:pressed {
   </widget>
   <widget class="QWidget" name="page_settings">
    <layout class="QVBoxLayout" name="verticalLayout_43">
-    <property name="spacing">
-     <number>30</number>
-    </property>
-    <property name="leftMargin">
-     <number>0</number>
-    </property>
-    <property name="topMargin">
-     <number>0</number>
-    </property>
-    <property name="rightMargin">
-     <number>0</number>
-    </property>
-    <property name="bottomMargin">
-     <number>0</number>
-    </property>
-    <item>
-     <spacer name="verticalSpacer_11">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>39</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_31">
       <property name="spacing">
@@ -2748,7 +2720,7 @@ QWidget#wdgTotalRegistro:hover {
                 <property name="maximumSize">
                  <size>
                   <width>120</width>
-                  <height>30</height>
+                  <height>40</height>
                  </size>
                 </property>
                 <property name="font">
@@ -2965,6 +2937,12 @@ QWidget#wdgTotalSRO:hover {
       <property name="spacing">
        <number>0</number>
       </property>
+      <property name="topMargin">
+       <number>10</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
       <item>
        <spacer name="horizontalSpacer_18">
         <property name="orientation">
@@ -3167,17 +3145,146 @@ QTableWidget::item:selected {
      </layout>
     </item>
     <item>
-     <spacer name="verticalSpacer_12">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
+     <layout class="QHBoxLayout" name="horizontalLayout_33">
+      <property name="spacing">
+       <number>10</number>
       </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>27</height>
-       </size>
+      <property name="leftMargin">
+       <number>10</number>
       </property>
-     </spacer>
+      <property name="topMargin">
+       <number>10</number>
+      </property>
+      <property name="rightMargin">
+       <number>10</number>
+      </property>
+      <property name="bottomMargin">
+       <number>10</number>
+      </property>
+      <item>
+       <widget class="QGroupBox" name="group_Planta">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>850</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>KonsensBook</family>
+          <pointsize>10</pointsize>
+          <italic>false</italic>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QGroupBox {
+	border: 1px solid rgb(99,101,105);
+	margin-top: 6px;
+	border-radius: 20px;
+	background-color: white;
+ }
+
+QGroupBox::title {
+	subcontrol-origin: top;
+	subcontrol-position: top left;
+	padding: 0 3px;
+	background-color: rgb(99,101,105);
+	color: white;
+	padding-left: 50px;
+	padding-right: 50px;
+}</string>
+        </property>
+        <property name="title">
+         <string>Planta Atual</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_34">
+         <item>
+          <widget class="QRadioButton" name="btn4400">
+           <property name="minimumSize">
+            <size>
+             <width>85</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>85</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>KonsensRegular</family>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QRadioButton {
+	padding-left: 15%;
+	background-color: transparent;
+}</string>
+           </property>
+           <property name="text">
+            <string>4400</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="btn4401">
+           <property name="minimumSize">
+            <size>
+             <width>85</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>85</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>KonsensRegular</family>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QRadioButton {
+	padding-left: 15%;
+	background-color: transparent;
+}</string>
+           </property>
+           <property name="text">
+            <string>4401</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>
@@ -3500,7 +3607,7 @@ font: 10pt &quot;KonsensLight&quot; bold;</string>
              <string notr="true">background-color: #F9F8F9;</string>
             </property>
             <property name="currentIndex">
-             <number>0</number>
+             <number>2</number>
             </property>
             <widget class="QWidget" name="page_geral">
              <layout class="QHBoxLayout" name="horizontalLayout_7">

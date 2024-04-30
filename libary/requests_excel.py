@@ -2,7 +2,7 @@ import openpyxl
 
 DIR = (
     "\\\\straumann.com\\public\\br03\\pcoudir\\Controle de Qualidade\\"
-    "01. 4400\\01. CQ Geral\\05. Banco de dados\\"
+    "01. 4400\\01. CQ Geral\\05. Banco de dados\\03. Auxiliares\\"
 )
 NAME_FILE = "Atualização Familia_p_item.xlsm"
 FILE = DIR + NAME_FILE

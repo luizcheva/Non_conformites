@@ -1,6 +1,7 @@
 from db.conn import DataBase
 from PySide6.QtWidgets import QTableWidgetItem, QTableWidget
 from widgets.pages.ui_pages import Ui_StackedWidget
+from identify import verificaUsuario
 
 
 class tableEdit():
@@ -10,7 +11,8 @@ class tableEdit():
 
     def carregaTable(self, table: QTableWidget):
         self.table = table
-        results = self.db_instance.selectTable()
+        planta = verificaUsuario().identificacao()
+        results = self.db_instance.selectTable(planta)
 
         self.table.clearContents()
         self.table.setRowCount(0)

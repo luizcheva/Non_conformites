@@ -16,6 +16,7 @@ from db.insertDB import insertNew
 from validation.form_validator import FormValidator
 from widgets.list import listView
 from widgets.email import NewEmail
+from identify import verificaUsuario
 if TYPE_CHECKING:
     from main_window import MainWindows
 
@@ -86,6 +87,8 @@ class ContentPage(QStackedWidget):
         self.ui_page.btnBuscar_del.clicked.connect(self.events.searchDel)
         self.ui_page.btn_NaoEmail.clicked.connect(self.desabilitaEmail)
         self.ui_page.btn_SimEmail.clicked.connect(self.habilitaEmail)
+        self.ui_page.btn4400.clicked.connect(self.events.plantaSelecionada4400)
+        self.ui_page.btn4401.clicked.connect(self.events.plantaSelecionada4401)
 
     def validaCampos(self):
         self.ui_page.text_qtde.setValidator(QIntValidator())
@@ -148,6 +151,7 @@ class ContentPage(QStackedWidget):
             self.atualizarTabelas()
 
     def editReg(self):
+        planta = verificaUsuario().identificacao()
         selected_item = self.table_edit.ui_page.tab_dados.selectedItems()
         is_sro = False
         if not selected_item:
@@ -167,7 +171,7 @@ class ContentPage(QStackedWidget):
         dialog.initUI(
             self.table_edit.table.item(row, 0).text(),
             self.table_edit.table.item(row, 10).text(),
-            '4400',
+            str(planta),
             self.table_edit.table.item(row, 2).text(),
             self.table_edit.table.item(row, 3).text(),
             self.table_edit.table.item(row, 1).text(),

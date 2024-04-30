@@ -1,26 +1,36 @@
 import sqlite3
-from pathlib import Path
 from datetime import datetime
 from information import Message
+import os
 
-ROOT_DIR = Path(__file__).parent
-DB_NAME = 'db.sqlite3'
-DB_FILE = ROOT_DIR / DB_NAME
+ROOT_DIR = (
+    "\\\\straumann.com\\public\\br03\\pcoudir\\Controle de Qualidade"
+    "\\01. 4400\\01. CQ Geral\\04. Pessoal\\01. Luiz Cheva"
+    "\\NaoConformidades\\_database\\"
+)
+DB_NAME = 'db_qualitson.sqlite3'
+DB_FILE = ROOT_DIR + DB_NAME
 
 
 class DataBase():
-    def __init__(self, name=DB_FILE) -> None:
-        self.name = name
+    def __init__(self) -> None:
+        self.name = DB_FILE
         self.connectDB()
 
     def connectDB(self):
-        self.connection = sqlite3.connect(self.name)
-        self.cursor = self.connection.cursor()
+        try:
+            self.connection = sqlite3.connect(self.name)
+            self.cursor = self.connection.cursor()
+        except Exception as err:
+            msg_erro = Message(
+                'Error', f'Ops, algo deu errado ao se conectar.\n"{err}"'
+            )
+            msg_erro.errorMsg()
 
-    def selectTable(self, table_name='nao_conformidade'):
+    def selectTable(self, table_name='4400'):
         table = table_name
         self.cursor.execute(
-            f'SELECT * FROM {table} ORDER BY "ID" DESC;'
+            f'SELECT * FROM [{table}] ORDER BY "ID" DESC;'
         )
         columns = [column[0] for column in self.cursor.description]
         data_table = [
@@ -29,13 +39,13 @@ class DataBase():
         return data_table
 
     def selectQueries(
-        self, table_name='nao_conformidade', column='', search=''
+        self, table_name='4400', column='', search=''
     ):
         table = table_name
         coluna = column
         pesquisa = search
         self.cursor.execute(
-            f"SELECT * FROM {table} WHERE {coluna} LIKE '%{pesquisa}%';"
+            f"SELECT * FROM [{table}] WHERE {coluna} LIKE '%{pesquisa}%';"
         )
         columns = [column[0] for column in self.cursor.description]
         data = [
@@ -43,17 +53,17 @@ class DataBase():
         ]
         return data
 
-    def selectColumn(self, table_name='nao_conformidade', column=''):
+    def selectColumn(self, table_name='4400', column=''):
         table = table_name
         coluna = column
         self.cursor.execute(
-            f'SELECT {coluna} FROM {table};'
+            f'SELECT {coluna} FROM [{table}];'
         )
         data = self.cursor.fetchall()
         return data
 
     def insertData(
-        self, table_name='nao_conformidade', fullDataSet: dict = {}
+        self, table_name='4400', fullDataSet: dict = {}
     ):
         fieldsTable = (
             'ITEM', 'ORDEM', 'LOTE', 'AREA_RESPONSAVEL', 'OPERACAO',
@@ -64,16 +74,18 @@ class DataBase():
             ":item, :ordem, :lote, :area, :operacao, :nc, :qtde, :qtde_rep,"
             ":acao, :data, :responsavel, :s_ro, :obs"
         )
-        sql = f'INSERT INTO {table_name} {fieldsTable} VALUES ({valuesTable})'
+        sql = (
+            f'INSERT INTO [{table_name}] {fieldsTable} VALUES ({valuesTable})'
+        )
         self.cursor.execute(sql, fullDataSet)
         self.connection.commit()
         self.closeDB()
         return "OK"
 
     def updateData(
-        self, table_name='nao_conformidade', fullDataSet: tuple = ()
+        self, table_name='4400', fullDataSet: tuple = ()
     ):
-        sql = f"UPDATE {table_name} SET " \
+        sql = f"UPDATE [{table_name}] SET " \
                 "ITEM = ?, ORDEM = ?, " \
                 "LOTE = ?, AREA_RESPONSAVEL = ?, " \
                 "OPERACAO = ?, NAO_CONFORMIDADE = ?, " \
@@ -95,12 +107,12 @@ class DataBase():
             pass
 
     def pesquisaPeriodo(
-        self, table_name='nao_conformidade', data_inicio='', data_fim=''
+        self, table_name='4400', data_inicio='', data_fim=''
     ):
         dataInicio = str(datetime.strftime(data_inicio, '%Y-%m-%d'))
         dataFim = (datetime.strftime(data_fim, '%Y-%m-%d'))
         sql = (
-            f"SELECT * FROM {table_name} WHERE DATA >= '{dataInicio}' "
+            f"SELECT * FROM [{table_name}] WHERE DATA >= '{dataInicio}' "
             f"AND DATA <= '{dataFim}';"
         )
         self.cursor.execute(sql)
@@ -128,19 +140,19 @@ class DataBase():
         return data_formatada
 
     def users(self):
+        usuario_atual = os.environ.get('USERNAME')
         table_name = 'usuarios'
-        sql = f'SELECT USERNAME FROM {table_name}'
+        sql = f'SELECT * FROM {table_name} WHERE USERNAME = "{usuario_atual}"'
         self.cursor.execute(sql)
 
         data = self.cursor.fetchall()
-        data_tuple = tuple(zip(*data))
         self.closeDB
-        return data_tuple[0]
+        return data
 
-    def deleteRegister(self, table_name='nao_conformidade', id_number=''):
+    def deleteRegister(self, table_name='4400', id_number=''):
         try:
             id_ = int(id_number)
-            sql = f'DELETE FROM {table_name} WHERE ID = {id_};'
+            sql = f'DELETE FROM [{table_name}] WHERE ID = {id_};'
             self.cursor.execute(sql)
             self.connection.commit()
             self.closeDB()
@@ -154,9 +166,9 @@ class DataBase():
 
         return False
 
-    def uploadListUser(self, table_name='nao_conformidade', colaborador=''):
+    def uploadListUser(self, table_name='4400', colaborador=''):
         try:
-            sql = f"SELECT * FROM {table_name} WHERE \
+            sql = f"SELECT * FROM [{table_name}] WHERE \
                     RESPONSAVEL LIKE '%{colaborador}%';"
             self.cursor.execute(sql)
             columns = [column[0] for column in self.cursor.description]
@@ -168,8 +180,8 @@ class DataBase():
         except Exception:
             return
 
-    def searchAll(self, table_name='nao_conformidade', text=''):
-        sql = f"SELECT * FROM {table_name} WHERE ID LIKE '%{text}%' " \
+    def searchAll(self, table_name='4400', text=''):
+        sql = f"SELECT * FROM [{table_name}] WHERE ID LIKE '%{text}%' " \
                 f"OR ITEM LIKE '%{text}%' OR ORDEM LIKE '%{text}%' " \
                 f"OR LOTE LIKE '%{text}%' " \
                 f"OR AREA_RESPONSAVEL LIKE '%{text}%' " \

@@ -1186,13 +1186,7 @@ class Ui_StackedWidget(object):
         self.page_settings = QWidget()
         self.page_settings.setObjectName(u"page_settings")
         self.verticalLayout_43 = QVBoxLayout(self.page_settings)
-        self.verticalLayout_43.setSpacing(30)
         self.verticalLayout_43.setObjectName(u"verticalLayout_43")
-        self.verticalLayout_43.setContentsMargins(0, 0, 0, 0)
-        self.verticalSpacer_11 = QSpacerItem(20, 39, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.verticalLayout_43.addItem(self.verticalSpacer_11)
-
         self.horizontalLayout_31 = QHBoxLayout()
         self.horizontalLayout_31.setSpacing(0)
         self.horizontalLayout_31.setObjectName(u"horizontalLayout_31")
@@ -1288,7 +1282,7 @@ class Ui_StackedWidget(object):
         self.lcd_totalRegistro = QLCDNumber(self.wdgTotalRegistro)
         self.lcd_totalRegistro.setObjectName(u"lcd_totalRegistro")
         self.lcd_totalRegistro.setMinimumSize(QSize(120, 30))
-        self.lcd_totalRegistro.setMaximumSize(QSize(120, 30))
+        self.lcd_totalRegistro.setMaximumSize(QSize(120, 40))
         self.lcd_totalRegistro.setFont(font7)
         self.lcd_totalRegistro.setStyleSheet(u"QLCDNumber {\n"
 "	background-color: #f4f4f4;\n"
@@ -1393,6 +1387,7 @@ class Ui_StackedWidget(object):
         self.horizontalLayout_30 = QHBoxLayout()
         self.horizontalLayout_30.setSpacing(0)
         self.horizontalLayout_30.setObjectName(u"horizontalLayout_30")
+        self.horizontalLayout_30.setContentsMargins(-1, 10, -1, 0)
         self.horizontalSpacer_18 = QSpacerItem(28, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout_30.addItem(self.horizontalSpacer_18)
@@ -1492,9 +1487,71 @@ class Ui_StackedWidget(object):
 
         self.verticalLayout_43.addLayout(self.horizontalLayout_30)
 
-        self.verticalSpacer_12 = QSpacerItem(20, 27, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.horizontalLayout_33 = QHBoxLayout()
+        self.horizontalLayout_33.setSpacing(10)
+        self.horizontalLayout_33.setObjectName(u"horizontalLayout_33")
+        self.horizontalLayout_33.setContentsMargins(10, 10, 10, 10)
+        self.group_Planta = QGroupBox(self.page_settings)
+        self.group_Planta.setObjectName(u"group_Planta")
+        self.group_Planta.setMinimumSize(QSize(0, 100))
+        self.group_Planta.setMaximumSize(QSize(850, 100))
+        font13 = QFont()
+        font13.setFamilies([u"KonsensBook"])
+        font13.setPointSize(10)
+        font13.setItalic(False)
+        self.group_Planta.setFont(font13)
+        self.group_Planta.setStyleSheet(u"QGroupBox {\n"
+"	border: 1px solid rgb(99,101,105);\n"
+"	margin-top: 6px;\n"
+"	border-radius: 20px;\n"
+"	background-color: white;\n"
+" }\n"
+"\n"
+"QGroupBox::title {\n"
+"	subcontrol-origin: top;\n"
+"	subcontrol-position: top left;\n"
+"	padding: 0 3px;\n"
+"	background-color: rgb(99,101,105);\n"
+"	color: white;\n"
+"	padding-left: 50px;\n"
+"	padding-right: 50px;\n"
+"}")
+        self.group_Planta.setAlignment(Qt.AlignCenter)
+        self.group_Planta.setFlat(False)
+        self.group_Planta.setCheckable(False)
+        self.horizontalLayout_34 = QHBoxLayout(self.group_Planta)
+        self.horizontalLayout_34.setObjectName(u"horizontalLayout_34")
+        self.btn4400 = QRadioButton(self.group_Planta)
+        self.btn4400.setObjectName(u"btn4400")
+        self.btn4400.setMinimumSize(QSize(85, 0))
+        self.btn4400.setMaximumSize(QSize(85, 16777215))
+        self.btn4400.setFont(font)
+        self.btn4400.setStyleSheet(u"QRadioButton {\n"
+"	padding-left: 15%;\n"
+"	background-color: transparent;\n"
+"}")
+        self.btn4400.setCheckable(True)
+        self.btn4400.setChecked(False)
 
-        self.verticalLayout_43.addItem(self.verticalSpacer_12)
+        self.horizontalLayout_34.addWidget(self.btn4400)
+
+        self.btn4401 = QRadioButton(self.group_Planta)
+        self.btn4401.setObjectName(u"btn4401")
+        self.btn4401.setMinimumSize(QSize(85, 0))
+        self.btn4401.setMaximumSize(QSize(85, 16777215))
+        self.btn4401.setFont(font)
+        self.btn4401.setStyleSheet(u"QRadioButton {\n"
+"	padding-left: 15%;\n"
+"	background-color: transparent;\n"
+"}")
+
+        self.horizontalLayout_34.addWidget(self.btn4401)
+
+
+        self.horizontalLayout_33.addWidget(self.group_Planta)
+
+
+        self.verticalLayout_43.addLayout(self.horizontalLayout_33)
 
         StackedWidget.addWidget(self.page_settings)
         self.page_add = QWidget()
@@ -1554,10 +1611,10 @@ class Ui_StackedWidget(object):
         self.label_8.setObjectName(u"label_8")
         self.label_8.setMinimumSize(QSize(100, 0))
         self.label_8.setMaximumSize(QSize(100, 16777215))
-        font13 = QFont()
-        font13.setFamilies([u"KonsensRegular"])
-        font13.setPointSize(11)
-        self.label_8.setFont(font13)
+        font14 = QFont()
+        font14.setFamilies([u"KonsensRegular"])
+        font14.setPointSize(11)
+        self.label_8.setFont(font14)
 
         self.horizontalLayout_2.addWidget(self.label_8)
 
@@ -1583,7 +1640,7 @@ class Ui_StackedWidget(object):
         self.label_9.setObjectName(u"label_9")
         self.label_9.setMinimumSize(QSize(100, 0))
         self.label_9.setMaximumSize(QSize(100, 16777215))
-        self.label_9.setFont(font13)
+        self.label_9.setFont(font14)
         self.label_9.setStyleSheet(u"color: #e6e6e6;")
 
         self.horizontalLayout_3.addWidget(self.label_9)
@@ -1610,7 +1667,7 @@ class Ui_StackedWidget(object):
         self.label_10.setObjectName(u"label_10")
         self.label_10.setMinimumSize(QSize(100, 0))
         self.label_10.setMaximumSize(QSize(100, 16777215))
-        self.label_10.setFont(font13)
+        self.label_10.setFont(font14)
         self.label_10.setStyleSheet(u"color: #e6e6e6;")
 
         self.horizontalLayout_4.addWidget(self.label_10)
@@ -1970,10 +2027,10 @@ class Ui_StackedWidget(object):
         self.btn_DadoGerais = QPushButton(self.frame_7)
         self.btn_DadoGerais.setObjectName(u"btn_DadoGerais")
         self.btn_DadoGerais.setMaximumSize(QSize(16777215, 35))
-        font14 = QFont()
-        font14.setFamilies([u"KonsensBold"])
-        font14.setPointSize(12)
-        self.btn_DadoGerais.setFont(font14)
+        font15 = QFont()
+        font15.setFamilies([u"KonsensBold"])
+        font15.setPointSize(12)
+        self.btn_DadoGerais.setFont(font15)
         self.btn_DadoGerais.setStyleSheet(u"QPushButton {\n"
 "	background-color: rgb(133,50,117);\n"
 "	color: white;\n"
@@ -2312,9 +2369,9 @@ class Ui_StackedWidget(object):
         self.horizontalLayout_11.setObjectName(u"horizontalLayout_11")
         self.btnVoltar1 = QPushButton(self.frame_10)
         self.btnVoltar1.setObjectName(u"btnVoltar1")
-        font15 = QFont()
-        font15.setFamilies([u"KonsensLight"])
-        self.btnVoltar1.setFont(font15)
+        font16 = QFont()
+        font16.setFamilies([u"KonsensLight"])
+        self.btnVoltar1.setFont(font16)
         self.btnVoltar1.setStyleSheet(u"QPushButton {\n"
 "	background-color: #f0f0f0;\n"
 "	border: 1px solid #d0d0d0;\n"
@@ -2336,7 +2393,7 @@ class Ui_StackedWidget(object):
         self.btn_DadosNcs = QPushButton(self.frame_10)
         self.btn_DadosNcs.setObjectName(u"btn_DadosNcs")
         self.btn_DadosNcs.setMaximumSize(QSize(16777215, 35))
-        self.btn_DadosNcs.setFont(font14)
+        self.btn_DadosNcs.setFont(font15)
         self.btn_DadosNcs.setStyleSheet(u"QPushButton {\n"
 "	background-color: rgb(133,50,117);\n"
 "	color: white;\n"
@@ -2454,11 +2511,7 @@ class Ui_StackedWidget(object):
         self.group_SRo.setObjectName(u"group_SRo")
         self.group_SRo.setMinimumSize(QSize(0, 100))
         self.group_SRo.setMaximumSize(QSize(16777215, 100))
-        font16 = QFont()
-        font16.setFamilies([u"KonsensBook"])
-        font16.setPointSize(10)
-        font16.setItalic(False)
-        self.group_SRo.setFont(font16)
+        self.group_SRo.setFont(font13)
         self.group_SRo.setStyleSheet(u"QGroupBox {\n"
 "	border: 1px solid rgb(99,101,105);\n"
 "	border-radius: 6px;\n"
@@ -2889,7 +2942,7 @@ class Ui_StackedWidget(object):
 
         self.btnVoltar2 = QPushButton(self.frame_13)
         self.btnVoltar2.setObjectName(u"btnVoltar2")
-        self.btnVoltar2.setFont(font15)
+        self.btnVoltar2.setFont(font16)
         self.btnVoltar2.setStyleSheet(u"QPushButton {\n"
 "	background-color: #f0f0f0;\n"
 "	border: 1px solid #d0d0d0;\n"
@@ -2911,7 +2964,7 @@ class Ui_StackedWidget(object):
         self.btn_Disposicao = QPushButton(self.frame_13)
         self.btn_Disposicao.setObjectName(u"btn_Disposicao")
         self.btn_Disposicao.setMaximumSize(QSize(16777215, 35))
-        self.btn_Disposicao.setFont(font14)
+        self.btn_Disposicao.setFont(font15)
         self.btn_Disposicao.setStyleSheet(u"QPushButton {\n"
 "	background-color: rgb(133,50,117);\n"
 "	color: white;\n"
@@ -2976,7 +3029,7 @@ class Ui_StackedWidget(object):
 
         self.retranslateUi(StackedWidget)
 
-        StackedWidget.setCurrentIndex(4)
+        StackedWidget.setCurrentIndex(3)
         self.stackedWidget.setCurrentIndex(2)
 
 
@@ -3086,6 +3139,9 @@ class Ui_StackedWidget(object):
         self.img_TotalSRo.setText(QCoreApplication.translate("StackedWidget", u"<html><head/><body><p><img src=\":/images/total_sro.png\"/></p></body></html>", None))
         self.label_52.setText(QCoreApplication.translate("StackedWidget", u"Total de S.RO", None))
         self.groupDadosColaboradores.setTitle(QCoreApplication.translate("StackedWidget", u"Registro(s) adicionados pelo seu usu\u00e1rio", None))
+        self.group_Planta.setTitle(QCoreApplication.translate("StackedWidget", u"Planta Atual", None))
+        self.btn4400.setText(QCoreApplication.translate("StackedWidget", u"4400", None))
+        self.btn4401.setText(QCoreApplication.translate("StackedWidget", u"4401", None))
         self.label_2.setText(QCoreApplication.translate("StackedWidget", u"1", None))
         self.label_8.setText(QCoreApplication.translate("StackedWidget", u"Dados Gerais", None))
         self.label_6.setText(QCoreApplication.translate("StackedWidget", u"2", None))

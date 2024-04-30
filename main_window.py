@@ -12,11 +12,13 @@ from PySide6.QtCore import QPropertyAnimation, QEasingCurve, Slot
 from db.conn import DataBase
 from information import Message
 from datetime import datetime
+from identify import verificaUsuario
 
 
 class MainWindows(QMainWindow):
     def __init__(self, parent: QWidget | None = None, *args, **kwargs):
         super().__init__(parent, *args, **kwargs)
+        self.planta = verificaUsuario().identificacao()
 
         self.setWindowTitle('Registros de Não Conformidades - NEODENT')
         self.resize(1200, 720)
@@ -130,9 +132,17 @@ class MainWindows(QMainWindow):
     def show_page_del(self):
         db = DataBase()
         user_access = db.users()
-        usuario_atual = os.environ.get('USERNAME')
 
-        if usuario_atual not in user_access:
+        if not len(user_access) > 0:
+            msg = Message(
+                'Usuário não permitido',
+                'Desculpe, você não possui acesso a essa seção!'
+                '\n Caso deseja excluir algum registro falar com seu líder '
+                'direto ou o responsável do sistema.'
+            )
+            msg.errorMsg()
+            return
+        elif user_access[0][4] != "ADM":
             msg = Message(
                 'Usuário não permitido',
                 'Desculpe, você não possui acesso a essa seção!'

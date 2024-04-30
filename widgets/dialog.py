@@ -52,6 +52,7 @@ class ShowDialog(QDialog):
             self.ui.btnNaoRo.setChecked(True)
 
         self.setWindowTitle(f'Alteração do registro: {self.id_number}')
+        self.ui.btn_NaoEmail.setChecked(True)
         self.ui.group_SRo.setDisabled(True)
         self.ui.group_Email.setDisabled(True)
         self.ui.group_addressEmail.setDisabled(True)
@@ -102,8 +103,9 @@ class ShowDialog(QDialog):
                 self.id_number
             )
 
+            planta = self.ui.text_planta.text()
             db = DataBase()
-            db.updateData('nao_conformidade', data_value)
+            db.updateData(planta, data_value)
 
             msg = Message(
                 'Sucesso',
